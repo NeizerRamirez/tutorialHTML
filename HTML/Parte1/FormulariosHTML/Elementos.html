@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de Formularios. Campos de texto</title>
+</head>
+<body>
+    <section>
+        <h1>Elementos de Formularios. Campos de texto</h1>
+        <h3>Vemos detenidamente los distintos elementos de formulario que sirven para introducir texto.</h3>
+        <p>El lenguaje HTML nos propone una gran diversidad de alternativas a la hora de crear nuestros formularios, es decir, una gran variedad de elementos para diferentes propósitos. Estas van desde la clásica caja de texto, hasta la lista de opciones en un menú desplegable, pasando por las cajas de validación, etc.</p>
+        <p>En el artículo anterior del Manual de HTML ya vimos cómo iniciar nuestro formulario con la etiqueta FORM y los distintos atributos que tenemos que utilizar para configurar su funcionamiento.</p>
+        <p>En el presente artículo veremos las etiquetas que tenemos que utilizar para crear campos de texto, que pueden ser de dos tipos. Veamos en qué consiste cada una de estas modalidades y como podemos implementarlas en nuestro formulario.</p>
+    </section>
+    <section>
+        <h2>Etiqueta INPUT para texto corto</h2>
+        <p>Las cajas de texto son colocadas por medio de la etiqueta INPUT. Dentro de esta etiqueta hemos de especificar el valor de dos atributos: type y name.</p>
+        <p>La etiqueta tendrá la siguiente forma:</p>
+        <code>&lt;input type="text" name="nombre"&gt;</code>
+        <p>El nombre del elemento del formulario es de gran importancia para poder identificarlo en nuestro programa de procesamiento o en el mail recibido. Por otra parte, es importante indicar el atributo type, ya que, como veremos, existen otras modalidades de elementos de formulario que usan esta misma etiqueta INPUT.</p>
+        <p>El empleo de estas cajas esta fundamentalmente destinado a la toma de datos breves: palabras o conjuntos de palabras de longitud relativamente corta. Veremos más adelante que existe otra forma de tomar textos más largos a partir de otra etiqueta.</p>
+        <p>Además de estos dos atributos, esenciales para el correcto funcionamiento de nuestra etiqueta, existen otra serie de atributos que pueden resultarnos de utilidad pero que no son imprescindibles:</p>
+        <p>size: define el tamaño de la caja de texto, en número de caracteres visibles. Si al escribir el usuario llega al final de la caja, el texto que escriba a continuación también cabrá dentro del campo pero irá desfilando, a medida que se escribe, haciendo desaparecer la parte de texto que queda a la izquierda.</p>
+        <p>maxlength: indica el tamaño máximo del texto, en número de caracteres, que puede ser escrito en el campo. En caso que el campo de texto tenga definido el atributo maxlength, el navegador no permitirá escribir más caracteres en ese campo que los que hayamos indicado.</p>
+        <p>Nota: Es importante no confundir el atributo maxlength con el atributo size. Mientras size define el tamaño visible de la caja de texto, maxlength indica el tamaño máximo real del texto que se puede escribir. Podemos tener una caja de texto con un tamaño aparente (size) que es menor que el tamaño máximo (maxlength). Lo que ocurrirá en este caso es que, al escribir, si sobrepasamos el espacio marcado por size, el texto ira desfilando dentro de la caja hasta que lleguemos a su tamaño máximo definido por maxlength, momento en el cual nos será imposible continuar escribiendo.</p>
+        <p>value: en algunos casos puede resultarnos interesante asignar un valor definido al campo en cuestión. Esto puede ayudar al usuario a rellenar más rápidamente el formulario o darle alguna idea sobre la naturaleza de datos que se requieren. Este valor inicial del campo puede ser expresado mediante el atributo value. Veamos su efecto con un ejemplo sencillo:</p>
+        <code>&lt;input type="text" name="nombre" value="Perico Palotes"&gt;</code>
+    </section>
+    <section>
+        <h2>Etiqueta INPUT, modalidad de texto oculto</h2>
+        <p>Hay determinados casos en los que podemos desear esconder el texto escrito en el campo INPUT, por medio asteriscos, de manera que aporte una cierta confidencialidad. Este tipo de campos son análogos a los de texto, con una sola diferencia: remplazamos el atributo type="text" por type="password":</p>
+        <code>&lt;input type="password" name="nombre"&gt;</code>
+        <p>En este caso, podéis comprobar que, al escribir dentro del campo, en lugar de texto veréis asteriscos.</p>
+        <p>Estos campos son ideales para la introducción de datos confidenciales, principalmente códigos de acceso o claves. Se ve en funcionamiento a continuación.</p>
+    </section>
+    <section>
+        <h2>Etiqueta TEXTAREA para texto largo</h2>
+        <p>Si deseamos poner a la disposición de usuario un campo de texto donde pueda escribir cómodamente sobre un espacio compuesto de varias líneas, hemos de invocar una nueva etiqueta: TEXTAREA y su cierre correspondiente.</p>
+        <p>Este tipo de campos son prácticos cuando el contenido a enviar no es un nombre, teléfono, edad o cualquier otro dato breve, sino más bien, un comentario, opinión, etc. en los que existe la posibilidad que el visitante desee rellenar varias líneas.</p>
+        <p>Dentro de la etiqueta textarea deberemos indicar, como para el caso visto anteriormente, el atributo name para asociar el contenido a un nombre que será asemejado a una variable en los programas de proceso. Además, podemos definir las dimensiones del campo a partir de los atributos siguientes:</p>
+        <p>rows: define el número de líneas del campo de texto.</p>
+        <p>cols: define el número de columnas del campo de texto.</p>
+        <p>La etiqueta queda por tanto de esta forma:</p>
+        <code>&lt;textarea name="comentario" rows="10" cols="40"&gt;&lt;/textarea&gt;</code>
+        <textarea name="comentario" rows="10" cols="40"></textarea>
+        <br><br>
+        <p>Asimismo, es posible predefinir el contenido del campo. Para ello, no usaremos el atributo value, sino que escribiremos dentro de la etiqueta el contenido que deseamos atribuirle. Veámoslo:</p>
+        <code>&lt;textarea name="comentario" rows="10" cols="40"&gt;Escribe tu comentario....&lt;/textarea&gt;</code>
+        <br><br>
+        <textarea name="comentario" rows="10" cols="40">Escribe tu comentario....</textarea>
+        <p>Como se podrá imaginar, los campos de texto son de vital importancia para los formularios, pero no son los únicos tipos de elementos que podemos colocar dentro de éstos. En el siguiente artículo veremos otros tipos de elementos para formularios.</p>
+    </section>
+</body>
+</html>
