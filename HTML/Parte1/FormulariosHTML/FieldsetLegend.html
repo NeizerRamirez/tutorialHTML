@@ -1,0 +1,77 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=
+        , initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <section>
+            <h1>Etiquetas FIELDSET y LEGEND de formularios</h1>
+            <h2>Las etiquetas de HTML FIELDSET y LEGEND sirven para crear bloques de elementos dentro de formularios.</h2>
+            <p>En el Manual de HTML de DesarrolloWeb.com ya hemos visto varios artículos para la creación de formularios en HTML. Pero nos quedaba por ver un par de etiquetas, que no siendo imprescindibles para la realización de formularios, sí nos pueden ayudar a estructurarlos, mejorando la interfaz de usuario de nuestras páginas.</p>
+            <p>Los atributos FIELDSET y LEGEND se utilizan en conjunto y sirven respectivamente para definir y etiquetar grupos lógicos de elementos de formularios. Realmente no afectan a la operativa del formulario, pero sirven para agrupar elementos en diferentes áreas, de modo que se clarifique la entrada de datos del usuario. Al formar varios grupos de elementos se puede crear una estructura mucho más fácil de asimilar por el usuario, sobre todo si se trata de formularios que tengan muchos elementos.</p>
+        </section>
+        <section>
+                <h2>Etiqueta FIELDSET</h2>
+                <p>La etiqueta FIELDSET sirve para agrupar los elementos. Se utiliza con su respectiva etiqueta de cierre y lo que hace es crear un recuadro que rodea a los elementos de formulario colocados dentro de ella.</p>
+                <p>Por ejemplo, se podría usar de esta manera:</p>
+            <pre>
+                <code>
+                    &lt;fieldset&gt;
+                    Elemento de formulario: &lt;input type="text" name="elemento1"&gt;
+                    &lt;br&gt;
+                    Otro elemento: &lt;input type="text" name="otro"&gt;
+                    &lt;/fieldset&gt;
+                </code>
+            </pre>
+        </section>
+        <section>
+            <h2>Etiqueta LEGEND</h2>
+            <p>LEGEND sirve para nombrar o etiquetar un grupo creado con FIELDSET. Añade simplemente una nota aclaratoria sobre qué tipo de información se está agrupando en el recuadro. Tampoco sirve para nada en especial, de no ser porque queda bonita y porque puede servir para ayudar al usuario y mejorar la interfaz y la claridad de los formularios.</p>
+            <p>La etiqueta LEGEND se coloca después de la etiqueta FIELDSET. Tiene su propia etiqueta de cierre. Entre LEGEND y su cierre colocamos el texto con el que queremos marcar el recuadro definido con FIELDSET.</p>
+            <p>A la etiqueta LEGEND se le puede poner el atributo align para indicar el lugar donde debe aparecer la leyenda. Por ejemplo podríamos indicar align=right para que apareciera en la parte de la derecha, en lugar de la izquierda, que es donde aparece por defecto.</p>
+            <p>Veamos ahora un ejemplo sencillo de utilización de las etiquetas FIELDSET y LEGEND en conjunto.</p>
+            <pre>
+                <code>
+                    &lt;form&gt;
+                    &lt;fieldset&gt;
+                    &lt;legend align="right"&gt;Datos personales&lt;/legend&gt;
+                    Nombre: &lt;input type="text" name="nombre"&gt;
+                    &lt;br&gt;
+                    Edad: &lt;input type="text" name="edad" size="2"&gt;
+                    &lt;br&gt;
+                    Dirección: &lt;input type="text" name="direccion"&gt;
+                    &lt;/fieldset&gt;
+                    &lt;br&gt;
+                    &lt;fieldset&gt;
+                    &lt;legend align="right"&gt;Datos de tu ordenador&lt;/legend&gt;
+                    Modelo de ordenador: &lt;input type="text" name="modelo"&gt;
+                    &lt;br&gt;
+                    Sistema que te da el problema:
+                    &lt;select&gt;
+                    &lt;option value=cpu&gt;CPU&lt;/option&gt;
+                    &lt;option value=impresora&gt;Impresora&lt;/option&gt;
+                    &lt;/select&gt;
+                    &lt;/fieldset&gt;
+                    &lt;br&gt;
+                    &lt;fieldset&gt;
+                    &lt;legend align="right"&gt;Descripción del problema&lt;/legend&gt;
+                    &lt;textarea cols="55" rows="8" name="descripcion"&gt;&lt;/textarea&gt;
+                    &lt;/fieldset&gt;
+                    &lt;/form&gt;
+                </code>
+            </pre>
+            <p>El ejemplo en marcha tendría este aspecto.</p>
+            <p>Podremos comprobar como aparecen tres bloques en el formulario, producidos por tres etiquetas FIELDSET, con varios campos de formulario incluidos en cada una. Además, cada uno de los FIELDSET tienen dentro un LEGEND que sirve para nombrar con una leyenda cada uno de los tres bloques.</p>
+        </section>
+        <section>
+            <h2>Etiqueta LABEL</h2>
+            <p>Aunque no forma parte del objetivo de este artículo, queremos nombrar también otra etiqueta llamada LABEL que sí tiene una utilidad especial en la creación de formularios, además de la estética. Sirve para poner texto al lado de los elementos de formulario y que tal texto esté asociado al propio elemento. Ese texto, que pondremos con el tag LABEL, se asocia a un elemento concreto con el atributo FOR, colocando como valor del atributo el identificador del campo que se está asociando.</p>
+            <code>&lt;label for="edad"&gt;Edad&lt;/label&gt; &lt;input type="text" name="edad" id="edad"&gt;</code>
+            <p>Como vemos, hemos creado un LABEL y hemos colocado en el atributo FOR el nombre del campo de formulario que estamos asociando a ese texto. El resultado es que el texto colocado dentro de LABEL es un elemento interactivo, al que podemos hacer clic y sería como si hiciésemos clic en el propio campo asociado al LABEL.</p>
+            <p>Para acabar, comentamos que estas etiquetas se hallan relatadas en otro artículo de DesarrolloWeb.com, con explicaciones escritas por otro autor, que podrían complementar y ampliar la presente información. Si te interesa, accede al artículo Las nuevas etiquetas de HTML 4.0 (2).</p>
+        </section>
+    </body>
+    </html>

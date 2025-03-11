@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las nuevas etiquetas de HTML 4.0</title>
+</head>
+<body>
+    <section>
+        <h2>En este artículo veremos estas nuevas etiquetas del estandar HTML 4.0.</h2>
+        <p>Cuando Internet empezaba su imparable escalada, la versión del estándar HTML que circulaba era la 2.0, el cuál siguen soportando los navegadores más actuales. Pero las herramientas de que se disponía no ofrecían un control preciso de los documentos.</p>
+        <p>Pero como por aquel entonces el objetivo de Internet estaba fundamentalmente orientado al ámbito académico y no al de diseño, no se le dio demasiada importancia a la cuestión de lanzar una versión mejorada del estándar hasta que Netscape, que por aquel entonces era la empresa líder en el sector, tomó la iniciativa de incluir nuevas etiquetas pensadas para mejorar el aspecto visual de las páginas web.</p>
+        <p>Por este motivo el IETF (Internet Engineering Task Force), Grupo de Trabajo en Ingeniería de Internet, comenzó a elaborar nuevos estándares, los cuales dieron como fruto el HTML 3.0, que resultó ser demasiado grande para las infraestructuras que había en ese momento, lo cual dificultó su aceptación.</p>
+        <p>Así pues, una serie de compañías (entre las que estaban Netscape, Sun Microsystems o Microsoft, entre otras), se unieron para crear lo que hoy se denomina W3C (o lo que es lo mismo, Consorcio para la World Wide Web), que fue fundado en octubre de 1.994 para conducir a la World Wide Web a su máximo potencial, desarrollando protocolos de uso común, para normalizar el uso de la web en todo el mundo.</p>
+        <p>El compromiso del W3C de encaminar a la Web a su máximo potencial incluye promover un alto grado de accesibilidad para las personas con discapacidades. El grupo de trabajo permanente Web Accessibility Initiative (WAI, Iniciativa para la Accesibilidad de la Red), en coordinación con organizaciones alrededor de todo el mundo, persigue la accesibilidad de la Web a través de cinco áreas de trabajo principales: Tecnología, directrices, herramientas, formación, difusión, e investigación y desarrollo.</p>
+        <p>De esta iniciativa nació el borrador de HTML 3.2 y en su versión definitiva se introdujeron cambios esenciales para las posibilidades que empezaban a ofrecer los navegadores, estas inclusiones fueron las tablas, los applets, etc.</p>
+        <p>En julio de 1.997 nace el borrador del HTML 4.0 y finalmente se aprueba en diciembre de 1.997 este estándar incluía como mejoras los marcos (frames), las hojas de estilo y la inclusión de scripts en páginas web, entre otras cosas.</p>
+    </section>
+    <section>
+        <h2>Etiquetas para definir bloques de texto</h2>
+        <p>Veamos una serie de etiquetas para englobar el texto cuya función indica principalmente la función que desempeña ese texto dentro de las páginas HTML. Daremos una breve descripción de cada una de ellas.</p>       
+        <p>Entre el estándar del HTML 3.2 al 4.0 se introdujeron ocho nuevas etiquetas de las cuales daremos una breve explicación.</p>
+        <h3>Q</h3>
+        <p>La etiqueta Q actúa de forma muy parecida a BLOCKQUOTE pero con la particularidad de que añade un sangrado en párrafos más pequeños y sin necesidad de romper el párrafo.</p>
+        <p>Según el W3C, la etiqueta BLOCKQUOTE es para añadir sangrados largos y Q, para sangrados más pequeños, sin necesidad de romper el párrafo.</p>
+        <p>Nota: En el HTML 4.0 es imprescindible poner la etiqueta de apertura y la de clausura de Q</p>
+        <h2>ACRONYM</h2>
+        <p>Las etiquetas ACRONYM y su cierre, in<P>dican que hay un acrónimo en el texto. Un acrónimo es un pequeño texto que ayuda a explicar la estructura del texto una frase.</P></p>
+        <p><b>Nota:</b> La etiqueta ACRONYM ha sido retirada del estándar con la versión HTML5.</p>
+    </section>
+    <section>
+        <h2>INS y DEL</h2>
+        <p>Utilice INS para marcar las partes de un documento que se han agregado desde la versión pasada del documento. DEL marca de manera similar un texto de un documento que se ha suprimido desde la versión anterior.</p>
+        <h2>COLGROUP</h2>
+        <P>Se utiliza para tener un mejor control sobre un el formato de las tablas especificando las características que comparten como: anchura, altura y alineación.</P>
+        <P>Cada tabla debe tener por lo menos un COLGROUP sin especificar ninguna característica de COLGROUP. HTML 4.0 asume que una tabla contiene un solo grupo de columnas y que este contiene todas las columnas de una tabla.</P>
+        <p>Por ejemplo, esto nos serviría para crear una tabla con una celda en la que puede incluirse una descripción y después seguido de check boxes para seleccionar las opciones deseadas.</p>
+        <p>Podemos ver un ejemplo de Código:</p>
+        <code>&lt;TABLE&gt; &lt;COLGROUP span="10" width="30"&gt; &lt;COLGROUP span="1" width="0*"&gt; &lt;THEAD&gt; &lt;TR&gt;... &lt;/TABLE&gt;</code>
+        <p>De esta forma, COLGROUP proporciona un formato más agradable a las celdas, sin necesidad de especificar propiedades idénticas para cada una por separado.</p>
+        <h2>Nuevas etiquetas para uso en formularios</h2>
+        <p>En el presente texto vamos a hablaros sobre las etiquetas del HTML 4.0 relacionadas con la creación de formularios, que muchas veces son desconocidas, pero no por ello dejan de ser interesantes. El paseo por esta nueva serie de etiquetas del HTML viene de la mano de Luciano Moreno y con revisión en 2011 de Miguel Angel Alvarez.</p>
+    </section>
+    <section>
+        <h2>FIELDSET</h2>
+        <P>Hasta ahora, no disponíamos de ninguna manera de agrupar visualmente varios controles, si no echábamos mano de elementos que no son del formulario, como tablas o capas (divisiones o elementos DIV, como prefieras llamarles).</P>
+        <p>Ahora, si encerramos una parte de un formulario dentro de la etiqueta FIELDSET, se mostrara un rectángulo alrededor de los campos englobados por dicha etiqueta.</p>
+        <p>Además, podemos indicar un título en el rectángulo creado por FIELDSET y para ello utilizamos la etiqueta LEGEND, que admite el parámetro align="left / center / right / top / bottom", lo que nos permite alinear el título horizontal y verticalmente.</p>
+        <p>Para aclarar el aspecto de la agrupación de campos con FIELDSET podemos ver el siguiente efecto obtenido al agrupar un par de elementos de formulario.</p>
+        <form action="#" method="post" enctype="text/plain" name="miform"> 
+            <fieldset> 
+            <legend align="left">
+                Datos personales
+            </legend> 
+            Nombre: 
+            <input type="text" size="15"> <br>
+            Edad:
+            <input type="text" size="15">
+            </fieldset> 
+        </form>
+        <p><b>Nota:</b> Ten en cuenta que puedes aplicar estilo a esta organización de campos de formulario usando las CSS sobre la etiqueta FIELDSET, en el caso que sepamos usar las Hojas de Estilo en Cascada.</p>
+        <p><b>Ejemplo:</b></p>
+        <pre>
+            <code>
+                &lt;form action="#" method="post" enctype="text/plain" name="miform"&gt; 
+                &lt;fieldset&gt; 
+                    &lt;legend align="left"&gt;
+                    Caja de texto
+                    &lt;/legend&gt; 
+                    pon tu nombre: 
+                    &lt;input type="text" size="15"&gt; 
+                &lt;/fieldset&gt; 
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p><b>Referencia:</b> Para los interesados, cabe señalar que en DesarrolloWeb.com existe un artículo que explica estas etiquetas desde otro punto de vista y con las palabras de otro autor, que se puede leer en el link Etiquetas FIELDSET y LEGEND de formularios.</p>
+    </section>
+    <section>
+        <h2>LABEL</h2>
+        <P>Hasta no hace mucho los textos que ponemos al lado de los campos de formulario no estaban asociados a dichos campos. Es decir, el texto que colocamos al lado de un elemento de formulario, para especificar qué debe escribir el usuario en el campo, no tiene ninguna relacion real con el propio elemento de formulario.</P>
+        <P>Por ejemplo, si tenemos un código como este:</P>
+        <code>Dirección: &lt;input type="text" name="direccion"&gt;</code>
+        <p>El texto "Dirección" no está asociado para nada con el campo INPUT. Por ello, al pulsar sobre el texto "Dirección" no ocurre nada. Esto es así también con otros campos de formulario, como las cajas de checkbox o botones de radio.</p>
+        <code>&lt;input type="checkbox" name="interesado"&gt; Estoy interesado</code>
+        <p>Si pulsamos sobre el texto que hay al lado del campo de confirmación "Estoy interesado", ¡no sucede nada! Pero ahora, con la utilización de la etiqueta LABEL podemos conseguir que, haciendo clic en el texto "Estoy interesado", el control checkbox cambie de estado.</p>
+        <p><b>Ejemplo:</b></p>
+        <pre>
+            <code>
+                &lt;form action="#" method="post" enctype="text/plain" name="un ejemplo más"&gt; 
+                &lt;label&gt; 
+                    &lt;input type="checkbox" name="email"&gt; 
+                    Recibir email 
+                &lt;/label&gt; 
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>Ese ejemplo de LABEL es perfectamente válido y asocia el texto "Recibir email" al campo checkbox de formulario, de manera que si pulsamos sobre "Recibir email" cambiará el estado del campo checkbox asociado. Sin embargo, en la etiqueta LABEL podemos utilizar un atributo llamado FOR, que sirve para indicar explícitamente a qué campo de formulario se está asociando ese texto. Para ello colocamos como valor del atributo FOR el identificador del campo que estamos asociando a ese LABEL. Esto nos permite una mayor versatilidad a la hora de componer el HTML de nuestra página. Veamos el siguiente ejemplo:</p>
+        <pre>
+            <code>
+                &lt;form&gt;
+                &lt;label for="hombre"&gt;Hombre&lt;/label&gt;
+                &lt;input type="radio" name="sexo" id="hombre" value="hombre"&gt;
+                &lt;br&gt;
+                &lt;label for="mujer"&gt;Mujer&lt;/label&gt;
+                &lt;input type="radio" name="sexo" id="mujer" value="mujer"&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>Si ponemos este ejemplo en marcha, veremos que pulsando en el texto "Hombre" se activa el botón de radio "hombre". Del mismo modo, si pulsamos sobre el texto "Mujer" se activará la opción del radio button "mujer". Podemos ver como quedaría ese código en marcha a continuación, aunque es una imagen, no podrás hacerlo funcionar:</p>
+        <form>
+            <label for="hombre">Hombre</label>
+            <input type="radio" name="sexo" id="hombre" value="hombre">
+            <br>
+            <label for="mujer">Mujer</label>
+            <input type="radio" name="sexo" id="mujer" value="mujer">
+        </form>
+    </section>
+    <section>
+        <h2>BUTTON</h2>
+        <p>A partir de la implementación de los estándares HTML 4.0 contamos con varias etiquetas nuevas para construir formularios, siendo BUTTON una de ellas, bastante útil por cierto. BUTTON se encuentra ampliamente soportada en la actualidad.</p>
+        <p>Esta etiqueta proporciona un método único para la implementación de cualquier tipo de botón de formulario. Sus principales atributos son:</p>
+        <ul>
+            <li>TYPE: Indica el tipo de botón que se va a crear. Los valores posibles son: submit, reset y button.</li>
+            <li>NAME: Nombre del botón, que se enviará al servidor si el botón es de tipo submit.</li>
+            <li>VALUE: Valor del botón, que se enviará al servidor si el botón es de tipo submit.</li>
+        </ul>
+        <p>La principal ventaja que aporta estas etiquetas es que ahora vamos a poder introducir dentro de ellas cualquier elemento de HTML, como imágenes y tablas.</p>
+        <p>Podemos ver un ejemplo a continuación.</p>
+        <pre>
+            <code>
+                &lt;form action="#" method="post" enctype="text/plain" name="miform"&gt; 
+                &lt;button name="boton_1" type="button"&gt; 
+                &lt;table width="10" cellspacing="0" cellpadding="2" border="1"&gt; 
+                &lt;tr&gt; 
+                &lt;td&gt;uno&lt;/td&gt; 
+                &lt;td&gt;dos&lt;/td&gt; 
+                &lt;/tr&gt; 
+                &lt;tr&gt; 
+                &lt;td&gt;tres&lt;/td&gt; 
+                &lt;td&gt;cuatro&lt;/td&gt; 
+                &lt;/tr&gt; 
+                &lt;/table&gt; 
+                &lt;/button&gt; 
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p><b>Referencia:</b> Si deseas aprender algo más sobre la etiqueta BUTTON te recomendamos leer el artículo Botones HTML con la etiqueta BUTTON.</p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta Iframe</title>
+</head>
+<body>
+    <section>
+        <h2>Explicamos detenidamente la etiqueta IFRAME de HTML y todos sus atributos, con algún ejemplo de uso.</h2>
+        <p>Los frames (frame en inglés significa marco) son unas herramientas que han tenido una historia dilatada en el desarrollo de páginas web con HTML. De ser una etiqueta no estándar ha pasado a ser soportada por todos los navegadores y formar parte de las especificaciones de HTML, para luego retirarse de nuevo del estándar en HTML5. No obstante, ha permanecido en uso y dentro del estándar una etiqueta hermana IFRAME que vamos a ver en este artículo, que todavía hoy tiene mucha utilidad.</p>
+        <p>En concreto iframe sirve para crear un espacio dentro de la página donde se puede incrustar otra web. Es un cuadrado cuyas dimensiones debe especificar el desarrollador en la propia página, incluidas por los atributos width y height en la propia etiqueta IFRAME.</p>
+        <p>El iframe tiene asociada una página web, que se carga en el espacio y operará de manera totalmente independiente. Esa página web tendrá sus propios contenidos y estilos. Además será perfectamente funcional: si tiene enlaces se mostrarán en ese mismo espacio y si tiene scripts o aplicaciones dentro se ejecutarán también de manera autónoma en el espacio reservado al iframe.</p>
+        <p>Nota: Si andas buscando información sobre los frames tradicionales, en DesarrolloWeb.com ya hemos hablado mucho sobre ellos y aunque ya no están dentro del estándar actual del HTML todavía los navegadores los interpretan, por compatibilidad con las páginas antiguas. Puedes comenzar la lectura en el artículo Frames en HTML.</p>
+        <p>En este artículo vamos a hablar la etiqueta "hermana" que es a día de hoy mucho más usada, porque resulta más útil y menos problemática que los propios frames. IFRAME fue un tag introducido en las especificaciones de HTML 4.0.</p>
+    </section>
+    <section>
+        <h2>Donde resulta de utilidad el IFRAME</h2>
+        <P>Iframe se utiliza en muchos contextos. Dentro de un iframe podemos mostrar contenidos de otras páginas, como si estuvieran en la nuestra, por lo que sirven para ejemplos como:</P>
+        <ul>
+            <li>Códigos de banner, que se invocan por medio de un iframe pidiendo los datos del banner generalmente a un servidor de banners que puede estar en otra red.</li>
+            <li>Visualizar contenidos de terceros, como bloques de noticias o novedades que ofrecen en otras webs.</li>
+            <li>Interfaces de usuario, en el que ciertas actividades se realizan de forma autónoma y el procesamiento está en otra página web.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Uso de iframe frente a frame</h2>
+        <p>Actualmente la etiqueta iframe se utiliza más a menudo que la etiqueta frame, porque no da tantos problemas como esta. La diferencia principal está basada en que la etiqueta iframe no necesita una declaración de los espacios de los frames o frameset, porque se incrusta en el código HTML de la página. El iframe, por tanto, no provoca problemas de navegación, como los que ocurren con los frames normales si no se entra correctamente a través del frameset.</p>
+        <p>También, ya que no existe el frameset en los iframe, no adolece de los problemas del uso de frames, sobretodo a la hora en que la página es indexada en los motores de búsqueda.</p>
+        <p>Por decirlo de alguna manera, trabajar con iframe o frames flotantes es tan sencillo como hacer una tabla, que se codifica dentro de la maqueta HTML, con su espacio reservado dentro de la página. Así, la única diferencia con respecto a una tabla es que el contenido del iframe se extrae de otra página web.</p>
+    </section>
+    <section>
+        <h2>Construcción de la etiqueta iframe</h2>
+        <p>Como decimos, el iframe se coloca directamente en el código HTML, en el lugar donde queremos que aparezca.</p>
+        <p>Se colocaría con un código como este:</p>
+        <code>&lt;iframe src="pagina_fuente.html" width="290" height="250"&gt;Texto para cuando el navegador no conoce la etiqueta iframe&lt;/iframe&gt;</code>
+        <p>Como se ve, los atributos principales de iframe son la página web que se va a mostrar en el espacio y el ancho y alto del recuadro que reservemos para el frame flotante.</p>
+        <p>Como se puede ver, la etiqueta iframe tiene su correspondiente etiqueta de cierre. Todo el texto que coloquemos entre la etiqueta de inicio y la de cierre es texto alternativo, que sólo se mostrará en caso que el navegador del visitante no acepte la etiqueta iframe.</p>
+    </section>
+    <section>
+        <h2>Todos los atributos iframe</h2>
+        <p>Ahora vamos a ver cuáles serían los atributos disponibles para la etiqueta iframe. No obstante, cabe ya señalar que algunos de los atributos que vamos a ver se engloban más en el terreno de los estilos y por tanto se podrían, y sería más correcto, especificar dentro de las CSS.</p>
+        <p><b>src:</b> Para indicar la página web que se mostrará en el espacio del frame flotante.</p>
+        <p><b>width:</b> Para definir la anchura del recuadro del iframe</p>
+        <p><b>height:</b> Para definir la altura del iframe</p>
+        <p><b>name:</b> Para especificar el nombre del frame, que podemos utilizar luego para referirnos a él con el target de los links, o mediante javascript.</p>
+        <p><b>id:</b> Para indicar el identificador del iframe, y poder referirnos a él desde javascript.</p>
+        <p><b>frameborder:</b> para definir si queremos o no que haya un borde en el frame. Los valores posibles son 0 | 1. frameborder=0 indicaría que no queremos borde y frameborder=1 que sí.</p>
+        <p><b>scrolling:</b> indica si se quiere que aparezcan barras de desplazamiento para ver los contenidos del iframe completo, en el caso que no aparezcan en el espacio reservado para el iframe. Los valores posibles son: yes | no | auto. El valor "yes" es para que aparezcan siempre las barras de desplazamiento o barras de scroll, "no" sirve para que no aparezcan nunca y "auto" es para que aparezcan sólo cuando son necesarias (es el valor por defecto)</p>
+        <p><b>marginwidth:</b> Para definir el margen a izquierda y derecha que debe tener la página que va dentro del iframe, con respecto al borde. Este margen va en pixels, pero prevalecerá el margen que pueda tener asignada la página web que mostremos en el frame flotante.</p>
+        <p><b>marginheight:</b> lo mismo que marginwidth, pero en este caso para el tamaño del margen por la parte de arriba y abajo.</p>
+        <p><b>margin:</b> para especificar alineación del frame, igual que se especifica para las imágenes.</p>
+        <p><b>style y class:</b> los atributos para definir el aspecto del iframe por medio de hojas de estilo css.</p>
+        <p>Para acabar, aquí vemos otro ejemplo de iframe con unos cuantos atributos más:</p>
+        <code>&lt;iframe name="miframeflotante" src="colabora.htm" width="400" height="550" frameborder="0" scrolling="yes" marginwidth="2" marginheight="4" align="left"&gt;Tu navegador no soporta frames!!&lt;/iframe&gt;</code>
+    </section>
+</body>
+</html>
