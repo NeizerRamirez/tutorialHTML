@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/FormatoBasicoHTML/FormatoParrafos.png" width="100%" alt="prologo" >
+    </header>
+
+    <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="3%" height="3%" alt="Volver al inicio"> </a> 
+    
+    <p>> <a href="/HTML/Principal.html">Manual de HTML</a></p>
+
+    <br>
+
+    <img src="/Imagenes/calendario.png">
+    <p>29 de septiembre de 2016</p>
+
+    <h3>Cómo colocar párrafos y saltos de línea en páginas web. También vemos los encabezados como párrafos que sirven de titulo.</h3>
+
+    <p>
+        En los capítulos anteriores hemos presentado a título de ejemplo algunas etiquetas que permiten dar formato a nuestro texto. En este capitulo veremos con más detalle las más ampliamente utilizadas y ejemplificaremos algunas de ellas posteriormente.
+    </p> 
+
+    <p>Formatear un texto pasa por tareas tan evidentes como definir los párrafos, justificarlos, introducir viñetas, numeraciones o bien poner en negrita, itálica...</p>
+
+    <p>Hemos visto que para definir los párrafos nos servimos de la etiqueta P que introduce un salto y deja una línea en blanco antes de continuar con el resto del documento.</p>
+
+    <p>Podemos también usar la etiqueta BR, de la cual no existe su cierre correspondiente (/BR), para realizar un simple retorno de carro con lo que no dejamos una línea en blanco sino que solo cambiamos de línea.</p>
+
+
+    <p><b>Nota:</b> Existen otras etiquetas que no tienen su correspondiente de cierre, como IMG para las imágenes, que veremos más adelante. Esto ocurre porque un salto de línea o una imagen no empiezan y acaban más adelante sino que sólo tienen presencia en un lugar puntual.</p>
+
+    <p>Podéis comprobar que cambiar de línea en nuestro documento HTML sin introducir alguna de estas u otras etiquetas no implica en absoluto un cambio de línea en la página visualizada. En realidad el navegador introducirá el texto y no cambiara de línea a no ser que esta llegue a su fin o bien lo especifiquemos con la etiqueta correspondiente.</p>
+
+    <p>Los párrafos delimitados por etiquetas P pueden ser fácilmente justificados a la izquierda, centro o derecha especificando dicha justificación en el interior de la etiqueta por medio de un atributo "align". Un atributo no es más que un parámetro incluido en el interior de la etiqueta que ayuda a definir el funcionamiento de la etiqueta de una forma más personalizada. Veremos a lo largo de este manual cantidad de atributos muy útiles para todo tipo de etiquetas.</p>
+
+
+    <p><b>Nota:</b> Ten muy en cuenta lo siguiente, que ya hemos comentado anteriormente. El HTML se usa para definir el contenido. Por tanto, los atributos align que vamos a conocer a continuación se están metiendo a una parcela que no le corresponde al HTML, porque están definiendo la forma con la que un párrafo debe de representarse, su estilo, y no el contenido. Es importante señalarlo para que aprendas que estas cosas se deben hacer mediante el lenguaje CSS, que sirve para definir el estilo, la forma. En la revisión de este texto en 2016 hemos decidido mantener estos ejemplos, a pesar que no es el uso más correcto del HTML, porque así nos sirve para introducir los atributos de las etiquetas, que no hemos visto hasta ahora. No obstante, tú lo tendrás en cuenta cuando realices tus páginas y aprenderás CSS para ver cómo se deben de aplicar estos formatos.</p>
+
+    <p>Así, si deseásemos introducir un texto alineado a la izquierda escribiríamos:</p>
+
+    <pre>
+        <code>
+        &lt;p align="left"&gt;Texto alineado a la izquierda&lt;/p&gt;  
+        Para una justificación al centro:  
+        
+        &lt;p align="center"&gt;Texto alineado al centro&lt;/p&gt;  
+        Para alinear a la derecha:  
+        
+        &lt;p align="right"&gt;Texto alineado a la derecha&lt;/p&gt;
+        </code>
+    </pre>
+        
+    <p>Los anteriores párrafos con sus alineaciones se verían más o menos así:</p>
+
+    <p align="left">Texto alineado a la izquierda</p>
+    <p align="center">Texto alineado al centro</p>
+    <p align="right">Texto alineado a la derecha</p>
+
+
+    <br><br>
+
+
+
+
+    <p>Como veis, en cada caso el atributo align toma determinados valores que son escritos entre comillas. En algunas ocasiones necesitamos especificar algunos atributos para el correcto funcionamiento de la etiqueta. En otros casos, el propio navegador toma un valor definido por defecto. Para el caso de align, el valor por defecto es left.</p>
+
+
+    <p>Nota: Los atributos tienen sus valores indicados entre comillas ("), pero si no los indicamos entre comillas también funcionará en la mayoría de los casos. Sin embargo, es aconsejable que pongamos siempre las comillas para acostumbrarnos a utilizarlas, por dar homogeneidad a nuestros códigos y para evitar errores futuros en sistemas más quisquillosos.</p>
+    <p>El atributo align no es exclusivo de la etiqueta P. Otras etiquetas muy comunes, que veremos más adelante, entre las cuales se introducen texto o imágenes, suelen hacer uso de este atributo de una forma habitual.</p>
+
+    <p>Imaginemos un texto relativamente largo donde todos los párrafos están alineados a la izquierda (por ejemplo). Una forma de simplificar nuestro código y de evitar introducir continuamente el atributo align sobre cada una de nuestras etiquetas es utilizando la etiqueta DIV.</p>
+
+    <p>Esta etiqueta, DIV, por si sola no sirve para nada, salvo producir un salto de línea simple. Para que realmente se vea tiene que estar acompañada de algún estilo definido en el CSS o de atributos del HTML como align y lo que nos permite es alinear cualquier elemento (párrafo o imagen) de la manera que nosotros deseemos.</p>
+
+    <p>Así, el código:</p>
+
+    <pre>
+        <code>
+        &lt;p align="left"&gt;Parrafo1&lt;/p&gt; 
+        &lt;p align="left"&gt;Parrafo3&lt;/p&gt; 
+        &lt;p align="left"&gt;Parrafo2&lt;/p&gt; 
+
+        <p>es equivalente a:</p>
+    
+        &lt;div align="left"&gt; 
+            &lt;p&gt;Parrafo1&lt;/p&gt; 
+            &lt;p&gt;Parrafo2&lt;/p&gt; 
+            &lt;p&gt;Parrafo3&lt;/p&gt; 
+        &lt;/div&gt;
+        </code>
+    </pre>
+    
+
+    <p>Nota: Recuerda que align tampoco sería correcto de usar en una etiqueta DIV, por el mismo motivo que no sería correcto de usar en un párrafo. Nos sirve para conocer facetas del HTML, que antes se usaban más y nos han quedado heredadas en las versiones actuales del lenguaje.</p>
+
+    <p>Como hemos visto, la etiqueta DIV marca divisiones en las que definimos un bloque de contenido, y a los que podríamos aplicar estilo de manera global, aunque lo correcto sería aplicar ese estilo del lado del CSS.</p>
+
+    <h2>Ejemplo práctico:</h2>
+    <p>Para practicar un poco lo que acabamos de ver vamos a proponer un ejercicio que podéis resolver en vuestros ordenadores. Simplemente queremos construir una página que tenga, por este orden:</p>
+
+    <p>
+        2 Párrafos centrados<br>
+        3 Párrafos alineados a la derecha<br>
+        Un salto de línea triple<br>
+        1 párrafo alineado a la izquierda<br>
+    </p>
+
+    <p>El código fuente del ejercicio, con lo que sabemos hasta ahora, podría tener la siguiente forma:</p>
+
+    <pre>
+        <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;title&gt;parrafos&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+    
+            &lt;p align="center"&gt;
+                Ejemplo de formatear parrafos
+            &lt;/p&gt;
+            &lt;p align="center"&gt;
+                Esto es el resultado:
+            &lt;/p&gt;
+    
+            &lt;div align="right"&gt;
+                &lt;p&gt;
+                    Que son los buscadores que no tienen porque mantener un índice y que tienen robots que constantemente recorren Internet en busca de nuevas páginas para incluirlas en el buscador.
+                &lt;/p&gt;
+                &lt;p&gt;
+                    Imaginemos un texto relativamente largo donde todos los párrafos están alineados a la izquierda (por ejemplo).
+                &lt;/p&gt;
+                &lt;p&gt;
+                    Que son los buscadores que no tienen porque mantener un índice y que tienen robots que constantemente recorren Internet en busca de nuevas páginas para incluirlas en el buscador. Estos buscadores suelen tener un formulario accesible desde la página inicial, con el enlace correspondiente. No hay que navegar las categorías para acceder al formulario.
+                &lt;/p&gt;
+            &lt;/div&gt;
+    
+            &lt;br&gt;
+            &lt;br&gt;
+            &lt;br&gt;
+    
+            &lt;p&gt;
+                Esto es que acaba... hasta luego...
+            &lt;/p&gt;
+    
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </code>
+    </pre>
+    
+    Al verlo en un navegador obtendríamos un resultado como el que sigue:
+
+    
+    <p align="center">
+        Ejemplo de formatear parrafos
+        </p>
+        <p align="center">
+        Esto es el resultado:
+        </p>
+    
+        <div align="right">
+        <p>
+        Que son los buscadores que no tienen porque mantener un índice y que tienen robots que constantemente recorren Internet en busca de nuevas páginas para incluirlas en el buscador.
+        </p>
+        <p>
+        Imaginemos un texto relativamente largo donde todos los párrafos están alineados a la izquierda (por ejemplo).
+        </p>
+        <p>
+        Que son los buscadores que no tienen porque mantener un índice y que tienen robots que constantemente recorren Internet en busca de nuevas páginas para incluirlas en el buscador. Estos buscadores suelen tener un formulario accesible desde la página inicial, con el enlace correspondiente. No hay que navegar las categorías para acceder al formulario.
+        </p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <p>
+        Esto es que acaba... hasta luego...
+        </p>
+    
+
+
+    <h2>Encabezados</h2>
+    <p>Existen otras etiquetas para definir párrafos especiales, que harán las veces de títulos. Son los encabezados o headings en inglés. Como decimos, son etiquetas que formatean el texto como un titular, pero el hecho de que cambien el formato no es lo que nos tiene que preocupar, sino el significado en sí de la etiqueta. Es cierto que los navegadores asignan un tamaño mayor de letra y colocan el texto en negrita, pero lo importante es que sirven para definir la estructura del contenido de un documento HTML. Así los navegadores para ciegos podrán informar a los invidentes que esta es una división nueva de contenido y que su titular es este o aquel. También motores de búsqueda sabrán interpretar mejor el contenido de una página en función de los titulares y subtitulares.</p>
+
+    <p>Hay varios tipos de encabezados, que se diferencian visualmente en el tamaño de la letra que utilizan. La etiqueta en concreto es la H1, para los encabezados más grandes, H2 para los de segundo nivel y así hasta H6 que es el encabezado más pequeño. Pero lo importante, insistimos es la estructura que denotan. Una página tendrá generalmente un encabezado de nivel 1 y dentro varios de nivel 2. Luego, dentro de los H2 encontraremos si acaso H3, etc. Nunca debemos usar los encabezados porque nos formateen el texto de una manera dada, sino porque nuestro documento lo requiera según su estructura.</p>
+
+    <p>Los encabezados implican también una separación en párrafos, así que todo lo que escribamos dentro de H1 y su cierre (o cualquier otro encabezado) se colocará en un párrafo independiente.</p>
+
+    <p>Podemos ver cómo se presentan algunos encabezados a continuación.</p>
+
+    <pre>
+        <code>
+        &lt;h1&gt;Encabezado de nivel 1&lt;/h1&gt;
+        </code>
+    </pre>
+
+    <p>Los encabezados, como otras etiquetas de HTML, soportan el atributo align. Vemos un ejemplo de encabezado de nivel 2 alineado al centro, aunque repetimos que esta formatación debería hacerse en CSS.</p>
+
+    <pre>
+        <code>
+        &lt;h1&gt;Encabezado de nivel 2&lt;/h1&gt;
+        </code>
+    </pre>
+    
+    <p>Los encabezados se verán de esta manera en la página:</p>
+    <h1>Encabezado de nivel 1</h1>
+    <h2>Encabezado de nivel 2</h2>
+    <h3>Encabezado de nivel 3</h3>
+    <h4>Encabezado de nivel 4</h4>
+    <h5>Encabezado de nivel 5</h5>
+    <h6>Encabezado de nivel 6</h6>
+</body>
+</html>

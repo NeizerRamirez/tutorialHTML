@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/IntroduccionHTML/Prologo.png" width="100%" alt="prologo" >
+    </header>
+
+    <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="3%" height="3%" alt="Volver al inicio"> </a> 
+    
+    <p>> <a href="/HTML/Principal.html">Manual de HTML</a></p>
+
+    <br>
+
+    <img src="/Imagenes/calendario.png">
+    <p>Última actualización: 24 de octubre de 2020</p>
+
+    <h3>En este artículo vamos a explicar y aportar ejemplos sobre las listas ordenadas, que se consiguen con la etiqueta ol, en el lenguaje HTML.</h3>
+
+    <img src="/Imagenes/Parte1/ListasHTML/ListasOrdenadasHeader.png" width="100%" alt="Imagen1" >
+
+
+    <p>Estamos en el Manual de HTML y continuamos estudiando las listas de HTML, con las que crear estructuras atractivas para presentar la información. En el capítulo anterior vimos las listas desordenadas y ahora estudiaremos las listas ordenadas.</p>
+
+    <h2>Listas ordenadas</h2>
+    <p>Las listas ordenadas sirven también para presentar información, en diversos elementos o items, con la particularidad que éstos estarán predecidos de un número o una letra para enumerarlos, siempre por un orden.</p>
+
+    <p>Para realizar las listas ordenadas usaremos las etiquetas OL (ordered list) y su cierre. Cada elemento sera igualmente indicado por la etiqueta LI, que ya vimos en las listas desordenadas.</p>
+
+    <p>Pongamos un ejemplo:</p>
+
+
+    <pre>
+        <code>
+        &lt;p&gt;Reglas de comportamiento en el trabajo&lt;/p&gt; 
+        &lt;ol&gt; 
+            &lt;li&gt;El jefe siempre tiene la razón 
+            &lt;li&gt;En caso de duda aplicar regla 1 
+        &lt;/ol&gt;
+        </code>
+    </pre>
+    
+    <p>El resultado es:</p>
+
+    <p>Reglas de comportamiento en el trabajo</p> 
+    <ol> 
+    <li>El jefe siempre tiene la razón 
+    <li>En caso de duda aplicar regla 1 
+    </ol>
+
+
+
+    <p>Del mismo modo que para las listas desordenadas, las listas ordenadas ofrecen la posibilidad de modificar el estilo. En concreto nos es posible especificar el tipo de numeración empleado eligiendo entre números (1, 2, 3...), letras (a, b, c...) y sus mayúsculas (A, B, C,...) y números romanos en sus versiones mayúsculas (I, II, III,...) y minúsculas (i, ii, iii,...).</p>
+
+    <p>Para realizar dicha selección hemos de utilizar, como para el caso precedente, el atributo type, el cual será situado dentro de la etiqueta OL. Los valores que puede tomar el atributo en este caso son:</p>
+
+    <p><b>Nota:</b> Recordamos que en algunos navegadores no funciona la opción de cambiar el tipo de viñeta a mostrar.</p>
+    <p>Puede que en algún caso deseemos comenzar nuestra enumeración por un número o letra que no tiene por qué ser necesariamente el primero de todos. Para solventar esta situación, podemos utilizar un segundo atributo, start, que tendra como valor un número. Este número, que por defecto es 1, corresponde al valor a partir del cual comenzamos a definir nuestra lista. Para el caso de las letras o los números romanos, el navegador se encarga de hacer la traducción del número a la letra correspondiente.</p>
+
+    <p>Os proponemos un ejemplo usando este tipo de atributos:</p>
+
+    <pre>
+        <code>
+        &lt;p&gt;Ordenamos por números&lt;/p&gt;
+    
+        &lt;ol type="1"&gt; 
+            &lt;li&gt;Elemento 1 
+            &lt;li&gt;Elemento 2 
+        &lt;/ol&gt; 
+    
+        &lt;p&gt;Ordenamos por letras&lt;/p&gt; 
+        &lt;ol type="a"&gt; 
+            &lt;li&gt;Elemento a 
+            &lt;li&gt;Elemento b 
+        &lt;/ol&gt;
+    
+        &lt;p&gt;Ordenamos por números romanos empezando por el 10&lt;/p&gt;
+    
+        &lt;ol type="i" start="10"&gt; 
+            &lt;li&gt;Elemento x 
+            &lt;li&gt;Elemento xi 
+        &lt;/ol&gt;
+        </code>
+    </pre>
+    
+    <p>El resultado</p>
+    <p>Ordenamos por números</p>
+
+    <ol type="1"> 
+    <li>Elemento 1 
+    <li> Elemento 2 
+    </ol> 
+
+    <p>Ordenamos por letras</p> 
+    <ol type="a"> 
+    <li>Elemento a 
+    <li> Elemento b 
+    </ol>
+
+    <p>Ordenamos por números romanos empezando por el 10</p>
+
+    <ol type="i" start="10"> 
+    <li>Elemento x 
+    <li> Elemento xi 
+    </ol>
+</body>
+</html>
