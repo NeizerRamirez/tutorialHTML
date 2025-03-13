@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/IntroduccionHTML/Prologo.png" width="100%" alt="prologo" >
+    </header>
+
+    <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="3%" height="3%" alt="Volver al inicio"> </a> 
+    
+    <p>> <a href="/HTML/Principal.html">Manual de HTML</a></p>
+
+    <br>
+
+    <p> <img src="/Imagenes/calendario.png"> Última actualización: 22 de febrero de 2024</p>
+
+    <h3>Explicaciones detalladas sobre la etiqueta IMG para la incorporación de imágenes en los documentos HTML y los atributos que podemos especificar para personalizar cómo se comportarán esas imágenes en la página web.</h3>
+<section>
+    
+        <img src="/Imagenes/Parte1/ImagenesYGraficos/ImagenEjemplo.png">
+    
+        <p>Sin duda uno de los aspectos más vistosos y atractivos de las páginas web es el grafismo. La introducción en nuestro texto de imágenes puede ayudarnos a explicar más fácilmente nuestra información y darle un aire mucho más estético. El abuso no obstante puede conducirnos a una sobrecarga que se traduce en una distracción para el navegante, quien tendrá más dificultad en encontrar la información necesaria.</p>
+    
+        <p>El uso de imágenes también tiene que ser realizado con cuidado porque aumentan el tiempo de carga de la página, lo que puede ser de un efecto nefasto si nuestro visitante no tiene una buena conexión o si es un poco impaciente. Por ello es recomendable siempre optimizar las imágenes para Internet, haciendo que su tamaño en bytes sea lo mínimo posible, para facilitar la descarga, pero sin que ello comprometa mucho su calidad.</p>
+    
+        <p>En este capitulo no explicaremos como crear ni tratar las imágenes, únicamente diremos que para ello se utilizan aplicaciones como Paint Shop Pro, Photoshop o Gimp. Tampoco explicaremos las particularidades de cada tipo de archivo: GIF, JPG o PNG y la forma de optimizar nuestras imágenes. Un capitulo posterior al respecto será dedicado a este menester: Formatos gráficos para páginas web.</p>
+    
+        <p>Las imágenes son almacenadas en forma de archivos, principalmente GIF (para dibujos) o JPG (para fotos). Estos archivos los podemos obtener desde diversas vías, como por ejemplo nuestra cámara digital, aunque también pueden ser creados por nosotros mismos con algún editor gráfico o pueden ser descargados gratuitamente en sitios web especializados.</p>
+    
+        <p>Así pues, en estos primeros capítulos nos limitaremos a explicar como insertar y alinear debidamente en nuestra página una imagen ya creada.</p>
+    
+        <p>La etiqueta que utilizaremos para insertar una imagen es IMG (image). Esta etiqueta no posee su cierre correspondiente y en ella hemos de especificar obligatoriamente el paradero de nuestro archivo gráfico mediante el atributo src (source).</p>
+    
+        <p>La sintaxis queda entonces de la siguiente forma:</p>
+    
+        <pre>
+            <code>
+                &lt;img src=&quot;camino_hacia_el_archivo.jpg&quot;&gt;
+            </code>
+        </pre>
+    
+        <p>Para expresar el camino, lo haremos de la misma forma que vimos para los enlaces. Las reglas siguen siendo las mismas, lo único que cambia es que, en lugar de una página destino, el destino es un archivo gráfico. En el código anterior estamos enlazando con un archivo con extensión .jpg, pero podrá ser otro tipo de archivo como .gif o .png, tal como se explica en el mencionado artículo sobre los formatos gráficos permitidos en una página web.</p>
+    
+        <p>Aparte de este atributo, indispensable obviamente para la visualización de la imagen, la etiqueta IMG nos propone otra serie de atributos de mayor o menor utilidad, que listamos a continuación:</p>
+</section>
+
+    <section>
+        <h2>Atributo alt</h2>
+        <p>Dentro de las comillas de este atributo colocaremos una brevísima descripción de la imagen. Esta etiqueta no es indispensable pero presenta varias utilidades. La sintaxis te quedaría de esta manera:</p>
+        <pre>
+            <code>
+                &lt;img src=&quot;mi_archivo.png&quot; alt=&quot;Descripci&oacute;n de esta maravillosa imagen&quot;&gt;
+            </code>
+        </pre>
+        <p>Primeramente, sirve para el posicionamiento de la página en buscadores. De los atributos alt el buscador puede extraer palabras clave y le ayuda a entender qué función o contenido tiene la imagen, y por lo tanto la página.</p>
+        <p>Otra utilidad importante la encontramos en determinadas aplicaciones, usadas por personas con discapacidad. Navegadores para ciegos, por ejemplo, no muestran las imágenes y por tanto los alt ofrecen la posibilidad de leerlas. Nunca esta de más pensar en crear páginas accesibles.</p>
+        <p>Por último, aunque ya menos importante en 2016, durante el proceso de carga de la página y cuando la imagen no ha sido todavía cargada, el navegador podría mostrar esta descripción, con lo que el navegante se puede hacer una idea de lo que va en ese lugar. Si hubo problemas de conexión y no se pudo mostrar la imagen, también podría usarse ese alt para mostrar al menos su descripción. En el pasado incluso era normal que algunos usuarios navegasen por la red con una opción del navegador que desactiva el muestreo de imágenes, con lo que tales personas podrán siempre saber de qué se trata el gráfico y eventualmente cambiar a modo con imágenes para visualizarla.</p>
+        <p>En general podemos considerar como aconsejable el uso de este atributo, salvo para imágenes de poca importancia. Si la imagen es usada como cuerpo de un enlace todavía se hace más indispensable.</p>
+    </section>
+
+    <section>
+        <h2>Atributos height y width</h2>
+        <p>Estos atributos definen la altura y anchura respectivamente de la imagen en píxeles. Aunque estas dimensiones forman parte del estilo de la imagen, y por tanto podrían ir en el CSS, todavía puede ser interesante definirlas dentro del HTML. De nuevo, en 2016 ya no es tan indispensable, puesto que muchos sitios creados con "Responsive Web Design" prefieren que las imágenes se adapten al tamaño de la pantalla donde se va a visualizar.</p>
+        <p>Todos los archivos gráficos poseen unas dimensiones de ancho y alto. Estas dimensiones pueden obtenerse a partir del propio diseñador grafico o bien haciendo clic con el botón derecho sobre la imagen, vista desde el explorador de archivos de tu ordenador, para luego elegir "propiedades" o "información de la imagen" sobre el menú que se despliega.</p>
+        <p>Un ejemplo de etiqueta IMG con sus valores de anchura y altura declarados te quedaría así:</p>
+        <pre>
+            <code>
+                &lt;img src=&quot;mi-imagen.gif&quot; width=&quot;200&quot; height=&quot;300&quot;&gt;
+            </code>
+        </pre>
+        <p>Aunque este punto actualmente no tiene tanta importancia, puesto que ahora contamos con conexiones más rápidas, el hecho de explicitar en nuestro código las dimensiones de nuestras imágenes ayuda al navegador a confeccionar la página de la forma que nosotros deseamos antes incluso de que las imágenes hayan sido descargadas. Cuando las dimensiones de las imágenes han sido proporcionadas, durante el proceso de carga, el navegador reservara el espacio correspondiente a cada imagen creando una maquetación correcta. El usuario podrá comenzar a leer tranquilamente el texto sin que este se mueva de un lado a otro cada vez que una imagen se cargue.</p>
+        <p>Además de esta utilidad, el alterar los valores de estos dos atributos, es una forma inmediata de redimensionar nuestra imagen. Este tipo de utilidad no es siempre aconsejable dado que, si lo que pretendemos es aumentar el tamaño, la perdida de calidad de la imagen será sensible. Inversamente, si deseamos disminuir su tamaño, estaremos usando un archivo más pesado en KB de lo necesario para la imagen que estamos mostrando con lo que aumentamos el tiempo de descarga de nuestro documento innecesariamente.</p>
+        <p><b>Nota:</b> Como ves, muchas cosas han cambiado sobre el tema de las imágenes en 2016. Este último punto merece una mención especial, puesto que en los últimos años han aparecido (y cada vez son más comunes) pantallas de una resolución de píxeles mayor. Son pantallas donde un pixel lógico se representa con varios píxeles físicos. A esto se llama la densidad de píxeles. Teléfonos móviles de alta gama y ordenadores también de alta gama suelen tener este tipo de pantallas para conseguir una mayor nitidez. En esos casos, aunque una imagen se reduzca y no se vea a su tamaño natural (por ejemplo, una imagen de 1000 píxel se redimensiona para que ocupe solo 400 píxel), todos los puntos de la imagen servirán para que se vean con mayor nitidez en las pantallas grandes. Si te interesa profundizar sobre este punto te recomendamos la lectura de los artículos Imágenes responsive o Mejorar la experiencia de usuario en sitios Responsive.</p>
+        <p>Es importante hacer hincapié en este punto ya que muchos debutantes tienen esa mala costumbre de crear gráficos pequeños redimensionando la imagen por medio de estos atributos a partir de archivos de tamaño descomunal. Hay que pensar que el tamaño de una imagen con unas dimensiones de la mitad no se reduce a la mitad, sino que resulta ser aproximadamente 4 veces inferior.</p>
+    </section>
+
+    <section>
+        <h2>Imágenes que son enlaces y el atributo border</h2>
+        <p>Ni que decir tiene que una imagen, lo mismo que un texto, puede servir de enlace. Vista la estructura de los enlaces en HTML, podemos muy fácilmente adivinar el tipo de código necesario:</p>
+        <pre>
+            <code>
+                &lt;a href=&quot;archivo.html&quot;&gt;&lt;img src=&quot;imagen.gif&quot;&gt;&lt;/a&gt;
+            </code>
+        </pre>
+        
+        <p>El problema de hacer esto en ciertos navegadores es que se crea un borde en la imagen, del mismo color que el color configurado para los enlaces, lo que suele ser un efecto poco deseado.</p>
+        <p>Sin embargo, en HTML podemos indicar que una imagen tenga borde. Mediante el atributo "border" se define el tamaño en píxeles del cuadro que rodea la imagen. De esta forma podemos recuadrar nuestra imagen si lo deseamos. No es algo que se use mucho, pero resulta particularmente útil cuando deseamos eliminar el borde que aparece cuando la imagen sirve de enlace. En dicho caso tendremos que especificar border="0".</p>
+        <p><b>Nota:</b> El atributo border ya no es tan necesario, porque los enlaces que se hacen con contenido de imágenes ya no colocan ese borde feo en los gráficos. Esto en navegadores modernos, por lo que podría darse el caso que sí nos apareciera el borde en algunos casos. Aunque de cualquier modo, ese borde se puede eliminar igualmente con CSS y será la manera correcta de hacerlo, porque no deja de ser un estilo.</p>
+    </section>
+
+    <section>
+        <h2>Atributos vspace y hspace</h2>
+        <p>Sirven para indicar el espacio libre, en pixeles, que tiene que colocarse entre la imagen y los otros elementos que la rodean, como texto, otras imágenes, etc. Estos atributos forman parte también de la responsabilidad de las CSS, así que no sería recomendable usarlos.</p>
+    </section>
+
+    <section>
+        <h2>Atributo lowsrc</h2>
+        <p>Con este atributo podemos indicar un archivo de la imagen de baja resolución. Cuando el navegador detecta que la imagen tiene este atributo primero descarga y muestra la imagen de baja resolución (que ocupa muy poco y que se transfiere muy rápido). Posteriormente descarga y muestra la imagen de resolución adecuada (señalada con el atributo src, que se supone que ocupará más y será más lenta de transferir).</p>
+        <p>Este atributo está en desuso, aunque supone una ventaja considerable para que la descarga inicial de la web se realice más rápido y que un visitante pueda ver una muestra de la imagen mientras se descarga la imagen real. Lee el artículo de imágenes con la etiqueta picture para poder ver una alternativa más moderna.</p>
+        <h2>Lazy load de imágenes</h2>
+        <p>Una de las utilidades más interesantes de la etiqueta &lt;img&gt; es la posibilidad de realizar la carga perezosa de los ficheros gráficos, lo que comúnmente llamamos "lazy load". Esta es una práctica recomendable para los sitios web porque ayuda a optimizarlos y reducir la carga del servidor, así como la transferencia de datos.</p>
+        <p>El lazy load consiste en esperar a que las imágenes se carguen cuando realmente se necesitan. Imaginemos una página bastante larga con decenas o cientos de imágenes. Probablemente no todas esas imágenes se vean en la vista principal del documento HTML, sino que será necesario realizar scroll (desplazamiento) hacia abajo para que esas imágenes aparezcan en la parte visible de la página. Pues bien, todas aquellas imágenes que no aparecen en la primera zona visible del documento no tiene mucho sentido que se carguen al inicio, pues probablemente el usuario no haga scroll hacia abajo y, por tanto, es posible que nunca llegue a visualizarlas.</p>
+        <p>De modo que, para evitar la transferencia innecesaria de los archivos de las imágenes y que solo se descarguen los archivos gráficos cuando el usuario los va a visualizar, podemos activar la carga perezosa, lo que se consigue fácilmente, con un simple atributo en la etiqueta &lt;img&gt;.</p>
+        <pre>
+            <code>
+                &lt;img src=&quot;la-imagen.jpg&quot; loading=&quot;lazy&quot;&gt;
+            </code>
+        </pre>
+        
+        <p>Cómo puedes comprobar tenemos en la anterior etiqueta un atributo loading="lazy" que es el que provoca la activación del lazy loading.No tenemos que hacer nada más y gracias a este atributo conseguiremos una buena optimización de la página, sobre todo cuando se está visualizando documentos largos.</p>
+        <p>Si queremos que las imágenes se carguen inmediatamente podemos utilizar el valor del atributo loading="eager", pero la verdad es que no se suele implementar porque es el comportamiento predeterminado. De modo que poner ese atributo o no poner nada en realidad nos llevaría al mismo resultado.</p>
+        <p>Solo sería importante mencionar que este atributo es relativamente moderno y es posible que no todos los navegadores lo implementen. En todo caso, es una configuración recomendable, dado que utilizarlo no cuesta nada y por lo menos servirá en los navegadores que lo reconozcan.</p>
+    </section>
+
+    <section>
+        <h2>Ejemplo práctico</h2>
+        <p>Resultará obvio para los lectores hacer ahora una página que contenga una imagen varias veces repetida pero con distintos atributos.</p>
+        <p>Una de las veces que salga debe mostrarse con su tamaño originar y con un borde de 3 pixeles.</p>
+        <p>En otra ocasión la imagen aparecerá sin borde, con su misma altura y con una anchura superior a la original</p>
+        <p>También mostraremos la imagen sin borde, con su misma anchura y con una altura superior a la original</p>
+        <p>Por último, mostraremos la imagen con una altura y anchura mayores que las originales, pero proporcionalmente igual que antes.</p>
+        <p>Las dimensiones originales de la imagen son 28x21, así que este sería el código fuente:</p>
+        <pre>
+            <code>
+                &lt;img src=&quot;img1.gif&quot; width=&quot;28&quot; height=&quot;21&quot; alt=&quot;Tamaño original&quot; border=&quot;3&quot;&gt;
+                &lt;br&gt;
+                &lt;br&gt;
+                &lt;img src=&quot;img1.gif&quot; width=&quot;68&quot; height=&quot;21&quot; alt=&quot;Achatada&quot; border=&quot;0&quot;&gt;
+                &lt;br&gt;
+                &lt;br&gt;
+                &lt;img src=&quot;img1.gif&quot; width=&quot;28&quot; height=&quot;51&quot; alt=&quot;Alargada&quot; border=&quot;0&quot;&gt;
+                &lt;br&gt;
+                &lt;br&gt;
+                &lt;img src=&quot;img1.gif&quot; width=&quot;56&quot; height=&quot;42&quot; alt=&quot;Doble grande&quot; border=&quot;0&quot;&gt;
+            </code>
+        </pre>
+        
+        <p>Se puede ver en la siguiente imagen una muestra sobre cómo quedaría ese código al visualizarse en un navegador. Observa como se produce en algunos casos una deformación de las imágenes, debido a por un cambio no proporcional en las dimensiones.</p>
+        <img src="/Imagenes/Parte1/ImagenesYGraficos/DimensionesImagen.png" alt="Dimensiones de la imagen">
+    </section>
+
+</body>
+</html>
