@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintaxis</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/IntroduccionHTML/SintaxisHTML.png" width="100%" alt="prologo" >
+    </header>
+
+    <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="3%" height="3%" alt="Volver al inicio"> </a> 
+    
+    <p>> <a href="/HTML/Principal.html">Manual de HTML</a></p>
+
+    <br>
+
+    <img src="/Imagenes/calendario.png">
+    <p>29 de septiembre de 2016</p>
+
+    <h3>Descripción de la sintaxis con la que se trabaja en el lenguaje HTML, así como la estructura que tendrá el documento básico HTML.
+
+    </h3>
+
+    <p>
+        El HTML es un "lenguaje de marcado". Basa su sintaxis en un elemento base al que llamamos marca, tag o simplemente etiqueta. A través de las etiquetas vamos definiendo los elementos del documento, como enlaces, párrafos, imágenes, etc. Así pues, un documento HTML estará constituido por texto y un conjunto de etiquetas para definir la función que juega cada contenido dentro de la página. Todo eso servirá al navegador para saber cómo se tendrá que presentar el texto y otros elementos en la página.
+    </p>
+
+    <p>
+        Existen etiquetas para crear negritas, párrafos, imágenes, tablas, listas, enlaces, etc. Así pues, aprender HTML es básicamente aprenderse una serie de etiquetas, sus funciones, sus usos y saber un poco sobre cómo debe de construirse un documento básico. Es una tarea muy sencilla de afrontar, al alcance de cualquier personas, puesto que el lenguaje es muy entendible por los seres humanos.
+    </p>
+
+    <h2>Anatomía de una etiqueta HTML</h2>
+    <p>
+        La etiqueta presenta frecuentemente dos partes, su apertura y cierre, y se encierran ambas partes entre símbolos "menor que" y "mayor que". Lo veremos a continuación.
+    </p>
+
+    <h2>Apertura</h2>
+    <p>
+        El inicio de una etiqueta se produce de la siguiente manera:
+    </p>
+
+    <pre>
+        <code>
+            &lt;etiqueta&gt;
+        </code>
+    </pre>
+
+
+    <h2>Cierre</h2>
+    <p>
+        El final de una etiqueta se produce de manera similar a su apertura, aunque agregando una barra:
+    </p>
+    <pre>
+        <code>
+            &lt;/etiqueta&gt;
+        </code>
+    </pre>
+
+    Todo lo incluido en el interior de esa etiqueta sufrirá las modificaciones que caracterizan a esta etiqueta. Así por ejemplo:
+
+    <p>La etiqueta B define un texto en negrita. Si en nuestro documento HTML escribimos una frase con el siguiente código:</p>
+
+    <pre>
+        <code>
+            &lt;b&gt;Esto esta en negrita &lt;/b&gt;
+
+        </code>
+    </pre>
+
+
+    <p>Veremos que las palabras "Esto esta en negrita" aparecen en negrita. Es así de simple.</p>
+
+    <p>Otro ejemplo rápido. La etiqueta P define un párrafo. Si en nuestro documento HTML escribimos:</p>
+
+    <pre>
+        <code>
+            &lt;p&gt;Hola, estamos en el párrafo 1 &lt;/p&gt;
+            &lt;p&gt;Ahora hemos cambiado de párrafo &lt;/p&gt;
+
+
+        </code>
+    </pre>
+
+
+    <p>Como resultado obtendríamos dos párrafos con esos textos. En HTML los párrafos están separados por un doble salto de línea. Se verían más o menos de esta manera:</p>
+
+
+
+    <h2>Partes de un documento HTML</h2>
+    <p>Además de todo esto, un documento HTML ha de estar delimitado por la etiqueta HTML. Dentro de este documento, podemos asimismo distinguir dos partes principales:</p>
+
+    <p>La cabecera, delimitada por la etiqueta HEAD, donde colocaremos etiquetas de índole informativo, como por ejemplo el titulo de nuestra página. El contenido de la cabecera no suele aparecer en el cuerpo de la página, pero sirve a los navegadores y otros sistemas para encontrar información útil para entender y procesar el documento.</p>
+
+    <p>El cuerpo, flanqueado por la etiqueta BODY, que será donde colocaremos nuestro texto e imágenes delimitados a su vez por otras etiquetas como las que hemos visto.</p>
+
+    El resultado de un documento básico tiene la siguiente estructura:
+
+
+    <pre>
+        <code>
+            &lt;html&gt;
+            &lt;head&gt;
+            &lt;title&gt;Mi documento básico&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;p&gt;Este es el cuerpo de mi primera página HTML&lt;/p&gt;
+            &lt;p&gt;Este segundo párrafo también forma parte del cuerpo&lt;/p&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+    </pre>
+
+    <p>
+        <b>Nota:</b> A este documento básico le faltan todavía algunas cosas importantes que no queremos que nunca se te olviden. Sin embargo hablaremos de ellas en el siguiente artículo, dedicado a la página HTML básica.
+        Las mayúsculas o minúsculas son indiferentes al escribir etiquetas
+    </p>
+    <p>En HTML las mayúsculas y minúsculas son indiferentes. Quiere decir que las etiquetas pueden ser escritas con cualquier tipo de combinación de mayúsculas y minúsculas. Resulta sin embargo aconsejable acostumbrarse a escribirlas en minúscula ya que otras tecnologías que pueden convivir con nuestro HTML (XML por ejemplo) no son tan permisivas y nunca viene mal hacernos a las buenas costumbres desde el principio, para evitar fallos triviales en un futuro.</p>
+
+    <h2>Saltos de línea en HTML</h2>
+    <p>Otra de las cosas importantes de conocer sobre la sintaxis básica del HTML es que los saltos de línea no importan a la hora de interpretar una página. Un salto de línea será simplemente interpretado como un separador de palabras, un espacio en blanco. Es por ello que para separar líneas necesitamos usar la etiqueta de párrafo comentada antes, o la etiqueta BR que significa un salto de línea simple.</p>
+</body>
+</html>

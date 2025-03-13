@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los colores y HTML</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/FormatoBasicoHTML/ColoresHTML.png" width="100%" alt="prologo" >
+    </header>
+
+    <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="3%" height="3%" alt="Volver al inicio"> </a> 
+    
+    <p>> <a href="/HTML/Principal.html">Manual de HTML</a></p>
+
+    <br>
+
+    <img src="/Imagenes/calendario.png">
+    <p>29 de septiembre de 2016</p>
+
+    <h3>En este artículo aprenderás a crear colores en notación RGB con valores en hexadecimal, la manera más habitual de expresar un color en el lenguaje HTML. Explicamos la correcta utilización de los colores en el HTML.</h3>
+
+    <p>
+        En la composición de webs juegan un papel muy importante los colores. Usar una paleta de colores definida suele ayudar a la consistencia de un diseño y a transmitir ciertas sensaciones al usuario. Como parte de nuestro aprendizaje de HTML tenemos que detenernos a comprender cómo se expresan los colores en el lenguaje.
+    </p> 
+
+    <p>En HTML se usa una notación específica de especificar un color, compuesta por tres valores "RGB": Red, Green, Blue. Rojo, Verde y Azul. Es decir, que para conseguir un color cualquiera mezclaremos cantidades de cada uno de esos colores. RGB es el modelo usado para la creación de colores de los monitores y televisores, así que es un excelente modo de expresar color en un medio digital como una web.</p>
+
+    <p>Los valores RBG en HTML se indican en numeración hexadecimal, en base 16. (Los dígitos pueden crecer hasta 16. Como no hay tantos dígitos numéricos, se utilizan las letras de la A a la F).</p>
+
+
+
+    <p>Para conseguir un color, mezclaremos valores asignando dos dígitos a cada valor RBG. De esta manera: "#RRGGBB"</p>
+
+    <p>Como has observado, colocamos también una almohadilla "#" al principio, para indicar que esa cadena es un valor de color en hexadecimal.</p>
+
+    <p>Más adelante en el artículo veremos ejemplos en una grande paleta, com sus valores en RGB. No obstante ejemplos podrían ser #000000 para el negro, #FFFFFF para el blanco, #660000 sería un rojo oscuro o #FF0000 un rojo brillante.</p>
+
+    <p><b>Nota:</b> Habrás podido observar en alguna ocasión que los colores también se pueden expresar con algunas palabras, de hecho en el artículo sobre Color y tipo de letra ya lo comentamos. No obstante, es bastante más común escribir en RGB, porque es más versátil y podemos conseguir más fácilmente cualquier tonalidad deseada.</p>
+
+    <h2>Atributos de color en etiquetas HTML</h2>
+    <p>En HTML existen numerosas etiquetas que soportan atributos de color. Para que tengas una primera referencia, así se cambiaría la fuente para escribir en rojo:</p>
+
+
+    <pre>
+        <code>
+        &lt;font color="#FF0000"&gt;Rojo&lt;/font&gt;
+        </code>
+    </pre>
+
+    <p>Como ves, al Atributo color le damos un valor RGB en formato hexadecimal. El caracter # se coloca al principio de la cadena.</p>
+
+    <p><b>Nota: </b>De nuevo tenemos que advertir sobre la necesidad de expresar todo lo que son estilos mediante CSS. En HTML nos debemos centrar en lo que es escribir el contenido y en CSS en aplicar el estilo. Por supuesto, el color es más estilo que contenido, así que debería ir en el CSS. Es motivo por el cual toda la etiqueta FONT ha quedado en desuso, porque solamente nos servía para aplicar estilo. Para tu tranquilidad, en CSS los colores se pueden expresar de la misma manera que en HTML, por lo que no tendrás que aprender nada nuevo.</p>
+
+    <p>Por poner otro ejemplo, la etiqueta TABLE admite que se le exprese el color de fondo de la tabla. La veremos más adelante, pero lo consigues con el atributo bgcolor.</p>
+
+    <pre>
+        <code>
+        &lt;table bgcolor="#ff8030"&gt;
+        </code>
+    </pre>
+    
+    <h2>Combinar otros colores</h2>
+    <p>Al principio puede parecer difícil crear combinaciones de color con valores hexadecimales, pero con la práctica nos iremos acostumbrando y hasta seremos capaces de pensar un color y conseguir de cabeza un valor RGB aproximado. Nos vendrá bien tener en mente la rueda de colores:</p>
+
+
+    <p>Pero al final de lo que resulta más fácil echar mano es de un programa de diseño gráfico, que tiene selectores de color que nos suelen dar los valores RGB para que los podamos usar en cualquier programa. Algunos editores vienen con "color pickers" integrados para facilitar esta tarea, sin tener que cambiar de programa. La mayoría de los editores puede instalar de manera adicional plugins para implementar selectores de color, ya que es una demanda muy habitual de los desarrolladores.</p>
+
+    <p>Por ejemplo, otros colores RGB los puedes combinar así. Aunque al final de este artículo tienes una tabla de color completa.</p>
+    <img src="/Imagenes/Parte1/FormatoBasicoHTML/RGB.png" alt="RGB">
+
+
+
+    <h2>Colores seguros</h2>
+    <p>Debemos estar preparados para recibir visitas desde todo tipo de dispositivos y a todos les debemos ofrecer una adecuada experiencia de usuario. En lo que respecta a los colores, no podemos saber a priori qué tipo de pantalla va a tener la persona que nos visita y la resolución de color. Por eso una buena idea es usar aquellos colores considerados seguros: "Safe colors", colores compatibles con todos los sistemas.</p>
+
+    <p>Nota: Hoy la necesidad de usar colores seguros (aquellos que se verán bien en todos los monitores, independientemente de su paleta de color), no es tan grande como hace años, porque la tecnología ha evolucionado mucho y es raro encontrar un monitor que solo soporte 256 colores. No obstante es un conocimiento que resulta interesante por el hecho de remarcar la naturaleza universal de la web y la necesidad de construir páginas que sean capaces de adaptarse a cada medio donde va a ser consultada. En este manual de HTML no vamos a entrar en este tipo de detalles, pero si te interesan deberías leer el Manual de Responsive Web Design.</p>
+
+    <p>La forma de conseguir colores seguros es limitando nuestros colores a los que se pueden conseguir utilizando los siguientes valores:</p>
+
+    <ul>
+        <li>00</li>
+        <li>33</li>
+        <li>66</li>
+        <li>99</li>
+        <li>AA</li>
+        <li>CC</li>
+        <li>FF</li>
+    </ul>
+
+
+    Es interesante comentar que, cuando usamos colores seguros, podemos resumir la notación RGB usando tres caracteres en vez de 6. Por ejemplo, #000 equivale a #000000. O #ABC equivale a #AABBCC.
+
+    <p>Usando todas las combinaciones de "safe colors", conseguimos la siguiente paleta de colores:</p>
+
+    <img src="/Imagenes/Parte1/FormatoBasicoHTML/TablaColores.png" alt="Colores seguros" width="100%">
+</body>
+</html>

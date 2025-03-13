@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos para páginas</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/FormatoBasicoHTML/AtributosPaginas.png" width="100%" alt="prologo" >
+    </header>
+
+    <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="3%" height="3%" alt="Volver al inicio"> </a> 
+    
+    <p>> <a href="/HTML/Principal.html">Manual de HTML</a></p>
+
+    <br>
+
+    <img src="/Imagenes/calendario.png">
+    <p>04 de marzo de 2002</p>
+
+    <h3>Explicamos una serie de atributos que se aplican de manera global a toda la página, como el color de fondo el del texto, de los enlaces, márgenes, etc.</h3>
+
+    <p>
+        En este artículo nos metemos de nuevo en el terreno del CSS. Veremos todo tipo de estilos que se pueden aplicar a una página, colores o imágenes de fondo, colores para los enlaces, etc. Todo eso tiene que ir en el CSS. Si estás decidido a aprender CSS a continuación de aprender HTML (que deberías), puedes saltarte este texto tranquilamente. Ahora bien, si quieres seguir aprendiendo cosas del HTML y te apetece empezar con lo que sabes a poner un poco de color a la página, lee a continuación.
+    </p> 
+
+    <p>Las páginas HTML pueden construirse con variedad de atributos que le pueden dar un aspecto a la página muy personalizado. Podemos definir atributos como el color de fondo, el color del texto o de los enlaces. Estos atributos se definen en la etiqueta BODY y, como decíamos son generales a toda la página.</p>
+
+    <p>Lo mejor para explicar su funcionamiento es verlos uno por uno.</p>
+
+    <h2>Atributos para fondos</h2>
+    <p><b>bgcolor:</b> especificamos un color de fondo para la página. En el capítulo anterior y en el taller de los colores y HTML hemos aprendido a construir cualquier color, con su nombre o su valor RGB. El color de fondo que podemos asignar con bgcolor es un color plano, es decir el mismo para toda la superficie del navegador.</p>
+
+    <p><b>background:</b> sirve para indicar la colocación de una imagen como fondo de la página. La imagen se coloca haciendo un mosaico, es decir, se repite muchas veces hasta ocupar todo el espacio del fondo de la página. En capítulos más adelante veremos como se insertan imágenes con HTML y los tipos de imágenes que se pueden utilizar.</p>
+
+    <h2>Ejemplo de fondo</h2>
+    <p>Vamos a colocar esta imagen como fondo en la página.</p>
+
+    <img src="/Imagenes/Parte1/FormatoBasicoHTML/fondo.png">
+
+    <P>La imagen se llama fondo.jpg. Puedes guardarla en tu disco duro para practicar tú también con ella, mediante un clic con el botón derecho. Para trabajar con esta imagen vamos a colocarla en la misma carpeta donde está el HTML donde vamos a trabajar. Más adelante también hablaremos sobre cómo acceder a otros archivos que están en otras carpetas, mediante la composición de rutas un poco más complejas, pero por el momento suponemos que la imagen se encuentra en el mismo directorio que la página.</P>
+
+    <P>Para colocar esta imagen como fondo de mosaico, se escribiría la siguiente etiqueta BODY.</P>
+
+
+    <pre>
+        <code>
+        &lt;body background="fondo.jpg"&gt;
+        </code>
+    </pre>
+    <p>Se puede ver el efecto que daría en la siguiente imagen como fondo.</p>
+
+    <img src="/Imagenes/Parte1/FormatoBasicoHTML/FondoPagina.png">
+
+
+
+    <p><b>Consejo:</b> Siempre que coloquemos una imagen de fondo, debemos poner también un color de fondo cercano al color de la imagen.</p>
+
+    <p>Esto se debe a que, al colocar una imagen de fondo, el texto de la página debemos colocarlo en un color que contraste suficientemente con dicho fondo. Si el visitante no puede ver el fondo por cualquier cuestión (Por ejemplo tener desactivada la carga de imágenes) puede que el texto no contraste lo suficiente con el color de fondo por defecto de la web.</p>
+
+    <p>Creo que lo mejor será poner un ejemplo. Si la imagen de fondo es oscura, tendremos que poner un texto claro para que se pueda leer. Si el visitante que accede a la página no ve la imagen de fondo, le saldrá el fondo por defecto, que generalmente es blanco, de modo que al tener un texto con color claro sobre un fondo blanco, nos pasará que no podremos leer el texto convenientemente.</p>
+
+    <p>Ocurre parecido cuando se está cargando la página. Si todavía no ha llegado a nuestro sistema la imagen de fondo, se verá el fondo que hayamos seleccionado con bgcolor y es interesante que sea parecido al color de la imagen para que se pueda leer el texto mientras se carga la imagen de fondo.</p>
+
+    <h2>Color del texto</h2>
+    <p><b>text:</b>este atributo sirve para asignar el color del texto de la página. Por defecto es el negro.</p>
+
+    <p>Además del color del texto, tenemos tres atributos para asignar el color de los enlaces de la página. Ya debemos saber que los enlaces deben diferenciarse del resto del texto de la página para que los usuarios puedan identificarlos fácilmente. Para ello suelen aparecer subrayados y con un color más vivo que el texto. Los tres atributos son los siguientes:</p>
+
+    <p><b>link:</b> el color de los enlaces que no han sido visitados. (por defecto es azul clarito)</p>
+
+    <p><b>vlink:</b> el color de los enlaces visitandos. La "v" viene justamente de la palabra visitado. Es el color que tendrán los enlaces que ya hemos visitado. Por defecto su color es morado. Este color debería ser un poco menos vivo que el color de los enlaces normales.</p>
+
+    <p><b>alink:</b> es el color de los enlaces activos. Un enlace está activo en el preciso instante que se pulsa. A veces es difícil darse cuenta cuando un enlace está activo porque en el momento en el que se activa es porque lo estamos pulsando y en ese caso el navegador abandonará la página rápidamente y no podremos ver el enlace activo más que por unos instantes mínimos.</p>
+
+    <h2>Ejemplo de color del texto</h2>
+    <p>Vamos a ver una página donde el color de fondo sea negro, y los colores del texto y los enlaces sean claros. Pondremos el color de texto balnco y los enlaces amarillos, más resaltados los que no estén visitados y menos resaltados lo que ya están visitados. Para ello escribiríamos la etiqueta BODY así:</p>
+
+
+    <pre>
+        <code>
+        &lt;body bgcolor="#000000" text="#ffffff" link="#ffff33" alink="#ffffcc" vlink="ffff00"&gt;
+        </code>
+    </pre>
+    
+    <p>El efecto de esta definición de colores para la página se vería de la siguiente manera.</p>
+
+    <img src="/Imagenes/Parte1/FormatoBasicoHTML/FondoPagina.png">
+
+
+
+    <h2>Márgenes</h2>
+    <p>Con otros atributos de la etiqueta BODY se pueden asignan espacios de margen en las páginas, lo que es muy útil para eliminar los márgenes en blanco que aparecen a los lados, arriba y debajo de la página. Estos atributos son distintos para Internet Explorer y para otros navegadores, por lo que debemos utilizarlos todos si queremos que todos los clientes web los interpreten perfectamente.</p>
+
+
+    <p><b>leftmargin:</b> para indicar el margen a los lados de la página. Válido para iexplorer.</p>
+
+    <p><b>topmargin:</b> para indicar el margen arriba y debajo de la página. Para iexplorer.</p>
+
+    <p><b>marginwidth:</b> la contrapartida de leftmargin para Firefox. (Margen a los lados)</p>
+
+    <p><b>marginheight:</b> igual que topmargin, pero para Firefox. (Margen arriba y abajo)</p>
+
+    <p>Tenemos un artículo sobre la utilización de estos atributos para hacer diseños avanzados con tablas en distintas definiciones de pantalla, que puede ser interesante de leer.</p>
+
+    <p>Un ejemplo de página sin margen es la propia página de DesarrolloWeb.com, que estás visitando actualmente. (Por lo menos a la hora de escribir este artículo) Además, vamos a ver otra página sin márgenes, por si alguien necesita ver el ejemplo en estas líneas.</p>
+
+
+    <pre>
+        <code>
+        &lt;body topmargin=0 leftmargin=0 marginheight=0 marginwidth=0 bgcolor="ffffff"&gt; 
+        &lt;table width=100% bgcolor=ff6666&gt;&lt;tr&gt;&lt;td&gt; 
+        &lt;h1&gt;Hola amigos&lt;/h1&gt; 
+        &lt;br&gt; 
+        &lt;br&gt; 
+        Gracias por visitarme! 
+        &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; 
+        &lt;/body&gt;
+        </code>
+    </pre>
+    
+    <p>Esta página tiene el fondo blanco y dentro una tabla con el fondo rojo. En la página podremos ver que la tabla ocupa el espacio en la página sin dejar sitio para ningún tipo de margen.</p>
+
+    <p>Todo lo que hemos visto hasta ahora en el Manual de HTML lo podemos encontrar en vídeo y en concreto las explicaciones de los últimos artículos se han recogido en el Vídeotutorial de HTML - Fuentes, colores y estilos de BODY.</p>
+
+    <h2>Por qué todos estos estilos deberían definirse en CSS</h2>
+    <p>Como hemos dicho, todos estos estilos deberían indicarse en el CSS. Existen muchos motivos para ello pero uno de ellos seguro que ahora se podrá comprender. Imagina un sitio web con 30 páginas distintas (no tiene que ser muy grande para llegar a ese número). Imagina que llegado un día te cansas del color negro de fondo y lo quieres azul, y el color de los enlaces amarillo y lo quieres verde. Si tienes los estilos en el HTML tendrías que ir, página a página, cambiando los estilos "n" veces.</p>
+
+    <p>CSS, entre otras cosas, te permite tener los estilos definidos en un único lugar, un archivo con código en texto plano, y todas las páginas de tu sitio web usarían ese mismo archivo para definir su presentación. Así, si un día te cansas del color de fondo, el color del texto, el tipo de letra o su tamaño, entonces solo tienes que ir a un único lugar (el archivo CSS) y cambiarlo una única vez.</p>
+
+</body>
+</html>

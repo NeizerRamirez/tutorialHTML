@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces locales</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/EnlacesHTML/EnlacesLocales.png" width="100%" alt="prologo" >
+    </header>
+
+    <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="3%" height="3%" alt="Volver al inicio"> </a> 
+    
+    <p>> <a href="/HTML/Principal.html">Manual de HTML</a></p>
+
+    <br>
+
+    <p><img src="/Imagenes/calendario.png"> 03 de octubre de 2016</p>
+
+    <h3>Cómo construir enlaces en HTML cuyo destino sean otras páginas dentro del mismo sitio web.</h3>
+
+    <section>
+        <p>Como hemos dicho, un sitio web esta constituido de páginas interconexas, que se relacionan mediante enlaces de hipertexto. Para abordar el estudio dividimos la materia por los distintos tipos de enlaces que nos podemos encontrar, atendiendo al tipo de destino. En el capitulo anterior vimos cómo enlazar distintas secciones dentro de una misma página.</p>
+        <p>En este artículo nos pondremos con otros tipos de enlaces, a los que hemos llamado "Enlaces locales". Se trata de un tipo de enlace mucho más común en el día a día del desarrollo. De hecho, es el tipo de enlace que más se produce en lo general. Estos enlaces locales nos permiten relacionar distintos documentos HTML que componen un sitio web. Gracias a los enlaces locales podremos convertir varias páginas sueltas en un sitio web completo, compuesto de varios documentos.</p>
+        <p>Para crear este tipo de enlaces, hemos de usar la misma etiqueta A que ya conocemos, de la siguiente forma:</p>
+        <pre>
+            <code>
+                &lt;a href=&quot;archivo.html&quot;&gt;contenido&lt;/a&gt;
+            </code>
+        </pre>
+    </section>
+    <section>
+        <h2>Rutas de los enlaces</h2>
+        <p>Hacer un enlace en si no es para nada complejo. No requiere muchas explicaciones con lo que ya conocemos del manual de HTML, sin embargo hay que abordar con detalle un tema importante: las rutas de los enlaces. Como rutas nos referimos al destino del enlace, o sea, lo que ponemos en el atributo "href" y es importante que nos paremos aquí porque nos puede dar algunos problemas al desarrollar, sobre todo para las personas que puedan tener menos experiencia en el trabajo con el ordenador.</p>
+        <p>Por regla general, para una mejor organización, los sitios suelen estar ordenados por directorios. Estos directorios suelen contener diferentes secciones de la página, imágenes, scripts, estilos... Es por ello que en muchos casos no nos valdrá con especificar el nombre del archivo, sino que tendremos que especificar además el directorio en el que nuestro archivo.html esta alojado.</p>
+        <p>Nota: Si habéis trabajado con MS-DOS o Linux por línea de comandos no tendréis ningún problema para comprender el modo de funcionamiento. Tan solo, para los usuarios de Windows hay que tener cuidado en usar la barra "/" en lugar de la contrabarra "", pues las contrabarras usadas en Windows para separar componentes de la ruta no se deben usar nunca al especificar rutas en HTML.</p>
+        <p>Para aquellos que no saben como mostrar un camino de un archivo, aquí van una serie de indicaciones que os ayudaran a comprender la forma de expresarlos. No resulta difícil en absoluto y con un poco de practica lo haréis prácticamente sin pensar.</p>
+        <ol>
+            <li>
+                <p>Hay que situarse mentalmente en el directorio en el que se encuentra la página donde vamos a crear el enlace.</p>
+            </li>
+            <li>
+                <p>Si la página destino está en el mismo directorio que el archivo desde donde vamos a enlazar podemos colocar simplemente el nombre del archivo de destino, ya que no hay necesidad de cambiar de directorio.</p>
+            </li>
+            <li>
+                <p>Si la página de destino está en una carpeta o subdirectorio interior al directorio donde está el archivo de origen, hemos de marcar la ruta enumerando cada uno de los directorios por los que pasamos hasta llegar al archivo de destino, separándolos por el símbolo barra "/". Al final obviamente, escribimos el nombre del archivo destino.</p>
+            </li>
+            <li>
+                <p>Si la página destino se encuentra en un directorio padre (superior al de la página del enlace), hemos de escribir dos puntos y una barra "../" tantas veces como niveles subamos en la arborescencia hasta dar con el directorio donde esta emplazado el archivo destino.</p>
+            </li>
+            <li>
+                <p>Si la página se encuentra en otro directorio no incluido ni incluyente del archivo origen, tendremos que subir como en la regla 3 por medio de ".." hasta encontrar un directorio que englobe el directorio que contiene a la página destino. A continuación haremos como en la regla 2. Escribiremos todos los directorios por los que pasamos hasta llegar al archivo.</p>
+            </li>
+        </ol>
+        <p>Se verá mejor enseguida con unos ejemplos.</p>
+        
+        <p>Imagina que tienes la siguiente estructura de carpetas y archivos. La que aparece en la siguiente imagen.</p>
+        <img src="/Imagenes/Parte1/EnlacesHTML/ArchivosEnlaces.png" alt="Archivos">
+        <ol>
+        
+            <li>
+                Para hacer un enlace desde index.html hacia yyy.html:
+                <pre>
+                    <code>
+                        &lt;a href=&quot;seccion1/paginas/yyy.html&quot;&gt;ir a yyy.html&lt;/a&gt;
+                    </code>
+                </pre>
+            </li>
+            <li>
+                Para hacer un enlace desde xxx.html hacia yyy.html:
+                <pre>
+                    <code>
+                        &lt;a href=&quot;../seccion1/paginas/yyy.html&quot;&gt;Ir (también) a yyy.html&lt;/a&gt;
+                    </code>
+                </pre>
+            </li>
+            <li>
+                Para hacer un enlace desde yyy.html hacia xxx.html:
+                <pre>
+                    <code>
+                        &lt;a href=&quot;../../seccion2/xxx.html&quot;&gt;Ir ahora a xxx.html&lt;/a&gt;
+                    </code>
+                </pre>
+            </li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Enlazar con una página diferente, pero en una sección interna</h2>
+        <p>Los enlaces locales pueden, a su vez, apuntar ya no a la página en general sino más precisamente a una sección concreta. Este tipo de enlaces resultan ser un híbrido de interno y local. La sintaxis es de este tipo:</p>
+        <pre>
+            <code>
+                &lt;a href=&quot;archivo.html#seccion&quot;&gt;contenido&lt;/a&gt;
+            </code>
+        </pre>
+        <p>Como para los enlaces internos, en este caso hemos de marcar la sección con un ancla:</p>
+        
+        <pre>
+            <code>
+                &lt;a name=&quot;seccion&quot;&gt;&lt;/a&gt;
+            </code>
+        </pre>
+    </section>
+    
+</body>
+</html>

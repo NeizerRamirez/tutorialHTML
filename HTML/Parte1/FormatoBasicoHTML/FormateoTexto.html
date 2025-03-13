@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formateando el texto</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/FormatoBasicoHTML/FormateoTexto.png" width="100%" alt="prologo" >
+    </header>
+
+    <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="3%" height="3%" alt="Volver al inicio"> </a> 
+    
+    <p>> <a href="/HTML/Principal.html">Manual de HTML</a></p>
+
+    <br>
+
+    <img src="/Imagenes/calendario.png">
+    <p>29 de septiembre de 2016</p>
+
+    <h3>Vemos como colocar negritas, itálicas, subrayados, subíndices y supreíndices.</h3>
+
+    <p>
+        Además de todo lo relativo a la organización de los párrafos, uno de los aspectos primordiales del formateo de un texto es el de la propia letra. Resulta muy común y práctico presentar texto resaltado en negrita, itálica y otros. Paralelamente el uso de índices, subíndices resulta vital para la publicación de textos científicos. Todo esto y mucho más es posible por medio del HTML a partir de multitud de etiquetas entre las cuales vamos a destacar algunas.
+    </p> 
+
+    <p>Pero antes de comenzar cabe hacer una reflexión sobre por qué son interesantes estas etiquetas y se siguen usando, a pesar que están entrando prácticamente en el terreno de CSS, ya que en la práctica están directamente formateando el aspecto de las fuentes. Son importantes porque las etiquetas en si no están para definir un estilo en concreto, sino una función de ciertas palabras dentro de un contenido. Por ejemplo, las negritas quieren decir que algo tiene más fuerza o importancia dentro de un texto y una itálica se puede usar para un texto que citado o algún énfasis particular. En cuanto a subíndices y superíndices todavía es más claro, ya que éstos especifican cosas que tiene que ver con el contenido y no con la presentación.</p>
+
+    Negrita
+    <p>Podemos escribir texto en negrita incluyéndolo dentro de las etiquetas B y su cierre (bold). Esta misma tarea es desempeñada por STRONG y su cierre, siendo ambas equivalentes. Nosotros nos inclinamos por la primeras por simple razón de esfuerzo.</p>
+
+    <p>Escribiendo un código de este tipo:</p>
+
+
+    <pre>
+        <code>
+        &lt;b&gt;Texto en negrita&lt;/b&gt;
+        </code>
+    </pre>
+    <p>Obtenemos este resultado:</p>
+    <b>Texto en negrita</b>
+
+
+
+
+
+    <p><b>Nota:</b> ¿Qué diferencia hay entre B y STRONG? Aunque las dos etiquetas hacen el mismo efecto, tienen una peculiaridad que las hace distintas. La etiqueta B indica negrita, mientras que la etiqueta STRONG indica que se debe escribir con fuerza. El HTML lo interpretan los navegadores según su criterio, es por eso que las páginas se pueden ver de distinta manera en unos browsers y en otros. La etiqueta H1 quiere decir "encabezado de nivel 1", es el navegador el responsable de formatear el texto de manera que parezca un encabezado de primer nivel. En la práctica los encabezados de los navegadores habituales son muy parecidos (tamaño de letra grande y en negrita), pero otro navegador podría colocar los encabezados con subrayado si le pareciese oportuno.</p>
+
+    <p>La diferencia entre b y STRONG se podrá entender ahora. Mientras que B significa simplemente negrita y todos los navegadores la interpretarán como negrita, STRONG es una etiqueta que significa que se tiene que resaltar fuertemente el texto y cada navegador es el responsable de resaltarlo como desee. En la práctica STRONG coloca el texto en negrita, pero podría ser que un navegador decidiese resaltar colocando negrilla, subrayado y color rojo en el texto.</p>
+
+    <h2>Itálica</h2>
+    También en este caso existen dos posibilidades, una corta: I y su cierre (italic) y otra un poco más larga: EM y su cierre. En este manual, y en la mayoría de las páginas que veréis por ahí, os encontraréis con la primera forma sin duda más sencilla a escribir y a acordarse.
+
+    He aquí un ejemplo de texto en itálica:
+
+    <pre>
+        <code>
+        &lt;i&gt;Texto en itálica&lt;/i&gt;
+        </code>
+    </pre>    
+
+    Que da el siguiente efecto:
+    <i>Texto en itálica</i>
+
+
+
+    <h2>Subrayado</h2>
+    <p>El HTML nos propone también para el subrayado el par de etiquetas: U (underlined). Sin embargo, el uso de subrayados ha de ser aplicado con mucha precaución dado que los enlaces hipertexto van, a no ser que se indique lo contrario, subrayados con lo que podemos confundir al lector y apartarlo del verdadero interés de nuestro texto.</p>
+
+    <p>Además, cabe decir que la etiqueta U se ha quedado obsoleta, debido a que es algo que realmente se debe hacer del lado del CSS, al ser básicamente un estilo.</p>
+
+    <h2>Subíndices y supraíndices</h2>
+    Este tipo de formato resulta de extremada utilidad para textos científicos. Las etiquetas empleadas son:
+
+    <pre>
+        <code>
+        &lt;sup&gt; y &lt;/sup&gt; para los supraíndices
+        &lt;sub&gt; y &lt;/sub&gt; para los subíndices
+        <p>Aquí tenéis un ejemplo:</p>
+    
+        La &lt;sup&gt;13&lt;/sup&gt;CC&lt;sub&gt;3&lt;/sub&gt;H&lt;sub&gt;4&lt;/sub&gt;ClNOS es un heterociclo alergeno enriquecido
+        </code>
+    </pre>
+    
+    <p>El resultado:</p>
+    La <sup>13</sup>CC<sub>3</sub>H<sub>4</sub>ClNOS es un heterociclo alergeno enriquecido
+
+
+    <h2>Anidar etiquetas</h2>
+    <p>Todas estas etiquetas y por supuesto el resto de las vistas y que veremos más adelante pueden ser anidadas unas dentro de otras de manera a conseguir resultados diferentes. Así, podemos sin ningún problema crear texto en negrita e itálica embebiendo una etiqueta dentro de la otra:</p>
+
+    <pre>
+        <code>
+        &lt;b&gt;Esto sólo está en negrita &lt;i&gt;y esto en negrita e itálica&lt;/i&gt;&lt;/b&gt;
+        </code>
+    </pre>
+    
+    Esto nos daria:
+    <b>Esto sólo está en negrita <i>y esto en negrita e itálica</i></b>
+</body>
+</html>

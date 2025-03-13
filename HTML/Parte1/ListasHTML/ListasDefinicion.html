@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas de definicion</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/ListasHTML/ListasDefinicion.png" width="100%" alt="prologo" >
+    </header>
+
+    <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="3%" height="3%" alt="Volver al inicio"> </a> 
+    
+    <p>> <a href="/HTML/Principal.html">Manual de HTML</a></p>
+
+    <br>
+
+    <img src="/Imagenes/calendario.png">
+    <p>11 de octubre de 2001</p>
+
+    <h3>Vemos las listas de definición y aprendemos a anidar listas para crear estructuras lista más complejas.</h3>
+
+    <p>Terminamos el tema de listas en el manual de HTML de DesarrolloWeb.com estudiando las listas de definición. Veremos también la anidación de listas, que resultará un recurso interesante para estructurar datos un poco más complejos o enumerar elementos con una jerarquía.</p>
+
+    <h2>Listas de definición</h2>
+    <p>Las listas de definición sirven para hacer un conjunto de elementos con pares concepto-descripción. Es decir, se especificarán varios términos por su nombre y se escribirá una definición para cada uno. Cada elemento es presentado junto con su definición, uno detrás de otro.</p>
+
+    <p>Nota: Este tipo de listas la verdad es que no se usan mucho. Es un buen recurso, porque permite aplicar semántica a los items de una lista, que quedan asociados a su definición, por lo que usarlas no será una mala idea, sin embargo casi nadie las usa en la práctica.</p>
+    <p>Para realizar una lista de definición, ja etiqueta principal es DL y su cierre (definition list). La etiquetas del elemento y su definición son DT (definition term) y DD (definition definition) respectivamente.</p>
+
+    <p>Aquí os proponemos un código que podrá aclarar este sistema:</p>
+
+    <pre>
+        <code>
+        &lt;p&gt;Diccionario de la Real Academia&lt;/p&gt; 
+        &lt;dl&gt; 
+            &lt;dt&gt;Brujula 
+            &lt;dd&gt;Señórula montada en una escóbula 
+            &lt;dt&gt;Oreja 
+            &lt;dd&gt;Sesenta minutejos 
+        &lt;/dl&gt;
+        </code>
+    </pre>
+    
+    El efecto producido:
+    <p>Diccionario de la Real Academia</p> 
+    <dl> 
+        <dt>Brujula 
+        <dd>Señórula montada en una escóbula 
+        <dt>Oreja 
+        <dd>Sesenta minutejos 
+    </dl>
+
+    <p>Fijaos en que cada línea DD está desplazada hacia la izquierda. Este tipo de etiquetas son usadas a menudo con el propósito de crear textos más o menos desplazados hacia la izquierda.</p>
+
+    <p>El código:</p>
+
+    <pre>
+        <code>
+        &lt;dl&gt; 
+            &lt;dd&gt;Primer nivel de desplazamiento 
+                &lt;dl&gt; 
+                    &lt;dd&gt;Segundo nivel de desplazamiento 
+                    &lt;dl&gt; 
+                        &lt;dd&gt;Tercer nivel de desplazamiento 
+                    &lt;/dl&gt; 
+                &lt;/dl&gt; 
+            &lt;/dl&gt;
+        </code>
+    </pre>    
+
+    <p>El resultado:</p>
+
+    <dl> 
+        <dd>Primer nivel de desplazamiento 
+            <dl> 
+                <dd>Segundo nivel de desplazamiento 
+                <dl> 
+                    <dd>Tercer nivel de desplazamiento 
+                </dl> 
+            </dl> 
+        </dl>
+
+    <h2>Anidando listas</h2>
+    <p>Nada nos impide utilizar todas estas etiquetas de forma anidada como hemos visto en otros casos. De esta forma, podemos conseguir listas mixtas como por ejemplo:</p>
+
+    <pre>
+        <code>
+        &lt;p&gt;Ciudades del mundo&lt;/p&gt; 
+        &lt;ul&gt; 
+            &lt;li&gt;Argentina 
+            &lt;ol&gt; 
+                &lt;li&gt;Buenos Aires 
+                &lt;li&gt;Bariloche 
+            &lt;/ol&gt; 
+            &lt;li&gt;Uruguay 
+            &lt;ol&gt; 
+                &lt;li&gt;Montevideo 
+                &lt;li&gt;Punta del Este 
+            &lt;/ol&gt; 
+        &lt;/ul&gt;
+        </code>
+    </pre>
+    
+    De esta forma creamos una lista como esta:
+    <p>Ciudades del mundo</p> 
+    <ul> 
+        <li>Argentina 
+        <ol> 
+            <li>Buenos Aires 
+            <li>Bariloche 
+        </ol> 
+        <li>Uruguay 
+        <ol> 
+            <li>Montevideo 
+            <li>Punta del Este 
+        </ol> 
+    </ul>
+</body>
+</html>
