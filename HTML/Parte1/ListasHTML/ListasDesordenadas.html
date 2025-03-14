@@ -23,93 +23,107 @@
     <p>Última actualización: 24 de octubre de 2020</p>
 
     <h3>Comenzamos con el tema de las listas en HTML. Tipos de listas y detalle sobre las listas desordenadas.</h3>
-
-    <img src="/Imagenes/Parte1/ListasHTML/ListasDesordenadasHeader.png" width="100%" alt="Imagen1" >
-
-    <p>Las posibilidades que nos ofrece el HTML en cuestión de tratamiento de texto son realmente notables. No se limitan a lo visto hasta ahora, sino que van más lejos todavía. Varios ejemplos de ello son las listas, que sirven para enumerar y definir elementos, los textos preformateados y las cabeceras o títulos.</p>
-
-    <p>Las listas originalmente están pensadas para citar, numerar y definir cosas a través de características, o al menos así lo hacemos en la escritura de textos. Sin embargo, las listas finalmente se utilizan para mucho más que enumerar una serie de puntos, en realidad son un recurso muy interesante para poder maquetar elementos diversos, como barras de navegación, pestañas etc. Pero esto lo veremos más adelante, cuando apliquemos estilos CSS a las listas.</p>
-
-    <p>De momento, en este Manual de HTML, trataremos las listas desde el punto de vista de su construcción y veremos los diferentes tipos que existen, y que podemos utilizar para resolver nuestras distintas necesidades a la hora de escribir textos en HTML.</p>
-
-
-    <p>Referencia: Todos los tipos de listas los hemos explicado en vídeo y se pueden revisar en el Videotutorial de HTML, más concretamente en la entrega siguiente: Vídeo sobre las Listas HTML.</p>
-    <p>Podemos distinguir tres tipos de listas HTML:</p>
-
-    <ul>
-        <li>Listas desordenadas</li>
-        <li>Listas ordenadas</li>
-        <li>Listas de definición</li>
-        <li>Las veremos detenidamente una a una.</li>
-    </ul>
-
-    <h2>Listas desordenadas</h2>
-    <p>Son delimitadas por las etiquetas UL y su cierre (unordered list). Cada uno de los elementos de la lista es citado por medio de una etiqueta LI (La LI tiene su cierre, aunque si no lo colocas el navegador al ver el siguiente LI interpretará que estás cerrando el anterior). La cosa queda así:</p>
-
-    <pre>
-        <code>
-        &lt;p&gt;Países del mundo&lt;/p&gt; 
-        &lt;ul&gt; 
-            &lt;li&gt;Argentina&lt;/li&gt; 
-            &lt;li&gt;Perú&lt;/li&gt; 
-            &lt;li&gt;Chile&lt;/li&gt; 
-        &lt;/ul&gt;
-        </code>
-    </pre>
+<section>
     
-    El resultado:
-
-    <p>Países del mundo</p> 
-    <ul> 
-        <li>Argentina</li> 
-        <li>Perú</li> 
-        <li>Chile</li> 
-    </ul>
-
-
-    <p>Podemos definir el tipo de viñeta empleada para cada elemento. Para ello debemos especificarlo por medio del atributo type incluido dentro de la etiqueta de apertura UL, si queremos que el estilo sea válido para toda la lista,o dentro le la etiqueta LI si queremos hacerlo específico de un solo elemento. La sintaxis es del siguiente tipo:</p>
-
-
-    <pre>
-        <code>
-        &lt;ul type="tipo de viñeta"&gt;
-        </code>
-    </pre>
-
-    <p>donde tipo de viñeta puede ser uno de los siguientes:</p>
-
-    <ul>
-        <li>circle</li>
-        <li>disc</li>
-        <li>square</li>
-    </ul>
-
-    <p><b>Nota:</b> En algunos navegadores no funciona la opción de cambiar el tipo de viñeta a mostrar y por mucho que nos empeñemos, siempre saldrá el redondel negro.</p>
-
-    <p>En caso de que no funcione siempre podemos construir la lista a mano con la viñeta que queramos utilizando las tablas de HTML. Veremos más adelante cómo trabajar con tablas.</p>
-
-    <p>También es posible definir el tipo de viñeta o bullet por medio de CSS.</p>
-    <p>Vamos a ver un ejemplo de lista con un cuadrado en lugar de un redondel, y en el último elemento colocaremos un círculo. Para ello vamos a colocar el atributo type en la etiqueta UL, con lo que afectará a todos los elementos de la lista.</p>
-
-    <pre>
-        <code>
-        Que tiene como resultado:
-        &lt;ul type="square"&gt; 
-            &lt;li&gt;Elemento 1 &lt;/li&gt;
-            &lt;li&gt;Elemento 2 &lt;/li&gt;
-            &lt;li&gt;Elemento 3 &lt;/li&gt;
-            &lt;li type="circle"&gt;Elemento 4 &lt;/li&gt;
-        &lt;/ul&gt;
-        </code>
-    </pre>
+        <img src="/Imagenes/Parte1/ListasHTML/ListasDesordenadasHeader.png" width="100%" alt="Imagen1" >
     
-    Que tiene como resultado:
-    <ul type="square"> 
-        <li>Elemento 1 </li>
-        <li>Elemento 2 </li>
-        <li>Elemento 3 </li>
-        <li type="circle">Elemento 4 </li>
+        <p>Las posibilidades que nos ofrece el HTML en cuestión de tratamiento de texto son realmente notables. No se limitan a lo visto hasta ahora, sino que van más lejos todavía. Varios ejemplos de ello son las listas, que sirven para enumerar y definir elementos, los textos preformateados y las cabeceras o títulos.</p>
+    
+        <p>Las listas originalmente están pensadas para citar, numerar y definir cosas a través de características, o al menos así lo hacemos en la escritura de textos. Sin embargo, las listas finalmente se utilizan para mucho más que enumerar una serie de puntos, en realidad son un recurso muy interesante para poder maquetar elementos diversos, como barras de navegación, pestañas etc. Pero esto lo veremos más adelante, cuando apliquemos estilos CSS a las listas.</p>
+    
+        <p>De momento, en este Manual de HTML, trataremos las listas desde el punto de vista de su construcción y veremos los diferentes tipos que existen, y que podemos utilizar para resolver nuestras distintas necesidades a la hora de escribir textos en HTML.</p>
+    
+    
+        <p>Referencia: Todos los tipos de listas los hemos explicado en vídeo y se pueden revisar en el Videotutorial de HTML, más concretamente en la entrega siguiente: Vídeo sobre las Listas HTML.</p>
+        <p>Podemos distinguir tres tipos de listas HTML:</p>
+    
+        <ul>
+            <li>Listas desordenadas</li>
+            <li>Listas ordenadas</li>
+            <li>Listas de definición</li>
+            <li>Las veremos detenidamente una a una.</li>
         </ul>
- 
+</section>
+<section>
+    
+        <h2>Listas desordenadas</h2>
+        <p>Son delimitadas por las etiquetas UL y su cierre (unordered list). Cada uno de los elementos de la lista es citado por medio de una etiqueta LI (La LI tiene su cierre, aunque si no lo colocas el navegador al ver el siguiente LI interpretará que estás cerrando el anterior). La cosa queda así:</p>
+    
+        <pre>
+            <code>
+            &lt;p&gt;Países del mundo&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Argentina&lt;/li&gt;
+                &lt;li&gt;Perú&lt;/li&gt;
+                &lt;li&gt;Chile&lt;/li&gt;
+            &lt;/ul&gt;
+            </code>
+        </pre>
+    
+        <p>El resultado:</p>
+    
+        <p>Países del mundo</p>
+        <ul>
+            <li>Argentina</li>
+            <li>Perú</li>
+            <li>Chile</li>
+        </ul>
+    
+    
+        <p>Podemos definir el tipo de viñeta empleada para cada elemento. Para ello debemos especificarlo por medio del atributo type incluido dentro de la etiqueta de apertura UL, si queremos que el estilo sea válido para toda la lista,o dentro le la etiqueta LI si queremos hacerlo específico de un solo elemento. La sintaxis es del siguiente tipo:</p>
+    
+    
+        <pre>
+            <code>
+            &lt;ul type="tipo de viñeta"&gt;
+            </code>
+        </pre>
+    
+        <p>donde tipo de viñeta puede ser uno de los siguientes:</p>
+    
+        <ul>
+            <li>circle</li>
+            <li>disc</li>
+            <li>square</li>
+        </ul>
+    
+        <p><b>Nota:</b> En algunos navegadores no funciona la opción de cambiar el tipo de viñeta a mostrar y por mucho que nos empeñemos, siempre saldrá el redondel negro.</p>
+    
+        <p>En caso de que no funcione siempre podemos construir la lista a mano con la viñeta que queramos utilizando las tablas de HTML. Veremos más adelante cómo trabajar con tablas.</p>
+    
+        <p>También es posible definir el tipo de viñeta o bullet por medio de CSS.</p>
+        <p>Vamos a ver un ejemplo de lista con un cuadrado en lugar de un redondel, y en el último elemento colocaremos un círculo. Para ello vamos a colocar el atributo type en la etiqueta UL, con lo que afectará a todos los elementos de la lista.</p>
+    
+        <pre>
+            <code>
+            Que tiene como resultado:
+            &lt;ul type="square"&gt;
+                &lt;li&gt;Elemento 1 &lt;/li&gt;
+                &lt;li&gt;Elemento 2 &lt;/li&gt;
+                &lt;li&gt;Elemento 3 &lt;/li&gt;
+                &lt;li type="circle"&gt;Elemento 4 &lt;/li&gt;
+            &lt;/ul&gt;
+            </code>
+        </pre>
+    
+        Que tiene como resultado:
+        <ul type="square">
+            <li>Elemento 1 </li>
+            <li>Elemento 2 </li>
+            <li>Elemento 3 </li>
+            <li type="circle">Elemento 4 </li>
+            </ul>
+    
+</section>
+
+<br>
+<section>
+    <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+    <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+
+    <p><a href="/HTML/Parte1/FormatoBasicoHTML/CaracteresEspeciales.html">Caracteres especiales</a> <a href="/HTML/Parte1/ListasHTML/ListasOrdenadas.html">Listas en HTML: Listas ordenadas</a> </p>
+</section>
+
+
 </body>
 </html>
