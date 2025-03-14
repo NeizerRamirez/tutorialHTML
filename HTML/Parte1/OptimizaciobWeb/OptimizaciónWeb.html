@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/OptimizacionWeb/BannerInicio.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 17 de abril de 2018
+    </header>
+    <section>
+        <h2>Qué es la optimización de páginas web, cuáles son los principales recursos en una página web susceptibles de recibir mayor optimización y en qué parámetros podemos optimizarlos.</h2>
+        <p>En el mundo de la web cada segundo de carga importa. Incluso cada milisegundo podríamos decir. La explicación es bien sencilla, pues se dice que un usuario estará esperando la carga de un sitio web por 5 segundos máximo, si pasado ese tiempo no se obtiene respuesta alguna del servidor, simplemente abandonará el intento de acceso a la página.</p>
+        <p>Este detalle se aprecia mejor todavía cuando hablamos de cifras. Por ejemplo según Google, medio segundo de retardo de carga de una página supone un decremento de 20% de su tráfico. Según Amazon, 100 milisegundos de retraso de carga de su web, afecta en 1% la caída de ventas en sus productos. Sin duda datos reveladores. ¿no?</p>
+        <p>Por este motivo, la optimización de una web es un detalle que no debemos pasar por alto. En este artículo aprenderás los criterios más importantes para conseguir optimizar los archivos y el código de tu sitio web.</p>
+        <img src="/Imagenes/Parte1/OptimizacionWeb/CarroOptimizacion.jpg" alt="10">
+        <h2>Qué recursos son capaces de ofrecer mayor optimización</h2>
+        <p>La optimización de una página depende de varios factores. Obviamente uno de ellos es el servidor donde la tengas publicada. Un servidor rápido</p>
+        <p>Nota: no entramos en la configuración del servidor, pues en este momento de nuestro aprendizaje y en el marco del Manual de HTML, la configuración del servidor no forma parte de nuestras responsabilidades como desarrolladores. Generalmente usaremos servidores de alojamiento compartido, por lo que no tendremos muchas opciones de configurar el servidor.</p>
+        <p>Entonces, en lo que respecta al código de nuestros archivos en una página web, la optimización la podremos realizar en estos tres principales recursos:</p>
+        <ul>
+            <li>Imágenes</li>
+            <li>Código Javascript</li>
+            <li>Código CSS</li>
+        </ul>
+        <p>Además la importancia de la optimización de un sitio también sigue por lo general este orden, siendo las imágenes el recurso más susceptible de alcanzar mejores resultados con una buena optimización.</p>
+        <p>Vamos a comenzar con la optimización de los conceptos más sencillos de explicar. Luego veremos algunas herramientas que podemos usar para conseguir todas estas optimizaciones.</p>
+    </section>
+    <section>
+        <h2>Optimizar el CSS</h2>
+        <p>El código CSS sirve para definir la capa de presentación y aunque no lo hemos tocado prácticamente nada en este Manual de HTML, es difícil que hagamos cualquier página web sin incluir algo de CSS.</p>
+        <p>La optimización de nuestro CSS podrá basarse en estos factores principales:</p>
+        <ul>
+            <li><b>Eliminando comentarios:</b> Si tienes comentarios en el código CSS, deberías eliminarlos de los archivos que se van a distribuir en el código definitivo. Aportan peso innecesario.</li><br>
+            <li><b>Compactando el código:</b> el código compactado ocupa menos espacio, porque se le quitan saltos de línea innecesarios, espacios en blanco, etc.</li><br>
+            <li><b>Reduciendo conexiones al servidor:</b> si tienes varios archivos CSS en tu sitio web, generalmente optimizarás el tiempo de carga si unes todo el código en un mismo fichero.</li><br>
+        </ul>
+        <p><b>Nota:</b> Las conexiones al servidor, para descargar todos los archivos externos al propio código HTML, como imágenes, CSS, Javascript, llevan un tiempo. El navegador no es capaz de descargar todo a la vez y si tenemos muchos archivos distintos generalmente tardará más. Esto con el próximo HTTP2 cambiará, puesto que ese nuevo protocolo ha optimizado la posibilidad de realizar más descargas concurrentes sin penalizar el tiempo usado en ellas.</p>
+        <p><b>Nota:</b> Como segunda nota, también debes de mantener un buen nivel de calidad de tu código. Por ejemplo, debes intentar reutilizar las declaraciones de estilos, no repetir las reglas a no ser que sea necesario, usar selectores adecuados y en general dejar las cosas sencillas al navegador. Pero esta parte tampoco la vamos a tocar, siendo material de estudio en artículos de <a href="https://desarrolloweb.com/articulos/problemas-arquitectura-css.html">Arquitectura de CSS.</a> Te recomendamos la <a href="https://desarrolloweb.com/en-directo/arquitectura-css-clase-vivo-9027.html">clase en vivo de arquitectura de CSS</a>.</p>
+        <p>El código CSS compactado luce más o menos como la siguiente imagen:</p>
+        <img src="/Imagenes/Parte1/OptimizacionWeb/CssCode.png" alt="CSS compactado">
+        <p>Otra cosa que se puede hacer con el CSS es dividir los estilos en dos archivos separados. En uno se colocaría el código fundamental para el CSS de cabecera y layout, necesario para la renderización de la parte de la página que se ve al abrirla en el navegador. Luego, se puede usar un segundo archivo CSS en el que se colocan todos los estilos que afectan a los elementos que habrá visibles al hacer scroll hacia abajo. El primer archivo CSS se colocará en el HEAD, para que esté disponible lo más rápido posible y el segundo archivo CSS se enlazará antes de cerrar el BODY, ya que no es necesario tan rápidamente y se puede deferir la carga hasta más tarde.</p>
+    </section>
+    <section>
+        <h2>Optimizar el Javascript</h2>
+        <p>El código Javascript tiene muchas posibilidades de optimización. Algunas son similares a las comentadas para el código CSS y otras son específicas.</p>
+        <ul>
+            <li><b>Minimización y compactación del código:</b> Del mismo modo que en CSS, si se minimiza el código y se compacta, se obtiene menos peso en el Javascript. También se retiran los comentarios. La minimización del código Javascript es si cabe más importante que la del CSS, pues en ese proceso también se modifican asuntos como variables, cambiando sus nombres de modo que ocupen menos espacio. Por ejemplo, una supuesta variable llamada "numeroDePasadas" al minimizarse podría llamarse simplemente "n". Si esa variable se usa en el código varias veces, obtenemos una mejora interesante en el peso del archivo, que será más significativa cuando tengamos ficheros Javascript grandes.</li>
+            <br>
+            <li><b>Reduciendo conexiones al servidor:</b> igual que en CSS, pero en este caso es especialmente importante porque el código Javascript siempre acaba usando muchas librerías de terceros y puede ocurrir más fácilmente que el código esté repartido por varios ficheros.</li>
+            <br>
+            <li><b>Cargando el Javascript cuando el resto del contenido ya está disponible:</b> esto lo conseguimos con dos mecanismos. El primero es simplemente colocando los scripts antes del cierre de la etiqueta BODY y el siguiente con los atributos "defer" o "async" en la etiqueta SCRIPT.</li>
+            <br>
+        </ul>
+        <p>Esta próxima imagen es una pequeña parte del código de jQuery, una popular librería Javascript, una vez minimizada.</p>
+        <img src="/Imagenes/Parte1/OptimizacionWeb/JsCode.png" alt="jQuery minimizado">
+        <h2>Defer vs Async en la etiqueta SCRIPT</h2>
+        <p>Los atributos "defer" o "async" sirven para decirle al navegador cuándo procesar el código Javascript. Es solamente posible usarlo en etiquetas SCRIPT que enlazan con archivos js externos.</p>
+        <ul>
+            <li><b>Defer:</b> indica que el script Javascript será ejecutado cuando la página ha terminado de montarse.</li> <br>
+            <li><b>Async:</b> indica que el script Javascript será ejecutado al mismo tiempo que la página se está montando.</li> <br>
+        </ul>
+        <p>Si no tenemos ni defer ni async, entonces ocurre que la ejecución del Javascript se realizar inmediatamente, y una vez finaliza tal ejecución continúa el proceso de montaje de la página y su renderización en la ventana del navegador.</p>
+        <p><b>Nota:</b> Obviamente, un código Javascript optimizado también será aquel que tenga menor complejidad algorítmica y que use más capacidades nativas del navegador y menos librerías externas, pero esta parte queda fuera de nuestro alcance en este momento de nuestro aprendizaje.</p>
+    </section>
+    <section>
+        <h2>Optimización de las imágenes</h2>
+        <p>Por fin llevamos a las imágenes, que son realmente importantes porque tenemos mucho margen para optimizar y realmente es bastante sencillo de hacer en el momento en el que estamos. Los principales argumentos para la optimización son los siguientes:</p>
+        <ul>
+            <li><b>Quitar las imágenes:</b> Parece un poco absurdo este punto, pero resulta obvio que la mejor optimización de una imagen sería hacer que desaparezca de nuestra web. Muchas veces no será posible, pero en realidad y de manera tradicional las páginas web usaban muchas imágenes que realmente hoy no serían necesarias. Por ejemplo imágenes para conseguir un degradado, que se puede definir mediante CSS, imágenes para conseguir una transparencia con canal Alpha (como la del PNG de 24 bit) para una caja, que también se puede conseguir con CSS. O imágenes que se usan para que se pueda representar una fuente específica y no disponible en los ordenadores del usuario, que hoy se puede conseguir con la carga de fuentes web. Otras imágenes son las de los iconos, que también se pueden conseguir con SVG o iconos basados en fuentes web.</li><br>
+            <li><b>Usar imágenes vectoriales en vez de mapa de bits:</b> esto es muy interesante porque hoy la compatibilidad de las imágenes vectoriales en SVG es prácticamente total. (A partir de IE9 está disponible). Los archivos vectoriales tienen la característica que que se pueden ampliar y reducir sin perder calidad. Sin embargo, los mapas de bits si se quieren hacer más grandes ocuparán sensiblemente mayor espacio en bytes. Esto es especialmente importante para los dispositivos que tienen mayores densidades de píxeles, pues los archivos vectoriales permiten aprovechar esa mayor densidad de puntos, quedando los diseños más nítidos, sin que eso afecte al peso de los archivos.</li><br>
+            <li><b>Escoger el formato idóneo para los mapas de bits:</b> ya sabes que existen varios formatos gráficos para la web https://desarrolloweb.com/articulos/19.php porque hablamos de ello anteriormente en este manual. Se trata de escoger el que mejor venga en cada caso y el que nos permita ajustar mejor la calidad de las imágenes, siempre con compromiso con su peso.</li><br>
+            <li><b>Usar imágenes "responsive":</b>https://desarrolloweb.com/articulos/imagenes-responsive-etiqueta-picture.html de modo que podamos proporcionar a los navegadores diferentes alternativas de imágenes, para que usen la que más les interese en cada caso.</li><br>
+        </ul>
+        <h2>Herramientas para la optimización web</h2>
+        <p>Ahora te preguntarás ¿cómo consigues todas estas optimizaciones?. Bueno, la verdad es que aquí las posibilidades son enormes, ya que existen multitud de programas, herramientas, automatizadores de tareas, etc.</p>
+        <p>Sin entrar en explicar cada una de las herramientas, pues sería extraordinariamente extenso para este artículo, podría clasificarlas en los siguientes apartados.</p>
+        <h3>Programa de diseño</h3>
+        <p>Básicamente, para la parte de las imágenes podrás usar cualquier programa de diseño que tengas. Photoshop, Gimp, Affinity Photo, Sketch, Pixlr, etc. Todos tienen herramientas para que, al guardar los archivos, se pueda ajustar su calidad.</p>
+        <p>Puedes aprender más sobre este tema por ejemplo en el <a href="https://desarrolloweb.com/manuales/manual-photoshop.html">Manual de Photoshop</a>. Con <a href="https://desarrolloweb.com/articulos/video-como-optimizar-imagen-gimp.html">Gimp puedes aprender a optimizar imágenes con este vídeo.</a></p>
+        <h3>Programas de automatización de tareas con interfaz gráfica</h3>
+        <p>Existen muchos programas que permiten automatización de tareas de optimización web, con interfaz gráfica y relativamente sencillos de usar.</p>
+        <p>Estos programas incluyen asuntos como el minimizado del código Javascript y CSS, así como la optimización de las imágenes usadas en un proyecto.</p>
+        <p>Alternativas conocidas serían Prepros, CodeKit, Koala, Compass. Koala es la única que es de código abierto y gratuita.</p>
+        <h3>Automatización de tareas profesional</h3>
+        <p>Los profesionales del desarrollo frontend más puristas prefieren las herramientas como Gulp o Grunt, o incluso scripts npm, para realizar este tipo de tareas de optimización.</p>
+        <p>Estas herramientas son lanzadores de tareas, que permiten automatizar todos los procesos de optimización de un sitio web, adaptando al 100% las características de cada proyecto. Tienen la ventaja de ser gratuitas y permitir un sin fin de posibilidades a los desarrolladores, así como la desventaja de requerir algo más de estudio para dominarlas.</p>
+        <p>Este tipo de herramientas las puedes estudiar por ejemplo en el <a href="https://escuela.it/cursos/taller-automatizacion-optimizacion-frontend">Curso de automatización y optimización frontend de EscuelaIT</a>.</p>
+        <h3>WPO</h3>
+        <p>Ya para acabar queremos mencionar que existe toda una disciplina en torno de la optimización web llamada WPO. Es una disciplina importante y prueba de ello es que hay profesionales que solamente se dedican al WPO.</p>
+        <p>WPO son las siglas de "Web Performante Optimization", optimización del rendimiento de la web e incluye tanto la parte del sitio web como la optimización del servidor. Es algo de lo que ya hemos hablado en varios momentos en DesarrolloWeb.com, así que te recomendamos asistir a esta clase, en la que se habla de WPO y que es la primera de las clases del <a href="https://escuela.it/cursos/taller-wpo-optimizar-velocidad-carga-web">Taller de WPO de EscuelaIT</a>.</p>
+        <a href="https://www.youtube.com/watch?v=RkudSeR6Klk"><img src = "/Imagenes/Parte1/OptimizacionWeb/Youtube.png"></a>
+    </section>
+</body>
+</html>

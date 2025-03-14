@@ -3,11 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Envío, borrado y demás en formularios HTML</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
 </head>
 <body>
-    <h2>Enseñamos la manera de colocar botones de envío y borrado en formularios HTML. También conocemos los campos invisibles y los botones normales. Además, hacemos un ejemplo práctico.</h2>
-    
+    <header>
+        <img src="/Imagenes/Parte1/FormulariosHTML/BannerInicioEnvioBorrado.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 06 de agosto de 2008
+    </header>
+    <section>
+        <h2>    Enseñamos la manera de colocar botones de envío y borrado en formularios HTML. También conocemos los campos invisibles y los botones normales. Además, hacemos un ejemplo práctico.</h2>
+        <p>Continuando con la explicación de todo lo relativo a formularios que estamos ofreciendo en el Manual de HTML, ha llegado el momento de explicar cómo podemos hacer un botón para provocar el envío del formulario, entre otras cosas.</p>
+        <p>Como podremos imaginarnos, en formularios no solamente habrá elementos o campos donde solicitar información del usuario, sino también habrá que implementar otra serie de funciones. Concretamente, han de permitirnos su envío mediante un botón. También puede resultar práctico poder proponer un botón de borrado o bien acompañar el formulario de datos ocultos que puedan ayudarnos en su procesamiento.</p>
+        <p>En este capitulo, para terminar la saga de formularios, daremos a conocer los medios de instalar todas estas funciones y acabaremos mostrando un ejemplo de formulario completo.</p>
+        <h2>botón de envío de formulario (botón de submit)</h2>
+        <p>Para dar por finalizado el proceso de relleno del formulario y hacerlo llegar a su gestor, el navegante ha de enviarlo por medio de un botón previsto a tal efecto. La construcción de dicho botón no reviste ninguna dificultad una vez familiarizados con las etiquetas INPUT ya vistas:</p>
+        <code>&lt;input type="submit" value="Enviar"&gt;</code>
+        <p>Con este código generamos un botón como este:</p>
+        <input type="submit" value="Enviar">
+        <p>Como puede verse, tan solo hemos de especificar que se trata de un botón de envío (type="submit") y hemos de definir el mensaje que queremos que aparezca escrito en el botón por medio del atributo value. Este tipo de campos INPUT, para envío de formularios, a menudo se conocen simplemente como "botones de submit".</p>
+        <p><b>Nota:</b> Al enviar el formulario se creará un mensaje con tu programa de correo, que se debe enviar con ese propio programa de correo, para que llegue al destinatario. Este es el comportamiento típico de los formularios que se programan con HTML, que requiere que el usuario tenga un programa de correo instalado y configurado para que funcione.</p>
+    </section>
+    <section>
+        <h2>botón de borrado (botón de reset)</h2>
+        <p>Este botón nos permitirá borrar el formulario por completo, en el caso de que el usuario desee rehacerlo desde el principio. Su estructura sintáctica es análoga a la anterior:</p>
+        <code>&lt;input type="reset" value="Borrar"&gt;</code>
+        <p>A diferencia del botón de envío, indispensable en cualquier formulario, el botón de borrado resulta meramente optativo y no es utilizado frecuentemente. Hay que tener cuidado de no ponerlo muy cerca del botón de envío y de distinguir claramente el uno del otro, para que ningún usuario borre el contenido del formulario que acaba de rellenar por error.</p>
+        <h2>Datos ocultos (campos hidden)</h2>
+        <p>En algunos casos, aparte de los propios datos rellenados por el usuario, puede resultar práctico enviar datos definidos por nosotros mismos que ayuden al programa en su procesamiento del formulario. Este tipo de datos, que no se muestran en la página pero si pueden ser detectados solicitando el código fuente, no son frecuentemente utilizados por páginas construidas en HTML, son más bien usados por páginas que emplean tecnologías de servidor. No os asustéis, veremos más adelante qué quiere decir esto. Tan solo queremos dar constancia de su existencia y de su modo creación. He aquí un ejemplo:</p>
+        <code>&lt;input type="hidden" name="sitio" value="www.desarrolloweb.com"&gt;</code>
+        <p>Esta etiqueta, incluida dentro de nuestro formulario, enviará un dato adicional al correo o programa encargado de la gestión del formulario. Podríamos, a partir de este dato, dar a conocer al programa el origen del formulario o algún tipo de acción a llevar a cabo (una redirección por ejemplo).</p>
+        <h2>Botones normales</h2>
+        <p>Dentro de los formularios también podemos colocar botones normales, pulsables como cualquier otro botón. Igual que ocurre con los campos hidden, estos botones por sí solos no tienen mucha utilidad pero podremos necesitarlos para realizar acciones en el futuro. Su sintaxis es la siguiente:</p>
+        <code>&lt;input type="button" value="Texto escrito en el botón"&gt;</code>
+        <p>Quedaría de esta manera:</p>
+        <input type="button" value="Texto escrito en el botón">
+        <p>El uso más frecuente de un botón es en la programación en el cliente. Utilizando lenguajes como Javascript podemos definir acciones a tomar cuando un visitante pulse el botón de una página web.</p>
+        <h2>Ejemplo completo de formulario</h2>
+        <p>Con este capítulo finalizamos el tema de formularios. Pasemos ahora a ejemplificar todo lo aprendido a partir de la creación de un formulario que consulta el grado de satisfacción de los usuarios de una línea de autobuses ficticia. El formulario está construido para que envíe los datos por correo electrónico a un buzón determinado.</p>
+        <p>Vemos el formulario en esta página. Vosotros tratar de construirlo para ver si habéis entendido bien los temas sobre formularios.</p>
+        <form action="mailto:colabora@desarrolloweb.com" method="post" enctype="text/plain">
+            Nombre <input type="text" name="nombre" size="30" maxlength="100">
+            <br>
+            Email <input type="text" name="email" size="25" maxlength="100" value="@">
+            <br>
+            Población <input type="text" name="poblacion" size="20" maxlength="60">
+            <br>
+            Sexo
+            <br>
+            <input type="radio" name="sexo" value="Varon" checked> Hombre
+            <br>
+            <input type="radio" name="sexo" value="Hembra"> Mujer
+            <br>
+            <br>
+            Frecuencia de los viajes
+            <br>
+            <select name="utilizacion">
+                <option value="1">Varias veces al dia
+                <option value="2">Una vez al dia
+                <option value="3">Varias veces a la semana
+                <option value="4">varias veces al mes
+            </select>
+            <br>
+            <br>
+            Comentarios sobre su satisfacción personal
+            <br>
+            <textarea cols="30" rows="7" name="comentarios"></textarea>
+            <br>
+            <br>
+            <input type="checkbox" name="recibir_info" checked> Deseo recibir notificación de las novedades en las líneas de autobuses.
+            <br>
+            <br>
+            <input type="submit" value="Enviar formulario">
+            <br>
+            <br>
+            <input type="Reset" value="Borrar todo">
+            </form>
+        <p>El código del formulario se puede ver a continuación. Pero antes de analizarlo te recomendamos construir el formulario por tu propia cuenta para practicar.</p>
+        <pre>
+            <code>
+                &lt;form action="mailto:colabora@desarrolloweb.com" method="post" enctype="text/plain"&gt;<br>
+                Nombre &lt;input type="text" name="nombre" size="30" maxlength="100"&gt;<br>
+                &lt;br&gt;<br>
+                Email &lt;input type="text" name="email" size="25" maxlength="100" value="@"&gt;<br>
+                &lt;br&gt;<br>
+                Población &lt;input type="text" name="poblacion" size="20" maxlength="60"&gt;<br>
+                &lt;br&gt;<br>
+                Sexo<br>
+                &lt;input type="radio" name="sexo" value="Varon" checked&gt; Hombre<br>
+                &lt;input type="radio" name="sexo" value="Hembra"&gt; Mujer<br>
+                &lt;br&gt;<br>
+                Frecuencia de los viajes<br>
+                &lt;select name="utilizacion"&gt;<br>
+                &lt;option value="1"&gt;Varias veces al día&lt;/option&gt;<br>
+                &lt;option value="2"&gt;Una vez al día&lt;/option&gt;<br>
+                &lt;option value="3"&gt;Varias veces a la semana&lt;/option&gt;<br>
+                &lt;option value="4"&gt;Varias veces al mes&lt;/option&gt;<br>
+                &lt;/select&gt;<br>
+                &lt;br&gt;<br>
+                Comentarios sobre su satisfacción personal<br>
+                &lt;textarea cols="30" rows="7" name="comentarios"&gt;&lt;/textarea&gt;<br>
+                &lt;br&gt;<br>
+                &lt;input type="checkbox" name="recibir_info" checked&gt; Deseo recibir notificación de las novedades en las líneas de autobuses.<br>
+                &lt;br&gt;<br>
+                &lt;input type="submit" value="Enviar formulario"&gt;<br>
+                &lt;br&gt;<br>
+                &lt;input type="reset" value="Borrar todo"&gt;<br>
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>Referencias:</p>
+        <p>Hemos publicado un taller de HTML con un formulario para valorar la página web. Muy sencillo y práctico. Puede ser interesante para afianzar estos conocimientos: Taller con formularios.</p>
+        <p>Además, también te recomendamos ver el videotutorial sobre formularios HTML, donde repasamos todo lo visto hasta el momento sobre la creación de formularios en páginas web.</p>
+    </section>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
 
+        <p><a href="/HTML/Parte1/IntroduccionHTML/PrologoManual.html">Prologo</a> <a href="/HTML/Parte1/IntroduccionHTML/IntroduccionHTML.html">Introduccion a HTML</a> </p>
+    </section>
 </body>
 </html>
