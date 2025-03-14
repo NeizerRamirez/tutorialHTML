@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Otros elementos de formulario</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
 </head>
 <body>
-    <section>
-        <img src="/Imagenes/Logo.png" width="50%" height="35" alt="Logo" >
-        <img src="/Imagenes/ColorNegroGrisaseo.png" wwith="50%" height="35"alt="Logo">
-        <h1>Otros elementos de formulario</h1>
-        <a href = /HTML/TodosobreHTML.html><img src="/Imagenes/botonHTML.png" alt="Todo sobre HTML"></a> Lectura: 10 min
+    <header>
+        <img src="/Imagenes/Parte1/FormulariosHTML/BannerInicioOtrosElementos.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 12 de enero de 2002
         <br><br>
-        <p>12 de enero de 2002</p>
+    </header>
     </section>
     <section>
         <h3>Explicamos la sintaxis y el funcionamiento de las cajas y listas de selección, casillas de verificación y botones de radio.</h3>
@@ -36,7 +36,97 @@
             </code>
         </pre>
         <p>El resultado que obtenemos mediante este código es el que se ilustra en la siguiente imagen:</p>
-        <img src="/Imagenes/Parte1/estructuraSection.jpg">
+        <img src="/Imagenes/Parte1/FormulariosHTML/EstructuraSection.jpg" alt="Estructura de la sección">
+        <p>Esta estructura puede verse modificada principalmente a partir de otros dos atributos:</p>
+        <p><b>size:</b></p>
+        <p>Indica el número de valores mostrados a la vez en la lista. Lo típico es que no se incluya ningún valor en el atributo size, en ese caso tendremos un campo de opciones desplegable, pero si indicamos size aparecerá un campo donde veremos las opciones definidas por size y el resto podrán ser vistos por medio de la barra lateral de desplazamiento.</p>
+        <p><b>multiple:</b></p>
+        <p>Permite la selección de más varios elementos de la lista. La elección de más de un elemento se hace como con el explorador de Windows, a partir de las teclas ctrl o mayúsculas (la flecha hacia arriba, también llamada shift). Este atributo se expresa sin valor alguno, es decir, no se utiliza con el igual: simplemente se pone para conseguir el efecto, o no se pone si queremos una lista desplegable común.</p>
+        <p>Consejo: Si es posible, no uses multiple. No recomendamos especialmente la puesta en practica de esta opción ya que el manejo de las teclas ctrl o shift para elegir varias opciones puede ser desconocido para el navegante. Evidentemente, siempre cabe la posibilidad de explicarle como funciona aunque no dejara de ser una complicación para más para el visitante.</p>
+        <p>Veamos cual es el efecto producido por estos dos atributos cambiando la línea:</p>
+        <code>&lt;select name="estacion"&gt;&lt;/select&gt;</code>
+        <p>por:</p>
+        <code>&lt;select name="estacion" size = "3" multiple&gt;</code>
+        <p>La lista quedara de esta forma:</p>
+        <select name="estacion" size="3" multiple>
+            <option>Primavera</option>
+            <option>Verano</option>
+            <option>Otoño</option>
+            <option>Invierno</option>
+        </select>
+        <p>La etiqueta OPTION puede asimismo ser matizada por medio de otros atributos</p>
+        <p><b>selected:</b></p>
+        <p>Del mismo modo que multiple, este atributo no toma ningún valor sino que simplemente indica que la opción que lo presenta esta elegida por defecto.</p>
+        <p>Así, si cambiamos la línea del código anterior:</p>
+        &lt;option&gt;Otoño&lt;/option&gt;
+        <p>por:</p> 
+        &lt;option selected&gt;Otoño&lt;/option&gt;
+        <p>El resultado será:</p>
+        <select name="estacion">
+            <option>Primavera</option>
+            <option>Verano</option>
+            <option selected>Otoño</option>
+            <option>Invierno</option>
+        </select>
+        <p><b>value:</b></p>
+        <p>Define el valor de la opción que será enviado al programa o correo electrónico si el usuario elige esa opción. Este atributo puede resultar muy útil si el formulario es enviado a un programa para su procesamiento, puesto que a cada opción se le puede asociar un número o letra, lo cual es más fácilmente manipulable que una palabra o texto. podríamos así escribir líneas del tipo:        </p>
+        &lt;option value = "1"&gt;Primavera&lt;/option&gt;
+        <p>De este modo, si el usuario elige primavera, lo que le llegara al programa (o correo) es una variable llamada estacion que tendrá con valor 1. En el correo electrónico recibiríamos:</p>
+        <p>estacion=1</p>
+    </section>
+    <section>
+        <h2>Botones de radio</h2>
+        <p>Existe otra alternativa para plantear una elección, en este caso, obligamos al internauta a elegir únicamente una de las opciones que se le proponen.</p>
+        <p>La etiqueta empleada en este caso es INPUT en la cual tendremos el atributo type ha de tomar el valor radio. Veamos un ejemplo:</p>
+        <pre>
+            <code>
+                &lt;input type = "radio" name = "estacion" value = "1"&gt;Primavera
+                &lt;br&gt;
+                &lt;input type = "radio" name = "estacion" value = "2"&gt;Verano
+                &lt;br&gt;
+                &lt;input type = "radio" name = "estacion" value = "3"&gt;Otoño
+                &lt;br&gt;
+                &lt;input type = "radio" name = "estacion" value = "4"&gt;Invierno
+            </code>
+        </pre>
+        <p>Nota: Hay que fijarse que la etiqueta INPUT type="radio" sólo coloca la casilla pinchable en la página. Los textos que aparecen al lado, así como los saltos de línea los colocamos con el correspondiente texto en el código de la página y las etiquetas HTML que necesitemos.</p>
+        <p>El resultado es el siguiente:</p>
+        <input type="radio" name="estacion" value="1">Primavera 
+        <br>
+        <input type="radio" name="estacion" value="2">Verano 
+        <br>
+        <input type="radio" name="est   acion" value="3">Otoño 
+        <br>
+        <input type="radio" name="estacion" value="4">Invierno
+        <p>Como puede verse, a cada una de las opciones se le atribuye una etiqueta input dentro de la cual asignamos el mismo nombre (name) para todas las opciones y un valor (value) distinto. Si el usuario elige supuestamente Otoño, recibiremos en nuestro correo una línea tal que esta:</p>
+        <p>estacion=3</p>
+        <p>Cabe señalar que es posible preseleccionar por defecto una de las opciones. Esto puede ser conseguido por medio del atributo checked:</p>
+        <code>&lt;input type = "radio" name = "estacion" value = "2" checked&gt;Verano</code>
+        <p>Veamos el efecto:</p>
+        <input type="radio" name="estacion" value="1">Primavera
+        <br>
+        <input type="radio" name="estacion" value="2" checked>Verano
+        <br>
+        <input type="radio" name="estacion" value="3">Otoño
+        <br>
+        <input type="radio" name="estacion" value="4">Invierno
+    </section>
+    <section>
+        <h2>Cajas de validación</h2>
+        <p>Este tipo de elementos pueden ser activados o desactivados por el visitante por un simple clic sobre la caja en cuestión. La sintaxis utilizada es muy similar a las vistas anteriormente:</p>
+        <code>&lt;input type="checkbox" name="paella"&gt;Me gusta la paella</code>
+        <p>El efecto:</p>
+        <input type="checkbox" name="paella">Me gusta la paella
+        <br>
+        <p>La única diferencia fundamental es el valor adoptado por el atributo type.</p>
+        <p>Del mismo modo que para los botones de radio, podemos activar la caja por medio del atributo checked.</p>
+        <p>El tipo de información que llegara a nuestro correo (o al programa) será del tipo:</p>
+        <p>paella=on (u off dependiendo si ha sido activada o no).</p>
+    </section>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+        <p><a href="/HTML/Parte1/IntroduccionHTML/PrologoManual.html">Prologo</a> <a href="/HTML/Parte1/IntroduccionHTML/IntroduccionHTML.html">Introduccion a HTML</a> </p>
     </section>
 </body>
 </html>
