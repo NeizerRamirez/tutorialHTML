@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/FormulariosHTML/BannerInicioFormularios.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 12 de enero de 2002
+    </header>
+    <section>
+        <h2>Empezamos la explicación de la creación de formularios con el lenguaje HTML.</h2>
+        <p>Hasta ahora hemos visto la forma en la que el HTML gestiona y muestra la información, esencialmente mediante texto, imágenes y enlaces. Nos queda por ver de qué forma podemos intercambiar información con nuestro visitante. Desde luego, este nuevo aspecto resulta primordial para gran cantidad de acciones que se pueden llevar a cabo mediante el Web: Comprar un articulo, rellenar una encuesta, enviar un comentario al autor...</p>
+        <p>Hemos visto anteriormente que podíamos, mediante los enlaces a direcciones de email, contactar directamente con un correo electrónico. Sin embargo, esta opción puede resultar en algunos casos poco versátil, si lo que deseamos es que el navegante nos envíe una información bien precisa y además requiere que el visitante tenga instalado en su ordenador algún correo electrónico en un programa como Outlook Express. Es por ello que el HTML propone otra solución mucho más amplia: Los formularios.</p>
+        <p>Los formularios son esas famosas cajas de texto y botones que podemos encontrar en muchas páginas web. Son muy utilizados para realizar búsquedas o bien para introducir datos personales por ejemplo en sitios de comercio electrónico. Los datos que el usuario introduce en estos campos son enviados al correo electrónico del administrador del formulario o bien a un programa que se encarga de procesarlo automáticamente.</p>
+        <h2>Qué se puede hacer con un formulario</h2>
+        <p>Usando HTML podemos únicamente enviar el contenido del formulario a un correo electrónico, es decir, construir un formulario con diversos campos y, a la hora pulsar el botón de enviar, generar una ventana de redacción de un email con los datos que el usuario haya escrito en cada uno de esos campos.</p>
+        <p>A menudo desearemos hacer cosas más complejas con los formularios, como que se envíe automáticamente el correo a un email sin necesidad que el contenido pase por ningún programa de email. Para ello tendremos que procesar el formulario mediante un programa.</p>
+        <p>La cosa puede resultar un poco más compleja, ya que tendremos que emplear otros lenguajes más sofisticados que el propio HTML. En este caso, la solución más sencilla es utilizar los programás prediseñados que nos ofrecen un gran número de servidores de alojamiento y que nos permiten almacenar y procesar los datos en forma de archivos u otros formatos. Si vuestras páginas están alojadas en un servidor que no os propone este tipo de ventajas, siempre podéis recurrir a servidores de terceros que ofrecen este u otro tipo de servicios gratuitos para webs. Por supuesto, existe otra alternativa que es la de aprender lenguajes como ASP o PHP que nos permitirán, entre otras cosas, el tratamiento de formularios.</p>
+        <p>Así pues, en resumen, con HTML podremos construir los formularios, con diversos tipos de campos, como cajas de texto, botones de radio, cajas de selección, menús desplegables, etc. Sin embargo, debe quedar claro que desde HTML no se puede enviar directamente el correo, sino que se generará un email en el ordenador del visitante, que éste tendrá que enviar "manualmente" por medio de su programa de correo. Si queremos que el formulario se envíe automáticamente o se procese en el servidor para generar otro tipo de respuesta, necesitaremos lenguajes de programación. En este Manual de HTML nos limitaremos a explicar la creación de formularios y os proponemos buscar otras formas de proceso de los mismos a través de otros artículos en DesarrolloWeb.com.</p>
+    </section>
+    <section>
+        <h2>Cómo hacer un formulario en HTML</h2>
+        <p>Los formularios son definidos por medio de las etiquetas FORM y su cierre. Entre estas dos etiquetas colocaremos todos los campos y botones que componen el formulario. Dentro de esta etiqueta FORM debemos especificar algunos atributos:</p>
+        <p><b>action:</b> define el tipo de acción a llevar a cabo con el formulario. Como ya hemos dicho, existen dos posibilidades:</p>
+        <ul>
+            <li>El formulario es enviado a una dirección de correo electrónico</li>
+            <li>El formulario es enviado a un programa o script que procesa su contenido</li>
+        </ul>
+        <p>En el primer caso, el contenido del formulario es enviado a la dirección de correo electrónico especificada por medio de una sintaxis de este tipo:</p>
+        <code>&lt;form action="mailto:direccion@correo.com" ...&gt;</code>
+        <p>Si lo que queremos es que el formulario sea procesado por un programa, hemos de especificar la dirección del archivo que contiene dicho programa. La etiqueta quedaría en este caso de la siguiente forma:</p>
+        <code>&lt;form action="dirección del archivo" ...&gt;</code>
+        <p>La forma en la que se expresa la localización del archivo que contiene el programa es la misma que la vista para los enlaces.</p>
+        <p><b>method:</b> Este atributo se encarga de especificar la forma en la que el formulario es enviado. Los dos valores posibles que puede tomar esta atributo son post y get. A efectos prácticos y, salvo que se os diga lo contrario, daremos siempre el valor post.</p>
+        <p><b>enctype:</b> Se utiliza para indicar la forma en la que viajará la información que se mande por el formulario. En el caso más corriente, enviar el formulario por correo electrónico, el valor de este atributo debe de ser "text/plain". Así conseguimos que se envíe el contenido del formulario como texto plano dentro del email.</p>
+        <p>Si queremos que el formulario se procese automáticamente por un programa, generalmente no utilizaremos este atributo, de modo que tome su valor por defecto, es decir, no incluiremos enctype dentro de la etiqueta FORM.</p>
+        <h2>Ejemplo de etiqueta FORM completa</h2>
+        <p>Así, para el caso más habitual -el envío del formulario por correo- la etiqueta de creación del formulario tendrá el siguiente aspecto:</p>
+        <code>&lt;form action="mailto:direccion@correo.com (o nombre del archivo de proceso)" method="post" enctype="text/plain"&gt;</code>
+        <p>Entre esta etiqueta y su cierre colocaremos el resto de etiquetas que darán forma a nuestro formulario, las cuales serán vistas en capítulos siguientes.</p>
+        <h2><b>Referencia: Mandar formulario por correo electrónico</b></h2>
+        <p>Los formularios se utilizan habitualmente para implementar un tipo de contacto con el navegante, que consiste en que éste pueda mandarnos sus comentarios por correo electrónico a nuestro buzón.</p>
+        <p>Para este tipo de utilización de los formularios hemos publicado hace tiempo en DesarrolloWeb.com un artículo que puede resultar muy interesante para los que deseen un referencia extremadamente rápida para construir un formulario que envíe los datos por correo electrónico al desarrollador de la página.</p>
+        <p>El artículo en cuestión se llama contacto con el navegante.</p>
+        <p>Para continuar, vamos a ver cómo insertar cada uno de los campos posibles en un formulario HTML, comenzando por los campos de texto.</p>
+        <p><b>Referencia</b> Si deseas la formación en vídeo, puedes ver este videotutorial sobre formularios, publicado en DesarrolloWeb.com.</p>
+    </section>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+        <a href="/HTML/Parte1/TablasHTML/AgruparFilasColumnas.html"><h4>Agrupar filas y columnas en HTML 4</h4></a>-----<a href="/HTML/Parte1/FormulariosHTML/Elementos.html"><h4>Elementos de Formularios. Campos de texto</h4></a>
+    </section>
+</body>
+</html>

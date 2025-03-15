@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos para tablas HTML</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte2/Estilos/BannerInicioColorTamano.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 11 de octubre de 2001
+    </header>
+        <h2>Conocemos los atributos principales que le podemos asignar a las tablas en el lenguaje HTML de modo general. Además vemos varios ejemplos prácticos de construcción de tablas.</h2>
+        <p>En este artículo vamos a seguir hablando de tablas, con información de diverso tipo. A la parte de los atributos para tablas puedes prestarle poca atención porque básicamente lo que hacen es aplicar estilo a la propia tabla o a sus celdas y estas definiciones actualmente se recomienda incluir en el CSS. Luego pasaremos a ver las tablas anidadas y realizar unas unas prácticas de representación de información tabulada, que sí merece la pena estudiar para afianzar el conocimiento.</p>
+        <p>A continuación encuentras los más importantes de los atributos específicos para tablas, aunque recuerda que todos están ya en desuso desde la versión del estándar HTML5.</p>
+        <p><b>align:</b> Alinea horizontalmente la tabla con respecto a su entorno.</p>
+        <p><b>background:</b> Nos permite colocar un fondo para la tabla a partir de un enlace a una imagen.</p>
+        <p><b>bgcolor:</b> Da color de fondo a la tabla.</p>
+        <p><b>border:</b> Define el número de pixels del borde principal.</p>
+        <p><b>bordercolor:</b> Define el color del borde.</p>
+        <p><b>cellpadding:</b> Define, en pixels, el espacio entre los bordes de la celda y el contenido de la misma.</p>
+        <p><b>cellspacing:</b> Define el espacio entre los bordes (en pixels).</p>
+        <p><b>height:</b> Define la altura de la tabla en pixels o porcentaje.</p>
+        <p><b>width:</b> Define la anchura de la tabla en pixels o porcentaje.</p>
+        <p>Los atributos que definen las dimensiones, height y width, funcionan de una manera análoga a la de las celdas tal y como hemos visto en el capitulo anterior. Contrariamente, el atributo align no nos permite justificar el texto de cada una de las celdas que componen la tabla, sino más bien, justificar la propia tabla con respecto a su entorno.</p>
+        <p>Vamos a poner tres ejemplos de alineado de tablas, centradas, alineadas a la derecha y a la izquierda.</p>
+        <img src="/Imagenes/Parte1/TablasHTML/EjemploTablas.jpg" alt="Ejemplo-Tablas">
+        <p>Los atributos cellpading y cellspacing nos ayudaran a dar a nuestra tabla un aspecto más estético. En un principio puede parecernos un poco confuso su uso pero un poco de practica será suficiente para hacerse con ellos.</p>
+        <p>En la siguiente imagen podemos ver gráficamente el significado de estos atributos.</p>
+        <img src="/Imagenes/Parte1/TablasHTML/ModeloCellpadingCellspacing.jpg" alt="ModeloCellpadingCellspacing">
+        <p>Con un poco de práctica podéis comprobar vosotros mismos que los atributos definidos para una celda tienen prioridad con respecto a los definidos para una tabla. Podemos definir, por ejemplo, una tabla con color de fondo rojo y una de las celdas de color de fondo verde y se verá toda la tabla de color rojo menos la celda verde. Del mismo modo, podemos definir un color azul para los bordes de la tabla y hacer que una celda particular sea mostrada con un borde rojo. (Aunque esto no funcionará en todos los navegadores debido a que algunos no reconocen el atributo bordercolor).</p>
+        <h2>Tablas anidadas</h2>
+        <p>Muy útil también es el uso de tablas anidadas. De la misma forma que podíamos incluir listas dentro de otras listas, las tablas pueden ser incluidas dentro de otras. Así, podemos incluir una tabla dentro de la celda de otra. El modo de funcionamiento sigue siendo el mismo aunque la situación puede complicarse si el número de tablas embebidas dentro de otras es elevado.</p>
+        <p>Vamos a ver un código de anidación de tablas. Veamos primero el resultado y luego el código, así conseguiremos entenderlo mejor.</p>
+        <img src="/Imagenes/Parte1/TablasHTML/CeldaTabla.jpg" alt="Celda-Tablas">
+        <p>Este sería el código:</p>
+        <pre>
+            <code>
+                &lt;table cellspacing="10" cellpadding="10" border="3"&gt; 
+                &lt;tr&gt; 
+                    &lt;td align="center"&gt; 
+                       Celda de la tabla principal 
+                       &lt;/td&gt; 
+                    &lt;td align="center"&gt; 
+                           &lt;table cellspacing="2" cellpadding="2" border="1"&gt; 
+                           &lt;tr&gt; 
+                               &lt;td&gt;Tabla anidada, celda 1&lt;/td&gt; 
+                               &lt;td&gt;Tabla anidada, celda 2&lt;/td&gt; 
+                           &lt;/tr&gt; 
+                           &lt;tr&gt; 
+                               &lt;td&gt;Tabla anidada, celda 3&lt;/td&gt; 
+                               &lt;td&gt;Tabla anidada, celda 4&lt;/td&gt; 
+                           &lt;/tr&gt; 
+                           &lt;/table&gt; 
+                       &lt;/td&gt; 
+                &lt;/tr&gt; 
+                &lt;/table&gt;
+            </code>
+        </pre>
+    </section>
+    <section>
+        <h2>Ejemplos prácticos</h2>
+        <p>Hasta aquí la información que pretendíamos transmitiros sobre las tablas en HTML. Sería importante ahora realizar algún ejemplo de realización de una tabla un poco compleja. Por ejemplo la siguiente:</p>
+        <table align="center" cellspacing="2" cellpadding="2" border="1" bgcolor=dddddd>
+            <tr>
+                <td colspan="4" align="center" bgcolor="666666"><font color="#FFFFFF"><strong>Animales en peligro de extinción</strong></font></td>
+            </tr>
+            <tr bgcolor="aaaaaa">
+                <td>Nombre</td>
+                <td align="center">Cabezas</td>
+                <td align="center">Previsión 2010</td>
+                <td align="center">Previsión 2020</td>
+            </tr>
+            <tr>
+                <td>Ballena</td>
+                <td align="center">6000</td>
+                <td align="center">4000</td>
+                <td align="center">1500</td>
+            </tr>
+            <tr>
+                <td>Oso Pardo</td>
+                <td align="center">50</td>
+                <td rowspan="2" colspan="2" align="center" bgcolor="red">0</td>
+            </tr>
+            <tr>
+                <td>Lince</td>
+                <td align="center">10</td>
+            </tr>
+            <tr>
+                <td>Tigre</td>
+                <td align="center">300</td>
+                <td colspan="2" align="center">210</td>
+            </tr>
+            </table>
+        <p>Se puede ver el código fuente para generar esa tabla. Pero antes intenta realizarla por ti mismo, que es esencial para poder afianzar el conocimiento. Ten en cuenta también que ciertos estilos colocados en la tabla pueden no funcionar en todos los navegadores. Además, lo que hemos repetido ya innumerables veces: los estilos forman parte de la responsabilidad del</p>
+        <pre>
+            <code>
+                &lt;table align="center" cellspacing="2" cellpadding="2" border="1" bgcolor=dddddd&gt;
+                &lt;tr&gt;
+                    &lt;td colspan="4" align="center" bgcolor="666666"&gt;&lt;font color="#FFFFFF"&gt;&lt;strong&gt;Animales en pelig
+                    ro de extinción&lt;/strong&gt;&lt;/font&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr bgcolor="aaaaaa"&gt;
+                    &lt;td&gt;Nombre&lt;/td&gt;
+                    &lt;td align="center"&gt;Cabezas&lt;/td&gt;
+                    &lt;td align="center"&gt;Previsión 2010&lt;/td&gt;
+                    &lt;td align="center"&gt;Previsión 2020&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Ballena&lt;/td&gt;
+                    &lt;td align="center"&gt;6000&lt;/td&gt;
+                    &lt;td align="center"&gt;4000&lt;/td&gt;
+                    &lt;td align="center"&gt;1500&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Oso Pardo&lt;/td&gt;
+                    &lt;td align="center"&gt;50&lt;/td&gt;
+                    &lt;td rowspan="2" colspan="2" align="center" bgcolor="red"&gt;0&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Lince&lt;/td&gt;
+                    &lt;td align="center"&gt;10&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Tigre&lt;/td&gt;
+                    &lt;td align="center"&gt;300&lt;/td&gt;
+                    &lt;td colspan="2" align="center"&gt;210&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <p>Otro ejemplo de tabla con el que podemos practicar. En este caso hemos implementado una anidación de tablas, es decir, dentro de un TD hemos colocado un TABLE completo. Es un buen ejemplo para seguir aprendiendo</p>
+        <table cellspacing="4" cellpadding="4" border="1" width=400 bgcolor=dddddd>
+            <tr>
+                <td colspan="2" bgcolor="666666" align="center"><font color="#FFFFFF"><strong>Climas de América del Sur</strong></font></td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <table align="right" cellspacing="1" cellpadding="1" border="1">
+                    <tr>
+                        <td bgcolor="#cccccc" align="center">Venezuela</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#cccccc" align="center">Colombia</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#cccccc" align="center">Ecuador</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#cccccc" align="center">Perú</td>
+                    </tr>
+                    </table>
+                    Parte de arriba de América del Sur. Países como:
+                </td>
+                <td width="50%">
+                    <table align="right" cellspacing="1" cellpadding="1" border="1">
+                    <tr>
+                        <td bgcolor="#cccccc" align="center">Argentina</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#cccccc" align="center">Chile</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#cccccc" align="center">Uruguay</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#cccccc" align="center">Paraguay</td>
+                    </tr>
+                    </table>
+                    Parte de abajo de América del Sur. Países como:
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#358391">Bosque tropical, clima de sabana, clima marítimo con inviernos secos.</td>
+                <td bgcolor="#358391">Climas marítimos con veranos secos, con inviernos secos, climas frios, clima de estepa, clima desértico.</td>
+            </tr>
+            </table>
+        <p>También podemos ver su código fuente. Inténtalo tú antes de revelar la solución!</p>
+        <pre>
+            <code>
+                &lt;table cellspacing="4" cellpadding="4" border="1" width=400 bgcolor=dddddd&gt;
+                &lt;tr&gt;
+                    &lt;td colspan="2" bgcolor="666666" align="center"&gt;&lt;font color="#FFFFFF"&gt;&lt;strong&gt;Climas de América del Sur&lt;/strong&gt;&lt;/font&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td width="50%"&gt;
+                        &lt;table align="right" cellspacing="1" cellpadding="1" border="1"&gt;
+                        &lt;tr&gt;
+                            &lt;td bgcolor="#cccccc" align="center"&gt;Venezuela&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td bgcolor="#cccccc" align="center"&gt;Colombia&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td bgcolor="#cccccc" align="center"&gt;Ecuador&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td bgcolor="#cccccc" align="center"&gt;Perú&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;/table&gt;
+                        Parte de arriba de América del Sur. Países como:
+                    &lt;/td&gt;
+                    &lt;td width="50%"&gt;
+                        &lt;table align="right" cellspacing="1" cellpadding="1" border="1"&gt;
+                        &lt;tr&gt;
+                            &lt;td bgcolor="#cccccc" align="center"&gt;Argentina&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td bgcolor="#cccccc" align="center"&gt;Chile&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td bgcolor="#cccccc" align="center"&gt;Uruguay&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td bgcolor="#cccccc" align="center"&gt;Paraguay&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;/table&gt;
+                        Parte de abajo de América del Sur. Países como:
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td bgcolor="#358391"&gt;Bosque tropical, clima de sabana, clima marítimo con inviernos secos.&lt;/td&gt;
+                    &lt;td bgcolor="#358391"&gt;Climas marítimos con veranos secos, con inviernos secos, climas frios, clima de estepa, clima desértico.&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <h2>No debes maquetar con tablas</h2>
+        <p>En HTML (antes de la popularización del lenguaje CSS) se utilizan las tablas para maquetar páginas, aparte de mostrar información tabulada como hemos visto en este artículo. Como maquetar nos referimos al proceso por el cual se posicionan contenidos atendiendo a una estructura. Se conoce como maquetación y a la estructura muchas veces se la conoce como layout.</p>
+        <p>Con las tablas podemos generar una serie de columnas, espacios como cabecera o pie donde podemos mostrar contenidos estructurados que den la sensación de un diseño bien realizado, dividido en columnas y filas, como la maquetación de una revista o un portal. Sin embargo, usar las tablas NO es una práctica recomendada. La maquetación por tablas la comentamos en un taller de HTML. Puedes analizar ese artículo para estudiar cómo se hacían las cosas antes y para practicar con HTML, pero hoy no se hacen las cosas así.</p>
+        <p>Lo correcto hoy, en páginas actuales que además tienen capacidades medianamente avanzadas y con información bien estructurada, se usa el lenguaje CSS y sus múltiples herramientas para producir un contenido correctamente maquetado. Si te interesa profundizar sobre este tema te recomendamos la lectura del Manual de Maquetación CSS, aunque antes debes aprender el propio CSS.</p>
+    </section>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+        <p><a href="/HTML/Parte1/IntroduccionHTML/PrologoManual.html">Prologo</a> <a href="/HTML/Parte1/IntroduccionHTML/IntroduccionHTML.html">Introduccion a HTML</a> </p>
+    </section>
+</body>
+</html>

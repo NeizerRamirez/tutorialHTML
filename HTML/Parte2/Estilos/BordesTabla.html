@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordes de tabla en HTML 4</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte2/Estilos/BannerInicioBordesTabla.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 07 de julio de 2008
+    </header>
+    <section>
+        <h2>    Mostramos algunos atributos de table, válidos en HTML 4, para definir el borde de las tablas: especificar bordes de varios tipos, externos e internos.</h2>
+        <p>Como ya vimos en nuestro manual de HTML, en los capítulos sobre trabajo con tablas, que se puede asignar un borde a las tablas. Para ello utilizábamos el atributo border, pero en HTML 4 existe otros atributos para definir cómo queremos que sean los bordes de las tablas.</p>
+        <h2>Bordes externos de las tablas</h2>
+        <p>Veamos el atributo que podemos usar para definir distintos tipos de borde externo en una tabla.</p>
+        <p>El atributo en concreto para definir el tipo de borde externo se llama FRAME y se utiliza en la misma etiqueta TABLE. Sus valores posibles son los siguientes:</p>
+        <code>frame = void | above | below | hsides | lhs | rhs | vsides | box | border</code>
+        <p>Paso a describir cada uno de los distintos valores posibles, que afectan sólo al borde externo de la tabla, quedando los bordes de las celdas inalterados:</p>
+        <ul>
+            <li>void: Ningún borde externo</li><br>
+            <li>above: Sólo aparece el borde superior</li><br>
+            <li>below: Sólo el borde inferior de la tabla</li><br>
+            <li>hsides: Se mostrará sólo el borde de arriba y abajo</li><br>
+            <li>vsides: Sólo los bordes de los lados izquierdo y derecho</li><br>
+            <li>lhs: Se mostrará tan solo el borde izquierdo</li><br>
+            <li>rhs: Se mostrará solamente el borde derecho</li><br>
+            <li>box: Los 4 bordes</li><br>
+            <li>border: También se mostrarán los 4 bordes</li>
+        </ul>
+        <p>Veamos un par de ejemplos de uso del atributo FRAME en tablas:</p>
+        <p>Tabla sin bordes externos (frame="void")</p>
+        <table border="1" frame="void">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+        <p>Tabla con borde externo arriba y abajo (frame="hsides")</p>
+        <table border="1" frame="hsides">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <h2>Bordes internos de tabblas</h2>
+        <p>También podemos definir el aspecto de los bordes internos de las tablas con HTML 4. El atributo que debemos utilizar para especificar qué bordes internos deben mostrarse es RULES, que también se utiliza en la etiqueta TABLE.</p>
+        <p>Como bordes internos nos referimos a los bordes de las celdas de la tabla, puesto que cuando se define un borde en una tabla no sólo tiene borde la parte externa de la tabla, sino también cada una de sus casillas.</p>
+        <p>Los distintos valores que puede llevar el atributo RULES para definir los bordes internos son los siguientes:</p>
+        <code>rules = none | groups | rows | cols | all</code>
+        <p>Cuya explicación podemos ver a continuación:</p>
+        <ul>
+            <li>none: No se coloca ningún borde interno</li><br>
+            <li>groups: Sólo se mostrarán bordes n los grupos de columnas o filas. (veremos más adelante como agrupar columnas o filas)</li><br>
+            <li>rows: Sólo aparecerán bordes entre filas</li><br>
+            <li>cols: Los bordes internos sólo aparecerán para separar columnas</li><br>
+            <li>all: Se mostrarán todos los bordes internos</li>
+        </ul>
+        <p>Ahora mostramos un par de ejemplos del atributo rules:</p>
+        <p>Sin ningún borde interno (rules="none")</p>
+        <table border="1" rules="none">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+        <p>Con borde interno para separar filas (rules="rows")</p>
+        <table border="1" rules="rows">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">HTML en desuso</a></h3>
+        <p><a href="/HTML/Parte1/IntroduccionHTML/PrologoManual.html">Prologo</a> <a href="/HTML/Parte1/IntroduccionHTML/IntroduccionHTML.html">Introduccion a HTML</a> </p>
+    </section>
+</body>
+</html>

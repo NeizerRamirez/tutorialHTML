@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alineación de imágenes con HTML</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte2/Estilos/BannerInicioAlineacionImagen.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> Última actualización: 05 de octubre de 2021
+    </header>
+    <section>
+        <h2>Cómo alinear imágenes usando el lenguaje HTML. Explicaremos como hacer la alineación centrada, derecha o izquierda, junto con una breve explicación del alineamiento de imágenes usando CSS.</h2>
+        <img src="/Imagenes/Parte2/Estilos/alineacion-imagenes.jpg" alt="alineacion-imagenes">
+        <p>En este artículo vamos a ayudarte a aplicar alineación a las imágenes usando HTML. Pero ten muy en cuenta que actualmente la recomendación (o mejor dicho, lo que marca el estándar) es realizar todo lo que vas a ver aquí mediante CSS. Como práctica de HTML este conocimiento te puede venir bien, pero nuestra recomendación es que aprendas a hacer esto mismo con CSS. Al final del artículo te vamos a explicar un resumen de las guías para conseguirlo.</p>
+        <h2>Atributo Align de HTML</h2>
+        <p>Vimos en su momento el atributo align, que nos permitía alinear el texto a derecha, izquierda o centro de nuestra página. Dijimos que este atributo no era exclusivo de la etiqueta &lt;p&gt;, sino que podía ser encontrado en otro tipo de etiquetas.</p>
+        <p>Pues bien, &lt;img&gt; resulta ser una de esas etiquetas que aceptan este atributo aunque en este caso el funcionamiento resulta ser diferente.</p>
+        <p>Para alinear una imagen horizontalmente podemos hacerlo de la misma forma que el texto, es decir, utilizando el atributo align dentro de una etiqueta &lt;p&gt; o &lt;div&gt;. En este caso, lo que incluiremos dentro de esa etiqueta será la imagen en lugar del texto:</p>
+        <h2>Ejemplos de alineamiento de imágenes</h2>
+        <p>Este código mostrará la imagen en el centro:</p>
+        <code>&lt;div align="center"&gt;&lt;img src="logo.gif"&gt;&lt;/div&gt;</code>
+        <p>El atributo align en las imágenes ha quedado obsoleto con el HTML5 y, como hemos señalado, se debe usar CSS para implementar esos estilos.</p>
+        <p>Sin embargo, ya hemos dicho que la etiqueta &lt;img&gt; puede aceptar el atributo align. En este caso, la utilidad que le damos difiere de la anterior.</p>
+        <p>El hecho de utilizar el atributo align dentro de la etiqueta &lt;img&gt; nos permite, en el caso de darle los valores left o right, justificar la imagen del lado que deseamos a la vez que rellenamos con texto el lado opuesto. De esta forma embebemos nuestras imágenes dentro del texto de una manera sencilla.</p>
+        <p>Aquí podéis ver el tipo de código a crear para obtener dicho efecto:</p>
+        <pre>
+            <code>
+                &lt;p&gt; 
+                    &lt;img src="imagen.gif" align="right"&gt;Texto tan extenso como queramos que cubrirá la parte izquierda de la imagen. Sigo poniendo texto para que se vea el efecto, Bla bla bla bla bla bla bla... 
+                &lt;/p&gt;
+            </code>
+        </pre>
+        <p>Quedaría así:</p>
+        <img src="/Imagenes/Parte2/Estilos/TextoDerecha.jpg" alt="ImgDerecha"> <br> <br>
+        <code>
+            &lt;p&gt;
+                &lt;img src="imagen.gif" align="left"&gt;Texto tan extenso como queramos que cubrirá la parte izquierda de la imagen. Sigo poniendo texto para que se vea el efecto, Bla bla bla bla bla bla bla... 
+            &lt;/p&gt;
+        </code>
+    </pre>        <p>Quedaría así:</p>
+        <img src="/Imagenes/Parte2/Estilos/TextoIzquierda.jpg" alt="ImgIzq"> <br> <br>
+        <p>Si en algún momento deseásemos dejar de rellenar ese espacio lateral, podemos pasar a una zona libre introduciendo un salto de línea &lt;br&gt; dentro del cual añadiremos un atributo: clear</p>
+        <p>Así, con etiquetas del tipo:</p>
+        <pre>
+            <code>
+                &lt;br clear="left"&gt; 
+                Saltara verticalmente hasta encontrar el lateral izquierdo libre. 
+                &lt;br clear="right"&gt; 
+                Saltara verticalmente hasta encontrar el lateral derecho libre. 
+                &lt;br clear="all"&gt; 
+            </code>
+        </pre>
+        <p>Saltará verticalmente hasta encontrar ambos laterales libres.</p>
+        <img src="/Imagenes/Parte2/Estilos/TextoDosLados.jpg" alt="textoAmbos">
+    </section>
+    <section>
+        <h2>Otros valores del atributo align</h2>
+        <p>Existen otro tipo de valores que puede adoptar el atributo align dentro de la etiqueta &lt;img&gt;. Estos son relativos a la alineación vertical de la imagen.</p>
+        <p>Supongamos que escribimos una línea al lado de nuestra imagen. Esta línea puede quedar por ejemplo arriba, abajo o al medio de la imagen. Asimismo, puede que en una misma línea tengamos varias imágenes de alturas diferentes que pueden ser alineadas de distintas formas.</p>
+        <p>Estos valores adicionales del atributo align son:</p>
+        <p><b>top:</b> Ajusta la imagen a la parte más alta de la línea. Esto quiere decir que, si hay una imagen más alta, ambas imágenes presentaran el borde superior a la misma altura.</p>
+        <p><b>bottom:</b> Ajusta el bajo de la imagen al texto.</p>
+        <p><b>Absbottom:</b> Colocara el borde inferior de la imagen a nivel del elemento más bajo de la línea.</p>
+        <p><b>middle:</b> Hace coincidir la base de la línea de texto con el medio vertical de la imagen.</p>
+        <p><b>Absmiddle:</b> Ajusta la imagen al medio absoluto de la línea.</p>
+        <p>Estas explicaciones, que pueden resultar un poco complicadas, pueden ser más fácilmente asimiladas a partir con un poco de practica.</p>
+        <p>Nos queda explicar como introducir debajo de la imagen un pie de foto o explicación. Para ello continua leyendo el Manual de HTML.</p>
+    </section>
+    <section>
+        <h2>Usando CSS para alinear las imágenes</h2>
+        <p>Como hemos dicho, HTML no es el lenguaje adecuado para definir estilos en la página, como es el caso de la alineación de las imágenes. Lo correcto es usar CSS.</p>
+        <p>Tenemos todo un Manual de CSS que te explica cómo es ese lenguaje y las distintas maneras que tienes de usarlo. Por supuesto en él aprenderás muchas cosas sobre alineamientos de textos e imágenes. No podemos en este artículo entrar al detalle, porque sería extenderse demasiado. No obstante, para que lo vayas viendo, vamos a explicarte cuáles serían los atributos de CSS para alineamiento de textos e imágenes.</p>
+        <h3>Alinear imágenes al centro</h3>
+        <p>Para conseguir que una imagen se centre necesitamos aplicar el estilo al elemento contenedor de la imagen, de esta manera:</p>
+        <pre>
+            <code>
+                &lt;div style="text-align: center;"&gt;
+                    &lt;img src="mi_imagen.jpg"&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+        <h3>Alineación flotante izquierda o derecha</h3>
+        <p>Para conseguir que una imagen tenga el texto rodeando a la propia imagen (lo que en HTML se consigue con align "left" o "right") tenemos que usar el atributo float. En esta ocasión el atributo se coloca en la propia etiqueta de la imagen, de esta manera:</p>
+        <pre>
+            <code>
+                &lt;div&gt;
+                    &lt;img src="otra_imagen.gif" style="float: left"&gt;
+                    &lt;p&gt;Aquí iría mucho texto para que rodee a la imagen y conseguir apreciar el efecto de alineación...&lt;/p&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+        <p>Ten en cuenta que esto no es un tutorial de CSS. Hay un detalle muy importante que debes de saber y es que el CSS que has visto aplicar aquí es lo que se llama un "CSS inline", que no es recomendado. Para ver las distintas maneras de aplicar CSS en una página consulta el artículo Distintas formas de incluir estilos CSS en una página web.</p>
+        <p>Esperamos que esta rápida zambullida en CSS te haya parecido interesante y veas que no es tan difícil. Para más información sobre estos y otros atributos te recomendamos la lectura del artículo sobre Atributos CSS</p>
+    </section>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">HTML en desuso</a></h3>
+        <p><a href="/HTML/Parte1/IntroduccionHTML/PrologoManual.html">Prologo</a> <a href="/HTML/Parte1/IntroduccionHTML/IntroduccionHTML.html">Introduccion a HTML</a> </p>
+    </section>
+</body>
+</html>

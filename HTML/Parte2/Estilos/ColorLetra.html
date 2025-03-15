@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color, tamaño y tipo de letra</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte2/Estilos/BannerInicioColorTamano.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 11 de octubre de 2001
+    </header>
+    <section>
+        <h2>Seguimos aprendiendo etiquetas que nos sirven para formatear el texto.</h2>
+        <p>Hasta ahora todos nuestros ejemplos han sido en blanco y negro. Muy aburrido! seguro que estáis deseando dar un poco de color a las páginas, así que en este artículo vamos a comenzar con ello.</p>
+        <p>A pesar de que por razones de homogeneidad y sencillez, pero sobre todo por la necesidad de la separación del código por responsabilidades, este tipo de etiquetas para definir formatos deben de realizarse exclusivamente por medio de las hojas de estilo en cascada (de las cuales ya tendremos tiempo de hablar). Sin embargo, en HTML tradicional existe una forma clásica y directa de definir color tamaño y tipo de letra de un texto determinado.</p>
+        <p>Esto se hace a partir de la etiqueta FONT y su cierre correspondiente. Dentro de esta etiqueta deberemos especificar los atributos correspondientes a cada uno de estos parámetros que deseamos definir. A continuación os comentamos los atributos principales de esta etiqueta:</p>
+        <p>Nota: Los colores no son responsabilidad del HTML, puesto que pertenecen al estilo y no al contenido. Por lo tanto, todo lo que se va a explicar aquí está en desuso. Lo advertimos mediante esta nota y en el texto del propio artículo. Este artículo te puede venir bien como práctica, si estás comenzando con HTML y quieres jugar con etiquetas diferentes. Sin embargo, tenlo muy en cuenta, nunca uses estas etiquetas en un proyecto real, usa CSS.</p>
+        <p>Incluso en el estándar HTML5, que es el más actual, etiquetas como FONT se han eliminado, por lo que no deberían usarse.</p>
+        <h2>Atributo face</h2>
+        <p>Define el tipo de letra. Muy probablemente tu navegador no le haga caso al atributo, puesto que está totalmente en desuso.</p>
+        <p>Hay que tener cuidado con este atributo ya que cada usuario, dependiendo de la plataforma que utilice, puede no disponer de los mismos tipos de letra que nosotros con lo que, si nosotros elegimos un tipo del que no dispone, el navegador se verá forzado a mostrar el texto con la fuente que utiliza por defecto (suele ser Times New Roman). Para evitar esto, dentro del atributo suelen seleccionarse varios tipos de letra separados por comas. En este caso el navegador comprobará que dispone del primer tipo enumerado y si no es así, pasará al segundo y así sucesivamente hasta encontrar un tipo que posea o bien acabar la lista y poner la fuente por defecto. Veamos un ejemplo.</p>
+        <code>&lt;font face="Comic Sans MS,arial,verdana"&gt;Este texto tiene otra tipografía&lt;/font&gt;</code>
+        <p>Que se visualizaría así en una página web.</p>
+        <font face="Comic Sans MS,arial,verdana">Este texto tiene otra tipografía</font>
+        <p>Nota: Aquí tenemos un ejemplo de atributo cuyo valor debe estar limitado por comillas ("). Habíamos dicho que las comillas eran opcionales en los atributos, sin embargo esto no es así siempre. Si el valor del atributo contiene espacios, como es el caso de:</p>
+        <p>face="Comic Sans MS,arial,verdana"</p>
+        <p>debemos colocar las comillas para limitarlo. En caso de no tener comillas</p>
+        <p>face=Comic Sans MS,arial,verdana</p>
+        <p>se entendería que face=Comic, pero no se tendría en cuenta todo lo que sigue, porque HTML no lo asociaría al valor del atributo. En este caso HTML pensaría que las siguientes palabras (después del espacio) son otros atributos, pero como no los conoce como atributos simplemente los desestimará.</p>
+        <h2>Atributo size</h2>
+        <p>Define el tamaño de la letra. Este tamaño puede ser absoluto o relativo.</p>
+        <p>Si hablamos en términos absolutos, existen 7 niveles de tamaño distintos numerados de 1 a 7 por orden creciente. Elegiremos por tanto un valor size="1" para la letra más pequeña o size="7" para la más grande.</p>
+        <code>&lt;font size=4&gt;Este texto es más grande&lt;/font&gt;</code>
+        <p>Que se visualizaría así en una página web.</p>
+        <font size=4>Este texto es más grande</font>
+        <p>Podemos asimismo modificar el tamaño de nuestra letra con respecto al del texto mostrado precedentemente definiendo el número de niveles que queremos subir o bajar en esta escala de tamaños por medio de un signo + o -. De este modo, si definimos nuestro atributo como size="+1" lo que queremos decir es que aumentamos de un nivel el tamaño de la letra. Si estabamos escribiendo previamente en 3, pasaremos automáticamente a 4.</p>
+        <p>Los tamaños reales que veremos en pantalla dependerán de la definición y del tamaño de fuente elegido por el usuario en el navegador. Este tamaño de fuente puede ser definido en el Explorer yendo al menu superior, Ver/Tamaño de la fuente. En Netscape elegiremos View/Text Size. Esta flexibilidad puede en más de una ocasión resultarnos embarazosa ya que en muchos casos desearemos que el tamaño del texto permanezca constante para que éste quepa en un determinado espacio. Veremos en su momento que esta prefijación del tamaño puede ser llevada a cabo por las hojas de estilo en cascada.</p>
+    </section>
+    <section>
+        <h2>Atributo color</h2>
+        <p>El color del texto puede ser definido mediante el atributo color. Cada color es a su vez definido por un número hexadecimal que esta compuesto a su vez de tres partes. Cada una de estas partes representa la contribución del rojo, verde y azul al color en cuestión.</p>
+        <p>Podéis entender cómo funciona esta numeración y cuáles son los colores que resultan más compatibles a partir de este artículo: Los colores y HTML.</p>
+        <p>Por otra parte, es posible definir de una manera inmediata algunos de los colores más frecuentemente usados para los que se ha creado un nombre más memotécnico:</p>
+        <img src="/Imagenes/Parte2/Estilos/ColoresCode.png" alt="Tabla de colores"> <br>
+        <code>&lt;font color="red"&gt;Este texto está en rojo&lt;/font&gt;</code>
+        <p>Que se visualizaría así en una página web.</p>
+        <font color="red">Este texto está en rojo</font>
+        <p>Con todo esto estamos ya en disposicion de crear un texto formateado de una forma realmente elaborada.</p>
+        <p>Pongamos pues en practica todo lo que hemos aprendido en estos capitulos haciendo un ejercicio consistente en una página que tenga las siguientes características:</p>
+        <ul>
+            <li>Un titular con encabezado de nivel 1, en itálica y color verde oliva.</li>
+            <li>Un segundo titular con encabezado de nivel 2, también de color verde oliva.</li>
+            <li>Todo el texto de la página deberá presentarse con una fuente distinta de la fuente por defecto. Por ejemplo "Comic Sans MS" y en caso de que ésta no esté en el sistema que se coloque la fuente "Arial".</li>
+        </ul>
+        <p>Se puede ver aquí una posible resolución de este ejercicio. Sin embargo ten en cuenta que este código no se debería implementar en un sitio de cara al público, puesto que las cosas no se hacen así actualmente. Recuerda que los estilos son parcela de las CSS. Como práctica te puede venir bien y es agradable dar un poco de color a la página, con lo poco que sabemos de HTML. Pero no uses la etiqueta FONT en tus sitios web. Nosotros nunca admitiremos que somos los autores de este código. Si alguna vez te preguntan no digas que lo has visto aquí ;)</p>
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;title&gt;Home de la cocina para todos&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;font color="Olive" face="Comic Sans MS,arial"&gt;
+                    &lt;h1 align="center"&gt;&lt;i&gt;Cocina para Todos&lt;/i&gt;&lt;/h1&gt;
+                    &lt;h2 align="center"&gt;La cocina tu alcance&lt;/h2&gt;
+                    &lt;/font&gt;
+                    &lt;font face="Comic Sans MS,arial"&gt;
+                    Descubre los platos más exquisitos, fáciles y económicos que puedas imaginar.
+                    &lt;br&gt;
+                    Dentro de este sitio podrás tener acceso a gran variedad de &lt;b&gt;recetas&lt;/b&gt; de preparacion sencilla,
+                    aprenderás como realizar &lt;b&gt;operaciones comunes&lt;/b&gt; dentro de una cocina y podras plantear tus preguntas
+                    en nuestro &lt;b&gt;consultorio&lt;/b&gt; gourmet donde nuestro cocinero virtual pod
+                    ayudarte con tus proyectos culinarios. También te será posible adquirir los &lt;b&gt;libros&lt;/b&gt; gastronómicos más populares al precio més accesible...
+                    &lt;br&gt;
+                    Adéntrate en los misterios de la cocina sin quemar más cacerolas ni llamar al pizzero.
+                    &lt;/font&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+        </pre>
+    </section>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+        <p><a href="/HTML/Parte1/IntroduccionHTML/PrologoManual.html">Prologo</a> <a href="/HTML/Parte1/IntroduccionHTML/IntroduccionHTML.html">Introduccion a HTML</a> </p>
+    </section>
+</body>
+</html>
+</body>
+</html>
