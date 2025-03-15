@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frames - Una página en cada marco</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte2/Frames/FramesMarco.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 28 de mayo de 2002
+    </header>
+    <section>
+        <h2>    Vemos cómo serían las distintas páginas independientes que componen un sitio creado con frames.</h2>
+        <p>Las páginas que mostraremos en cada marco son documentos HTML iguales a los que venimos creando anteriormente. Podemos colocar cualquier elemento HTML de los estudiados en este manual, como etiquetas de párrafo, imágenes, colores de fondo, etc. <br> Cada documento, como ya hemos indicado, se escribe por separado en su propio archivo HTML. Para el ejemplo del capítulo anterior podemos definir los archivos HTML de la siguiente manera.</p>
+        <p><b>pagina1.html</b><br>Es la página que contiene el titular de la web. Simplemente se trata de una etiqueta &lt;H1&gt; de titular. La página tiene su propio título, con la etiqueta &lt;TITLE&gt;, que no se podrá visualizar por ningún sitio a no ser que se muestre esta página sin los frames, ya que las páginas dentro de los marcos heredan el título de la definición de los frames.</p>
+        <pre>
+            <code>
+                &lt;html&gt;
+                &lt;head&gt;
+                &lt;title&gt;Titulo Carnicería Pepe&lt;/title&gt;
+                &lt;/head&gt;
+
+                &lt;body bgcolor="#DECC09"&gt;
+                &lt;h1 align=center&gt;Carnicería PEPE&lt;/h1&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p><b>pagina2.html</b><br>Es la página que se presentará en el área principal de la definición de frames, es decir, la página que tiene más espacio para visualizarse y donde pondremos los contenidos de la web. En este caso muestra un mensaje de bienvenida a la web, que hará las veces de portada.</p>
+        <pre>
+            <code>
+                &lt;html&gt;
+                &lt;head&gt;
+                &lt;title&gt;Portada de Carnicería PEPE&lt;/title&gt;
+                &lt;/head&gt;
+
+                &lt;body bgcolor="#CF391C" text="#ffffff"&gt;
+                &lt;h1 align="center"&gt;Bienvenidos a nuestra web&lt;/h1&gt;
+                &lt;br&gt;
+                &lt;br&gt;
+                La carnicería PEPE, con más de 100 años de experiencia, es la mejor fuente de carnes de vacuno y cerdo de la comunidad.
+                &lt;br&gt;
+                &lt;br&gt;
+                Tanto en invierno como en verano puede encontrar nuestras ofertas de temporada de primera calidad.
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p><b>pagina3.html</b><br>En esta página se mostrará la barra de navegación por los contenidos del sitio. Contiene enlaces que deberían actualizar el contenido del área principal de la declaración de frames, para mostrar los distintos contenidos del sitio, por ejemplo, la portada, los productos, la página de contacto, etc.</p>
+        <pre>
+            <code>
+                &lt;html&gt;
+                &lt;head&gt;
+                &lt;title&gt;Barra de navegación de carnicería PEPE&lt;/title&gt;
+                &lt;/head&gt;
+
+                &lt;body bgcolor="#AC760E" link="ffffcc" vlink="ffffcc"&gt;
+                &lt;div align="center"&gt;
+                &lt;b&gt;
+                &lt;a href="pagina2.html"&gt;Portada&lt;/a&gt; |
+                &lt;a href="productos.html"&gt;Productos&lt;/a&gt; |
+                &lt;a href="contacto.html"&gt;Contacto&lt;/a&gt;
+                &lt;/b&gt;
+                &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p>Podemos ver cómo queda la página de frames con estos contenidos, que simulan la página de una carnicería.</p>
+    </section>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+
+        <p><a href="/HTML/Parte2/FramesHTML/FramesCreacion.html">Frames - Creación de una estructura simple</a> <a href="/HTML/Parte2/FramesHTML/FramesEnlaces.html">Frames - Dirigir los enlaces</a> </p>
+    </section>
+</body>
+</html>

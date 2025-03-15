@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frames - Atributos avanzados</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte2/Frames/FramesAtributosAvanzados.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 13 de junio de 2002
+    </header>
+    <section>
+        <h2>    Lista de atributos de las etiquetas frameset y frame con las que podemos configurar la apariencia y características de los marcos.</h2>
+        <p>Aparte de la creación de los marcos propiamente dicha, existen muchos atributos con los que configurar su apariencia. Para ello, tanto la etiqueta <frameset> como <frame> admiten diversos atributos que permiten especificar la forma de elementos como los bordes de los frames, el margen, la existencia o no de barras de desplazamiento, etc.</p>
+    </section>
+
+    <section>
+        <h2>Atributos para la etiqueta &lt;frameset&gt;</h2>
+        <p>Ya hemos conocido el atributo cols y rows, que sirven para indicar si la distribución en marcos se hará horizontalmente o verticalmente. Sólo se puede utilizar uno de ellos y se iguala a las dimensiones de cada uno de las divisiones, separadas por comas.</p>
+        <p><b>border="número de pixels"</b><br>Permite especificar de manera global para todo el frameset el número de pixels que ha de tener el borde de los frames.</p>
+        <p><b>bordercolor="#rrggbb"</b><br>Con este atributo podemos modificar el color del borde de los frames, también de manera global a todo el frameset.</p>
+        <p><b>frameborder="yes|no|0"</b><br>Sirve para mostrar o no el borde del frame. Sus posibles valores son "yes" (para que se vean los bordes) y "no" o "0" (para que no se vean). En la práctica elimina el borde, pero permanece una línea de separación de los frames.</p>
+        <p><b>framespacing="número de pixels"</b><br>Para determinar la anchura de la línea de separación de los frames. Se puede utilizar en Internet Explorer y junto con el atributo frameborder="0" sirve para eliminar los bordes de los marcos.</p>
+    </section>
+    <section>
+        <h2>Atributos para la etiqueta &lt;frame&gt;</h2>
+        <p>Para esta etiqueta hemos señalado en capítulos anteriores los atributos src, que sirve para indicar el archivo que contiene el marco y name, para darle un nombre al marco y luego dirigir los enlaces hacia el. Veamos ahora otros atributos disponibles. <br><b>marginwidth="número de pixels"</b><br>Define el número de pixels que tiene el margen del frame donde se indica. Este margen se aplica a la página que pretendemos ver en ese marco, de modo que si colocamos 0, los contenidos del página en ese marco estarán pegados por completo al borde del margen y si indicamos un valor de 10, los contenidos de la página estarían separados del borde 10 pixels.</p>
+        <p><b>marginheight="número de pixels"</b><br>Lo mismo que el anterior atributo, pero para el margen vertical.</p>
+        <p><b>scrolling="yes|no|auto"</b><br>Sirve para indicar si queremos que haya barras de desplazamiento en los distintos marcos. Si indicamos "yes" siempre saldrán las barras, si indicamos "no" no saldrán nunca y si colocamos "auto" saldrán sólo si son necesarias. Auto es el valor por defecto.</p>
+        <p><b>Consejo: </b>hay que tener cuidado si eliminamos los bordes de los frames, puesto que la página web puede tener dimensiones distintas dependiendo de la definición de pantalla del visitante. Si el espacio de la ventana se ve reducido, podría verse reducido el espacio para el frame y puede que no quepan los elementos que antes si que cabían y si hemos eliminado las barras de desplazamiento puede que el visitante no pueda ver todo el contenido del marco. <br>Este mismo consejo se puede aplicar al redimensionamiento de frames, que veremos en el siguiente atributo. Si hacemos que los marcos no sean redimensionables probablemente tengamos una declaración de frames demasiado rígida, que puede verse mal en algún tipo de pantalla.</p>
+        <p><b>noresize</b><br>Este atributo no tiene valores, simplemente se pone o no se pone. En caso de que esté presente indica que el frame no se puede redimensionar. Como hemos podido ver, al colocar el ratón sobre el borde de los marcos sale un cursor que nos señala que podemos mover dicho borde y redimensionar así los frames. Por defecto, si no colocamos nada, los marcos si se pueden redimensionar.</p>
+        <p><b>frameborder="yes|no|0"</b><br>Este atributo permite controlar la aparición de los bordes de los frames. Con este atributo igualado a "0" o "no" los bordes se eliminan. Sin embargo, quedan los feos márgenes en el borde. Por lo que hemos podido comprobar funciona mejor en Netscape que en Internet Explorer. De todos modos, tenemos una nota un poco más adelante para explicar los frames sin bordes.</p>
+        <p><b>Nota: </b>los atributos de frames no funcionan siempre bien en todos los navegadores. Es recomendable que hagamos un test sobre lo que estamos diseñando en varios navegadores para comprobar que nuestros frames se ven bien en todas las plataformas.</p>
+        <p><b>bordercolor="#rrggbb"</b><br>Permite especicicar el color del borde del marco.</p>
+        <p><b>Referencia: </b>Tenemos un taller de HTML en el que explicamos como realizar un frame sin bordes que se vea bien en los navegadores más habituales.</p>
+    </section>
+
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+
+        <p><a href="/HTML/Parte2/FramesHTML/FramesAnidar.html">Frames - Anidar frames</a> <a href="/HTML/Parte2/FramesHTML/FramesVentajaDesventaja.html">Ventajas e inconvenientes del uso de frames</a> </p>
+    </section>
+</body>
+</html>

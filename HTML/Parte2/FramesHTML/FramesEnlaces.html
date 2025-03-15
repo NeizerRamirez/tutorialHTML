@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frames - Dirigir los enlaces</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte2/Frames/FramesEnlaces.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 28 de mayo de 2002
+    </header>
+    <section>
+        <h2>    Explicación sobre cómo dirigir el enlace al frame que deseemos que actualice, que no tiene porque ser el mismo donde está situado.</h2>
+        <p>La única particularidad destacable en el ejemplo del capítulo anterior, y en el manejo de frames en general, se trata de que cada uno de los enlaces que colocamos en las páginas actualizan el frame donde está colocado este enlace. Por ejemplo, si tenemos enlaces en la parte inferior de la ventana, en el espacio correspondiente al tercer marco, actualizarán los contenidos del tercer frame, que es donde están situados los enlaces.<br>Este efecto que comentamos se puede observar en el ejemplo de la página de la carnicería, tal como quedaría al incluir los códigos de las distintas páginas.</p>
+        <p>Lo lógico es que al pulsar sobre un enlace de la barra de navegación actualicemos el frame principal, que es donde habíamos planeado colocar los contenidos, en lugar del frame donde colocamos la barra de navegación, que debería mantenerse fija. Para conseguir este efecto debemos hacer un par de cosas:</p>
+        <ol>
+            <li><p><b>Darle un nombre al frame que deseamos actualizar</b><br>Dicho nombre se indica en la etiqueta &lt;FRAME&gt; de la definición de frames. Para ello utilizamos el atributo name, igualado al nombre que le queremos dar a dicho marco.</p></li>
+            <li><p><b>Dirigir los enlaces hacia ese frame</b><br>Para ello debemos colocar en el atributo target de los enlaces -etiqueta &lt;A&gt;- el nombre del frame que deseamos actualizar al pulsar el enlace.</p></li>
+        </ol>
+        <p>Después de darle un nombre al frame principal, nuestra declaración de frames quedaría de la siguiente manera.</p>
+        <pre>
+            <code>
+                &lt;frameset rows="15%,*,75"&gt;
+                    &lt;frame src="pagina1.html"&gt;
+                    &lt;frame src="pagina2.html" name="principal"&gt;
+                    &lt;frame src="pagina3.html"&gt;
+                &lt;/frameset&gt;
+            </code>
+        </pre>
+        <p>Además, deberíamos colocar el atributo target a los enlaces, tal como sigue.</p>
+        <pre>
+            <code>
+                &lt;a href="pagina2.html" target="principal"&gt;Portada&lt;/a&gt; |
+                &lt;a href="productos.html" target="principal"&gt;Productos&lt;/a&gt; |
+                &lt;a href="contacto.html" target="principal"&gt;Contacto&lt;/a&gt;
+            </code>
+        </pre>
+        <p>Una vez realizados este par de cambios podemos ver como los enlaces de la barra de navegación sí actualizan la página que deben.</p>
+    </section>
+    <section>
+        <h2>Valores para el atributo target</h2>
+        <p>Como hemos visto, con el atributo target de la etiqueta <A> podemos indicar el nombre del frame que deseamos que actualice ese enlace. Sin embargo, no es este el único valor que podemos aplicarle al atributo. Tenemos algunos valores adicionales que podemos asignar a cualquier enlace en general.</p>
+        <p><b>_blank</b><br>Para hacer que ese enlace se abra en una ventana a parte. Nuestros ejemplos en este manual se suelen abrir en una ventana a parte, colocando este valor en el target de los enlaces que llevan a los ejemplos.</p>
+        <p><b>_self</b><br>Se actualiza el frame donde está situado el enlace. Es el valor por defecto.</p>
+        <p><b>_parent</b><br>El enlace se actualiza sobre su padre o sobre la ventana que estamos trabajando, si es que no hay un padre.</p>
+        <p><b>_top</b><br>La página se carga a pantalla completa, es decir, eliminando todos los frames que pudiera haber. Este atributo es muy importante porque si colocamos en nuestra página con frames un enlace a una página externa, se abriría en uno de los frames y se mantendrían visibles otros frames de la página, haciendo un efecto que suele ser poco agradable, porque parece que están evitando que nos escapemos.</p>
+        <p>La sintaxis de uno de estos valores de atributos colocados en un enlace sería la siguiente.</p>
+        <p>&lt;A href="http://www.guiarte.com" target="_top"&gt;Acceder a guiarte.com&lt;/A&gt;</p>
+    </section>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+
+        <p><a href="/HTML/Parte2/FramesHTML/FramesMarcoPagina.html">Frames - Una página en cada marco</a> <a href="/HTML/Parte2/FramesHTML/FramesAnidar.html">Frames - Anidar frames</a> </p>
+    </section>
+</body>
+</html>

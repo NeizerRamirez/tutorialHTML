@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas en HTML</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/TablasHTML/TablasHTML.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 19 de diciembre de 2001
+    </header>
+    <section>
+        <h2>    Vemos lo que son las tablas, para que sirven y en qué casos podemos utilizarlas. Vemos la tabla más simple posible.</h2>
+        <p><b>Una tabla en un conjunto de celdas organizadas dentro de las cuales podemos alojar distintos contenidos.</b></p>
+        <p>HTML dispone de una gran variedad de etiquetas para crear tablas, con sus atributos, de las cuales veremos una introducción en este artículo.</p>
+        <p>En un principio nos podría parecer que las tablas son raramente útiles y que pueden ser utilizadas principalmente para listar datos como agendas, resultados y otros datos de una forma organizada. En general, sirven para representar información tabulada, en filas y columnas. Esto es una realidad en los últimos años, desde que las tablas se han descartado para fines relacionados con la maquetación.</p>
+        <p><b>Nota: </b>Durante un tiempo, gran parte de los diseñadores de páginas basaron su maquetación en este tipo de artilugios. En efecto, una tabla nos permite organizar y distribuir los espacios de la manera más adecuada. Nos puede ayudar a generar texto en columnas como los periódicos, prefijar los tamaños ocupados por distintas secciones de la página o poner de una manera sencilla un pie de foto a una imagen.</p>
+        <p>Estamos en la segunda década del 2000 y hablar de las tablas como solución para maquetación ha pasado a la historia. Las webs de primera y segunda generación utilizaban este recurso intensivamente para maquetar contenidos en páginas web, además de otras barbaridades, como los píxeles transparentes, para conseguir efectos como márgenes o espacios en blanco. Sin embargo, las webs actuales, a partir de la tercera generación, han acabado con todas esas técnicas que no hacían más que ensuciar el código fuente de las páginas web, mezclando presentación y contenido. Actualmente toda la maquetación de una página se organiza con CSS, lo que nos da un mayor control de todos los elementos de la página y la posibilidad de separar todos los estilos para definir el aspecto de una web en un fichero aparte del HTML.</p>
+        <p>Por ello, en el momento actual las tablas se utilizan mucho menos que en el pasado y realmente la recomendación es usarlas solo en los casos en los que necesitemos incluir en una página información tabulada, es decir, dispuesta en filas y columnas. Todo uso basado en tablas para procurar colocar elementos en determinadas posiciones de la página sería incorrecto en las técnicas actuales de diseño de páginas web.</p>
+        <p>Como veremos a continuación, existen diversas etiquetas que se deben utilizar en una forma determinada para la creación de tablas. Por ello, puede que en un principio nos resulte un poco complicado trabajar con estas estructuras pero, con un poco de práctica podremos crear tablas con absoluta soltura. Si deseamos mostrar datos de una manera sencilla de leer, dispuestos en filas y columnas, tarde o temprano observaremos que las tablas son la mejor solución y apreciaremos las posibilidades nos ofrecen.</p>
+    </section>
+
+    <section>
+        <h2>Etiquetas básicas para tablas en HTML</h2>
+        <p>Para empezar, nada más sencillo que por el principio: las tablas son definidas por las etiquetas TABLE y su cierre.</p>
+        <p>Dentro de estas dos etiquetas colocaremos todas las otras etiquetas de las tablas, hasta llegar a las celdas. Dentro de las celdas ya es permitido colocar textos e imágenes que darán el contenido a la tabla.</p>
+        <p>Las tablas son descritas por líneas de arriba a abajo (y luego por columnas de izquierda a derecha). Cada una de estas líneas, llamada fila, es definida por otra etiqueta y su cierre: TR</p>
+        <p>Asimismo, dentro de cada línea, habrá diferentes celdas. Cada una de estas celdas será definida por otra etiqueta: TD. Dentro de ésta y su cierre será donde coloquemos nuestro contenido, el contenido de cada celda.</p>
+        <p>Aquí tenéis un ejemplo de estructura de tabla:</p>
+        <pre>
+            <code>
+                &lt;table&gt;
+                &lt;tr&gt; 
+                    &lt;td&gt;Celda 1, linea 1&lt;/td&gt; 
+                    &lt;td&gt; Celda 2, linea 1&lt;/td&gt;
+                &lt;/tr&gt; 
+                &lt;tr&gt; 
+                    &lt;td&gt; Celda 1, linea 2&lt;/td&gt;
+                    &lt;td&gt; Celda 2, linea 2&lt;/td&gt;
+                &lt;/tr&gt; 
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <p>El resultado:</p>
+            <table> 
+            <tr> 
+               <td>Celda 1, linea 1</td> 
+               <td> Celda 2, linea 1</td> 
+            </tr> 
+            <tr> 
+               <td> Celda 1, linea 2</td> 
+               <td> Celda 2, linea 2</td> 
+            </tr> 
+            </table>
+            <p><b>Nota: </b>Nota: Hasta aquí hemos visto todas las etiquetas que necesitamos conocer para crear tablas. Existen otras etiquetas, pero lo que podemos conseguir con ellas se puede conseguir también usando las que hemos visto.</p>
+            <p>Por poner un ejemplo, señalamos la etiqueta TH, que sirve para crear una celda cuyo contenido esté formatedo como un título o cabecera de la tabla. En la práctica, lo que hace es poner en negrita y centrado el contenido de esa celda, lo que se puede conseguir aplicando las correspondientes etiquetas dentro de la celda. Así:</p>
+            <code>&lt;td align="center"&gt;&lt;b&gt;contenido de la celda&lt;/b&gt;&lt;/td&gt;</code>
+            <p>Sin embargo, cuando estudies la semántica del HTML te darás cuenta que, aunque la presentación sea la misma, la semántica no lo es. Esto es un tema más avanzado por el que de momento (si estás comenzando con HTML) no necesitas preocuparte. Puedes encontrar algo más de información en el artículo de las etiquetas semánticas del HTML5.</p>
+    </section>
+
+    <section>
+        <h2>Atributos para tablas, filas y celdas</h2>
+        <p>A partir de esta idea simple y sencilla, las tablas adquieren otra magnitud cuando les incorporamos toda una batería de atributos aplicados sobre cada tipo de etiquetas que las componen.</p>
+        <p>En cuanto a atributos para tabla hay unos cuantos. Muchos los conoces ya de otras etiquetas, como width, height, align, etc. Hay otros que son especialmente creados para las etiquetas TABLE.</p>
+        <ul>
+            <li><p><b>cellspacing: </b>es el espacio entre celdas de la tabla.</p></li>
+            <li><p><b>cellpadding: </b>es el espacio entre el borde de la celda y su contenido.</p></li>
+            <li><p><b>border: </b>es el número de píxeles que tendrá el borde de la tabla.</p></li>
+            <li><p><b>bordercolor: </b>es el rbg que le vas a asignar al borde de la tabla.</p></li>
+        </ul>
+        <p>En cuanto a las etiquetas "interiores" de una tabla, nos referimos a TR y TD, ten en cuenta:</p>
+        <ul>
+            <li><p>Podemos usar prácticamente cualquier tipo de etiqueta dentro de la etiqueta TD para, de esta forma, escribir su contenido.</p></li>
+            <li><p>Las etiquetas situadas en el interior de la celda no modifican el resto del documento.</p></li>
+            <li><p>Las etiquetas de fuera de la celda no son tenidas en cuenta por ésta.</p></li>
+        </ul>
+        <p>Así pues, podemos especificar el formato de nuestras celdas a partir de etiquetas introducidas en su interior o mediante atributos colocados dentro de la etiqueta de celda TD o bien, en algunos casos, dentro de la etiqueta TR, si deseamos que el atributo sea valido para toda la línea. La forma más útil y actual de dar forma a las celdas es a partir de las hojas de estilo en cascada que ya tendréis la oportunidad de abordar más adelante.</p>
+        <p>Veamos a continuación algunos atributos útiles para la construcción de nuestras tablas. Empecemos viendo atributos que nos permiten modificar una celda en concreto o toda una línea:</p>
+        <ul>
+            <li><p><b>align: </b>Justifica el texto de la celda del mismo modo que si fuese el de un párrafo.</p></li>
+            <li><p><b>valign: </b>Podemos elegir si queremos que el texto aparezca arriba (top), en el centro (middle) o abajo (bottom) de la celda.</p></li>
+            <li><p><b>bgcolor: </b>Da color a la celda o línea elegida.</p></li>
+            <li><p><b>bordercolor: </b>Define el color del borde.</p></li>
+        </ul>
+        <p>Otros atributos que pueden ser únicamente asignados a una celda y no al conjunto de celdas de una línea son:</p>
+        <ul>
+            <li><p><b>background: </b>Nos permite colocar un fondo para la celda a partir de un enlace a una imagen.</p></li>
+            <li><p><b>height: </b>Define la altura de la celda en pixels o porcentaje.</p></li>
+            <li><p><b>width: </b>Define la anchura de la celda en pixels o porcentaje.</p></li>
+            <li><p><b>colspan: </b>Expande una celda horizontalmente.</p></li>
+            <li><p><b>rowspan: </b>Expande una celda verticalmente.</p></li>
+        </ul>
+        <p><b>Nota: </b>El atributo height no funciona en todos los navegadores, además, su uso no está muy extendido. Las celdas por lo general tienen el alto que ncesitan para que quepa todo el contenido que se le haya insertado, es decir, crecen lo suficiente para que quepa lo que hemos colocado dentro.</p>
+        <p>El atributo width si que funciona en todos los navegadores y lo tendréis que utilizar constantemente. Si le asignamos un ancho a la celda, el ancho será respetado y si dicha celda tiene mucho texto o cualquier otro contenido, la celda crecerá hacia abajo todo lo necesario para que quepa lo que hemos colocado.</p>
+        <p>Un matiz al último párafo. Se trata de que si definimos una celda de un ancho 100 por ejemplo, y colocamos en la celda un contenido como una imagen que mida más de 100 pixeles, la celda crecerá en horizontal todo lo necesario para que la imagen quepa. Si el elemento, aunque más ancho, fuera divisible (como un texto) el ancho sería respetado y el texto crecería hacia abajo o lo que es lo mismo, en altura, como señalábamos en el anterior párrafo.</p>
+        <p>Estos últimos cuatro atributos descritos son de gran utilidad. Concretamente, height y width nos ayudan a definir las dimensiones de nuestras celdas de una forma absoluta (en pixels o puntos de pantalla) o de una forma relativa, es decir por porcentajes referidos al tamaño total de la tabla. Podéis leer un articulo interesante a propósito de estas dos modalidades de diseño en nuestro manual de usabilidad.</p>
+        <p>A titulo de ejemplo:</p>
+        <code>&lt;td width="80"&gt;&lt;/td&gt;</code>
+        <p>Dará una anchura de 80 pixels a la celda. Sin embargo,</p>
+        <code>&lt;td width="80%"&gt;&lt;/td&gt;</code>
+        <p>Dará una anchura a la celda del 80% de la anchura de la tabla.</p>
+        <p>Hay que tener en cuenta que, definidas las dimensiones de las celdas, el navegador va a hacer lo que buenamente pueda para satisfacer al programador. Esto quiere decir que puede que en algunas ocasiones el resultado que obtengamos no sea el esperado. Concretamente, si el texto presenta una palabra excesivamente larga, puede que la anchura de la celda se vea aumentada para mantener la palabra en la misma línea. Por otra parte, si el texto resulta muy largo, la celda aumentara su altura para poder mostrar todo su contenido.</p>
+        <p>Análogamente, si por ejemplo definimos dos anchuras distintas a celdas de una misma columna, el navegador no sabrá a cual hacer caso. Es por ello que resulta conveniente tener bien claro desde un principio como es la tabla que queremos diseñar. No esta de más si la prediseñamos en papel si la complejidad es importante. El HTML resulta en general fácil pero las tablas pueden convertirse en un verdadero quebradero de cabeza si no llegamos a comprenderlas debidamente.</p>
+        <p>Los atributos rowspan y colspan son también utilizados frecuentemente. Gracias a ellos es posible expandir celdas fusionando éstas con sus vecinas. El valor que pueden tomar estas etiquetas es numérico. El número representa la cantidad de celdas fusionadas.</p>
+        <p>Así:</p>
+        <code>&lt;td colspan="2"&gt;&lt;/td&gt;</code>
+        <p>Fusionara la celda en cuestión con su vecina derecha.</p>
+        <table>
+            <tr>
+                <td colspan="2">Esta celda tiene un colspan="2"</td>
+            </tr>
+            <tr>
+                <td>Celda normal</td>
+                <td>Otra celda</td>
+            </tr>
+        </table>
+        <p>Del mismo modo,</p>
+        <code>&lt;td rowspan="2"&gt;&lt;/td&gt;</code>
+        <p>Expandirá la celda hacia abajo fusionándose con la celda inferior.</p>
+        <table>
+            <tr>
+                <td rowspan="2">Esta celda tiene rowspan="2", <br>por eso tiene fusionada la celda de abajo</td>
+                <td>Celda normal</td>
+            </tr>
+            <tr>
+                <td>Otra celda normal</td>
+            </tr>
+        </table>
+        <p>El resto de los atributos presentados presentan una utilidad y uso bastante obvios. Los dejamos a vuestra propia investigación.</p>
+        <p>Podemos continuar las explicaciones de tablas en los artículos Atributos de la tabla y conclusión y Bordes de tabla en HTML 4.</p>
+    </section>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+
+        <p><a href="/HTML/Parte1/ImagenesYGraficos/FormatosGraficos.html">Formatos gráficos para páginas web</a> <a href="/HTML/Parte1/TablasHTML/AtributosTablas.html">Atributos para tablas HTML</a> </p>
+    </section>
+</body>
+</html>

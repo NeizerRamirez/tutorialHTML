@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frames - Explicación básica</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte2/Frames/FramesExplicacion.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 28 de mayo de 2002
+    </header>
+    <section>
+        <h2>    Explicamos los detalles generales y los más básicos sobre la creación de frames. Etiquetas FRAMESET Y FRAME.</h2>
+        <p>Las páginas web que están hechas con frames se componen de una declaración de los marcos y tantas páginas en formato HTML corriente como distintas divisiones hemos definido. La declaración o definición de frames es la única página que realmente debemos aprender, puesto que las páginas que se van a visualizar en cada uno de los cuadros son ficheros HTML de los que venimos aprendiendo anteriormente en este manual. <br> Dicha definición está compuesta por etiquetas &lt;FRAMESET&gt; y &ltFRAME&gt, con las que se indicamos la disposición de todos los cuadros. La etiqueta &lt;FRAMESET&gt; indica las particiones de la ventana del navegador y la etiqueta &lt;FRAME&gt; indica cada uno de los cuadros donde colocaremos una página independiente.</p>
+        <p>Las particiones que se pueden hacer con un &lt;FRAMESET&gt; son en filas o columnas. Por ejemplo, podríamos indicar que deseamos hacer una división de la página en dos filas, o dos columnas, tres filas, etc. Para indicar tanto la forma de partir la ventana -en filas o columnas- como el número de particiones que pretendemos hacer, se ha de utilizar el atributo COLS o ROWS. El primero sirve para indicar una partición en columnas y el segundo para una partición en filas.</p>
+        <p><b>Nota:</b> Es importante indicar que no se puede hacer una partición en filas y columnas a la vez, sino que debemos escoger en partir la ventana en una de las dos disposiciones. Más adelante indicaremos cómo partir la ventana tanto en filas como en columnas, que se hace con la anidación de frames.</p>
+        <p>En el atributo COLS o ROWS -sólo podemos elegir uno de los dos- colocamos entre comillas el número de particiones que deseamos realizar, indicando de paso el tamaño que va a asignarse a cada una. Un valor típico de estos atributos sería el siguiente: <p>
+        <p><b>cols="20%,80%"</b> <br> Indica que se deben colocar dos columnas, la de la izquierda tendría un 20% del espacio total de la ventana y la de la derecha un 80%.</p>
+        <p><b>rows="15%,60%,25%"</b> <br> Así indicamos que deseamos tres filas, la de arriba con un 15% del espacio total, la del medio con un espacio correspondiente al 60% del total y la de abajo con un 25%. En total suman el 100% del espacio de la ventana.</p>
+        <p>Además del porcentaje para indicar el espacio de cada una de las casillas, también podemos indicarlo en pixeles. De esta manera.</p>
+        <p><b>cols="200,600"</b> <br> Para indicar que la columna de la izquierda debe tener 200 pixels de ancho y la de la derecha 600. Esto está bien si nuestra ventana tiene 800 pixels de ancho, pero esto no tiene porque ser así en todos los monitores de los usuarios, por lo que este modo de expresar los marcos es importante que se indique de la siguiente manera.</p>
+        <p><b>cols="200,*"</b> <br> Así indicamos que la primera columna ha de medir 200 pixels y que el resto del espacio disponible -que será mayor o menor dependiendo de la definición de la pantalla del usuario- se le asignará a segunda columna.</p>
+        <p>En la práctica podemos mezclar todos estos métodos para definir los marcos de la manera que deseemos, con pocentaje, con pixels o con el comodín (*). No importa cómo se definan, la única recomendación es que uno de los valores que indiquemos sea un asterisco, para que el área correspondiente a dicho asterisco o comodín sea más o menos grande dependiendo del espacio que tenga la ventana de nuestro navegador. Otros métodos de definir filas y columnas, atendiendo a este consejo, serían los siguientes:</p>
+        <p><b>rows="100,*,12%"</b> <br> Definimos tres filas, la primera con 100 pixels de ancho, la segunda con el espacio que sobre de las otras dos, y la tercera con un 12% del espacio total.</p>
+        <p><b>cols="10%,50%,120,*"</b> <br> Estamos indicando cuatro columnas. La primera del 10% del espacio de la ventana, la segunda con la mitad justa de la ventana, la tercera con un espacio de 120 pixels y la última con la cantidad de espacio que sobre al asignar espacio a las demás particiones.</p>
+        <p>Una vez hemos indicado el número de filas o columnas y el espacio reservado a cada una con la etiqueta &lt;FRAMESET&gt;, debemos especificar con la etiqueta &lt;FRAME&gt; la procedencia de cada uno de los frames en los que hemos partido la ventana.</p>
+        <p>Para ello, disponemos del atributo SRC, que se ha de definir para cada una de las filas o columnas. De esta manera.</p>
+        <p>&lt;FRAME src="marco1.html"&gt;</p>
+        <p>Así queda indicado que el frame que estamos definiendo debe mostrar la página marco1.html en su interior.</p>
+        <p>Hasta ahora hemos visto bastante información teórica, la suficiente para saber construir nuestras propias estructuras de frames, pero seguro que para aclarar las cosas vendrá bien hacer alguna práctica. Así que en el próximo artículo pasaremos a la creación de frames en páginas web.</p>
+    </section>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+
+        <p><a href="/HTML/Parte2/FramesHTML/FramesHtml.html">Frames en HTML</a> <a href="/HTML/Parte2/FramesHTML/FramesCreacion.html">Frames - Creación de una estructura simple</a> </p>
+    </section>
+</body>
+</html>

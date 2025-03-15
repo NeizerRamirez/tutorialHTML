@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrupar filas o columnas de tablas con HTML 4</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/TablasHTML/AgruparColumnasFilas.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 24 de Julio de 2008
+    </header>
+    <section>
+        <h2>    En HTML 4.0 podemos agrupar filas de una tabla, o columnas. Sirve para especificar estilos específicos a esas filas o columnas.</h2>
+        <p>Con HTML 4 existen dos etiquetas que nos permiten agrupar filas o columnas de una tabla, para crear agrupaciones a las que se les puede definir un estilo de una sola vez, y no fila a fila o celda a celda. No son etiquetas que se usen mucho, además ahora menos que las tablas han sido sustituidas por otros tipos de herramientas para presentar la información maquetada en una rejilla, pero siguen estando dentro del estándar.</p>
+        <p>Son etiquetas para agrupación de los elementos de una tabla, que se diferencian en el tipo de elementos que pretenden agrupar.</p>
+        <p>Para agrupar conjuntos de filas se usa la etiqueta TBODY</p>
+        <code>&lt;tbody&gt;</code>
+        <p>Para agrupar conjuntos de columnas se usa la etiqueta COLGROUP.</p>
+        <code>&lt;colgroup&gt;</code>
+        <p>Ambas etiquetas tienen soporte a partir de HTML 4, por lo tanto están disponibles en todos los navegadores modernos más comúnmente utilizados.</p>
+    </section>
+
+    <section>
+        <h2>Agrupar filas con TBODY</h2>
+        <p>Hacer grupos de filas nos sirve para especificar estilos a determinadas filas de la tabla, de una sola vez. El modo de uso es el siguiente:</p>
+        <pre>
+            <code>
+                &lt;table cellspacing="4" cellpadding="4" border="2"&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;1&lt;/td&gt;
+                    &lt;td&gt;2&lt;/td&gt;
+                    &lt;td&gt;3&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tbody align="center" bgcolor="#ff8800" valign="top"&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;4&lt;/td&gt;
+                    &lt;td&gt;
+                    Esta es una celda
+                    &lt;br&gt;
+                    5
+                    &lt;/td&gt;
+                    &lt;td&gt;6&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;7&lt;/td&gt;
+                    &lt;td&gt;8&lt;/td&gt;
+                    &lt;td&gt;9&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;/tbody&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <p>Como se puede ver, se tiene una tabla de 3 filas. Se ha marcado un grupo de dos filas con TBODY, justamente las dos últimas. Para esas filas hemos definido, mediante los atributos de la etiqueta TBODY, un centrado, un color de fondo y una alineación vertical superior. Los atributos que podríamos utilizar con la etiqueta TBODY son un grupo reducido de los que podríamos asignar a etiquetas TR o TD: align, bgcolor y valing, class, id, además de manejadores de eventos.</p>
+        <p>Podemos ver cómo se mostraría esta tabla:</p>
+        <table cellspacing="4" cellpadding="4" border="2">
+            <tr>
+               <td>1</td>
+               <td>2</td>
+               <td>3</td>
+            </tr>
+            <tbody align="center" bgcolor="#ff8800" valign="top">
+            <tr>
+               <td>4</td>
+               <td>
+               Esta es una celda
+               <br>
+               5
+               </td>
+               <td>6</td>
+            </tr>
+            <tr>
+               <td>7</td>
+               <td>8</td>
+               <td>9</td>
+            </tr>
+            </tbody>
+            </table>
+        <p>De manera similar, se pueden asignar atributos de hojas de estilo en cascada, utilizando el atributo HTML style, como se puede ver a continuación:</p>
+        <pre>
+            <code>
+                &lt;table cellspacing="2" cellpadding="2" border="2"&gt;
+                &lt;tbody style="font-size:150%;"&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;1&lt;/td&gt;
+                    &lt;td&gt;2&lt;/td&gt;
+                    &lt;td&gt;3&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;4&lt;/td&gt;
+                    &lt;td&gt;5&lt;/td&gt;
+                    &lt;td&gt;6&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;/tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;7&lt;/td&gt;
+                    &lt;td&gt;8&lt;/td&gt;
+                    &lt;td&gt;9&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <p>Aunque hay que decir que el grupo de atributos de hojas de estilo que son interpretados, cuando los colocamos en TBODY, es bastante reducido. Internet Explorer da mejor variedad de atributos aceptados.</p>
+    </section>
+
+    <section>
+        <h2>Agrupar columnas con COLGROUP</h2>
+        <p>Veamos ahora cómo se pueden agrupar varias filas con la etiqueta COLGROUP. El objetivo es básicamente el mismo que el de agrupar columnas, es decir, definir de una sola vez estilos específicos para un determinado conjunto de columnas de una tabla. El uso de la etiqueta, no obstante, es un poco diferente.</p>
+        <pre>
+            <code>
+                &lt;table cellspacing="2" cellpadding="2" border="2"&gt;
+                &lt;colgroup span=2 width="40"&gt;
+                &lt;/colgroup&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;1&lt;/td&gt;
+                    &lt;td&gt;2&lt;/td&gt;
+                    &lt;td&gt;3&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;4&lt;/td&gt;
+                    &lt;td&gt;5&lt;/td&gt;
+                    &lt;td&gt;6&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;7&lt;/td&gt;
+                    &lt;td&gt;8&lt;/td&gt;
+                    &lt;td&gt;9&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <p>Como se puede ver, COLGROUP se utiliza después de abrir la tabla y antes de empezar a meter los contenidos de filas y celdas.</p>
+        <p>El atributo span indica el número de columnas que se desean agrupar, empezando por la primera. En nuestro ejemplo se han agrupado las dos primeras columnas. Los otros atributos que podemos colocar en COLGROUP son los siguientes: align, id, class, style, valign, width y manejadores de eventos Javascript. Aunque Internet Explorer acepta otros atributos como bgcolor.</p>
+        <p>El ejemplo de colgroup se muestra a continuación:</p>
+        <table cellspacing="2" cellpadding="2" border="2">
+            <colgroup span=2 width="40">
+            </colgroup>
+            <tr>
+               <td>1</td>
+               <td>2</td>
+               <td>3</td>
+            </tr>
+            <tr>
+               <td>4</td>
+               <td>5</td>
+               <td>6</td>
+            </tr>
+            <tr>
+               <td>7</td>
+               <td>8</td>
+               <td>9</td>
+            </tr>
+            </table>
+            <p>Además, también podemos definir estilos CSS para las agrupaciones de columnas. De hecho lo correcto justamente es aplicar los estilos con CSS</p>
+            <p>Cuando queremos definir estilos para cada una de las columnas de la tabla, de manera que toda columna tenga sus estilos propios, también utilizamos COLGROUP. En este caso no se debe utilizar el atributo span, sino que se debe de agregar la etiqueta COL, una por cada columna a la que pretendemos asignar estilos. De esta manera:</p>
+            <pre>
+                <code>
+                &lt;table cellspacing="2" cellpadding="2" border="2"&gt;
+                &lt;colgroup&gt;
+                &lt;col&gt;
+                &lt;col width=100&gt;
+                &lt;col style="width: 200px;"&gt;
+                &lt;/colgroup&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;1&lt;/td&gt;
+                    &lt;td&gt;2&lt;/td&gt;
+                    &lt;td&gt;3&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;4&lt;/td&gt;
+                    &lt;td&gt;5&lt;/td&gt;
+                    &lt;td&gt;6&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;7&lt;/td&gt;
+                    &lt;td&gt;8&lt;/td&gt;
+                    &lt;td&gt;9&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;/table&gt;
+                </code>
+            </pre>
+        <p>En nuestra tabla, que tenía tres columnas, hemos colocado la etiqueta COLGROUP y dentro de esta, tres etiquetas COL, cada una con sus estilos propios.</p>
+        <p>En el primer COL, como se puede ver, no hay ningún atributo. Eso quiere decir que no estoy asignando ningún estilo a la primera columna de la tabla. El segundo COL ha definido una anchura de 100 pixels. El tercer COL, también hemos definido una anchura, pero esta vez con CSS mediante el atributo style.</p>
+        <p>Los atributos CSS que acepta esta etiqueta también son bastante reducidos en Firefox, aunque Internet Explorer acepta bastantes más.</p>
+        <p>Para terminar, mostramos la tabla del último ejemplo:</p>
+        <table cellspacing="2" cellpadding="2" border="2">
+            <colgroup>
+            <col>
+            <col width=100>
+            <col style="width: 200px;">
+            </colgroup>
+            <tr>
+               <td>1</td>
+               <td>2</td>
+               <td>3</td>
+            </tr>
+            <tr>
+               <td>4</td>
+               <td>5</td>
+               <td>6</td>
+            </tr>
+            <tr>
+               <td>7</td>
+               <td>8</td>
+               <td>9</td>
+            </tr>
+            </table>
+    </section>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+
+        <p><a href="/HTML/Parte1/TablasHTML/AtributosTablas.html">Atributos para tablas HTML</a> <a href="/HTML/Parte1/FormulariosHTML/Formularios.html">Formularios HTML</a> </p>
+    </section>
+</body>
+</html>
