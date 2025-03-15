@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frames - Anidar Frames</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte2/Frames/FramesAnidar.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 28 de mayo de 2002
+    </header>
+    <section>
+        <h2>    Explicamos como se crean estructuras con frames más complejas: anidación de frames.</h2>
+        <p>Para crear estructuras de marcos en las que se mezclen las filas y las columnas debemos anidar etiquetas &lt;FRAMESET&gt;. Empezando por la partición de frames más general, debemos colocar dentro las particiones de frames más pequeñas. La manera de indicar esto se puede ver fácilmente con un ejemplo.</p>
+        <center>
+        <img src="/Imagenes/Parte2/Frames/FramesAnidar1.png">
+            <p>Los pasos para definir la anidación se pueden encontrar a la derecha.</p>
+            <p>Los distintos frames vienen numerados con el orden</p>
+            <p>en el que se escriben en el código.</p>
+        </center>
+        <p>En la imagen se puede ver el resultado final acompañada de la representación sobre la manera de definirlos. En primer lugar definimos una estructura de frames en dos columnas y dentro de la primera columna colocamos otra parcición de frames en dos filas. El código necesario es el siguiente.</p>
+        <pre>
+            <code>
+                &lt;frameset cols="200,*"&gt;
+                    &lt;frameset rows="170,*"&gt;
+                        &lt;frame src="pagina1.html"&gt;
+                        &lt;frame src="pagina2.html"&gt;
+                    &lt;/frameset&gt;
+                    &lt;frame src="pagina3.html"&gt;
+                &lt;/frameset&gt;
+            </code>
+        </pre>
+        <p>Podemos ver el ejemplo en una página a parte.</p>
+        <p><b>Nota:</b>hemos colocado un margen en cada una de las líneas de esta definición de frames para conseguir un código más entendible visualmente. Estos márgenes no son en absoluto necesarios, simplemente nos sirven para ver en qué nivel de anidación nos encontramos.</p>
+        <p>El ejemplo anterior se puede complicar un poco más si incluimos más particiones. Vamos a ver algo un poco más complicado para practicar más con las anidaciones de frames.</p>
+        <center>
+            <img src="/Imagenes/Parte2/Frames/FramesAnidar2.png">
+            <p>Los pasos para definir la anidación se pueden encontrar a la derecha.</p>
+            <p>Los distintos frames vienen numerados con el orden</p>
+            <p>en el que se escriben en el código.</p>
+        </center>
+        <p>En la imagen se observa que el primer frameset a definir se compone de dos filas. Posteriormente, dentro de la segunda fila del primer frameset, tenemos otra partición en dos columnas, dentro de las que colocamos un tercer nivel de frameset con una definción en filas en los dos casos. El código se puede ver a continuación.</p>
+        <pre>
+            <code>
+                &lt;frameset rows="60,*"&gt;
+                    &lt;frame src="pagina1.html"&gt;
+                    &lt;frameset cols="200,*"&gt;
+                        &lt;frameset rows="*,150"&gt;
+                            &lt;frame src="pagina2.html"&gt;
+                            &lt;frame src="pagina3.html"&gt;
+                        &lt;/frameset&gt;
+                        &lt;frameset rows="*,60"&gt;
+                            &lt;frame src="pagina4.html"&gt;
+                            &lt;frame src="pagina5.html"&gt;
+                        &lt;/frameset&gt;
+                    &lt;/frameset&gt;
+                &lt;/frameset&gt;
+            </code>
+        </pre>
+        <p>Podemos ver el ejemplo en una página a parte.</p>
+        <p>Hasta aquí hemos visto la parte más básica de la creación de frames. En los siguientes capítulos podremos aprender a configurar los marcos para variar su apariencia y, entre otras cosas, eliminar las barras que separan cada uno de los distintos frames.</p>
+    </section>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+
+        <p><a href="/HTML/Parte2/FramesHTML/FramesEnlaces.html">Frames - Dirigir los enlaces</a> <a href="/HTML/Parte2/FramesHTML/FramesAvanzado.html">Frames - Atributos avanzados</a> </p>
+    </section>
+</body>
+</html>

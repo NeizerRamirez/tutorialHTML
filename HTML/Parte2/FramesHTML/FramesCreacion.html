@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frames - Creación de una estructura simple</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte2/Frames/FramesEstructura.png" alt="inicio">
+        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 28 de mayo de 2002
+    </header>
+    <section>
+        <h2>    Ejemplo de la creación de un frame simple para ilustrar lo aprendido hasta ahora.</h2>
+        <p>Para ilustrar todo lo que venimos explicando podemos ver el ejemplo sobre cómo se crearía la definición de frames de la imagen que podemos ver a continuación.</p>
+        <center>
+        <img src="/Imagenes/Parte2/Frames/FramesCreacion1.png">
+        </center>
+        <pre>
+            <code>
+                &lt;html&gt;
+                &lt;head&gt;
+                    &lt;title&gt;Definición de Frames&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;frameset rows="15%,*,75"&gt;
+                    &lt;frame src="pagina1.html"&gt;
+                    &lt;frame src="pagina2.html"&gt;
+                    &lt;frame src="pagina3.html"&gt;
+                &lt;/frameset&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p>Se puede ver esta partición de frames en una página a parte.</p>
+        <p>Además tenemos algunas consideraciones que hacer para terminar de comprender este ejemplo:</p>
+        <ul>
+            <li><p>El título de la definición de frames es el que hereda toda la página web, por ello, no es buena idea titular como "definición de frames" por ejemplo, ya que entonces toda nuestra página se titularía así y seguramente no sea muy descriptivo. Si estuviésemos haciendo una página para la carnicería pepe sería mejor titular a la definición de frames algo como "Carnicería Pepe, las mejores carnes en Madrid".</p></li>
+            <li><p>La página que define los frames no tiene body. HTML puede arrojarnos un error si lo incluimos.</p></li>
+            <li><p>Las páginas "pagina1.html", "pagina2.html"y "pagina3.html" han de escribirse en archivos independientes con el nombre indicado. En este ejemplo, dichas páginas deberían encontrarse en el mismo directorio que la declaración de frames. Si especificamos una ruta para acceder al archivo podemos colocarlo en el directorio que deseemos.</p></li>
+            <li><p>Los colores de cada uno de los frames los hemos colocado con el atributo bgcolor colocado en la etiqueta &lt;BODY&gt; de cada una de las páginas que se muestran en los marcos.</p></li>
+        </ul>
+        
+    </section>
+    
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+
+        <p><a href="/HTML/Parte2/FramesHTML/FramesExplicacion.html">Frames - Explicación básica</a> <a href="/HTML/Parte2/FramesHTML/FramesMarcoPagina.html">Frames - Una página en cada marco</a> </p>
+    </section>
+</body>
+</html>
