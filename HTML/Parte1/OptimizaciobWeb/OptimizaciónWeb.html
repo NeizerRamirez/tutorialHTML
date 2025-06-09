@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduccion a la optimizacion de webs</title>
-    <link rel="icon"  href="/Imagenes/Icono.ico">
+    <link rel="icon"  href="../../../Imagenes/Icono.ico">
 </head>
 <body>
     <header>
-        <img src="/Imagenes/Parte1/OptimizacionWeb/BannerInicio.png" alt="inicio">
-        <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
-        <img src="/Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 17 de abril de 2018
+        <img src="../../../Imagenes/Parte1/OptimizacionWeb/BannerInicio.png" alt="inicio">
+        <a href="../../Principal.html"><img src="../../../Imagenes/IconoHome.png" width="1%" height = "1%" alt="Volver al inicio">  &gt; Manual HTML</a><br>
+        <img src="../../../Imagenes/calendario.png" width="1%" height = "1%" alt="calendario"> 17 de abril de 2018
     </header>
     <section>
         <h2>Qué es la optimización de páginas web, cuáles son los principales recursos en una página web susceptibles de recibir mayor optimización y en qué parámetros podemos optimizarlos.</h2>
         <p>En el mundo de la web cada segundo de carga importa. Incluso cada milisegundo podríamos decir. La explicación es bien sencilla, pues se dice que un usuario estará esperando la carga de un sitio web por 5 segundos máximo, si pasado ese tiempo no se obtiene respuesta alguna del servidor, simplemente abandonará el intento de acceso a la página.</p>
         <p>Este detalle se aprecia mejor todavía cuando hablamos de cifras. Por ejemplo según Google, medio segundo de retardo de carga de una página supone un decremento de 20% de su tráfico. Según Amazon, 100 milisegundos de retraso de carga de su web, afecta en 1% la caída de ventas en sus productos. Sin duda datos reveladores. ¿no?</p>
         <p>Por este motivo, la optimización de una web es un detalle que no debemos pasar por alto. En este artículo aprenderás los criterios más importantes para conseguir optimizar los archivos y el código de tu sitio web.</p>
-        <img src="/Imagenes/Parte1/OptimizacionWeb/CarroOptimizacion.jpg" alt="10">
+        <img src="../../../Imagenes/Parte1/OptimizacionWeb/CarroOptimizacion.jpg" alt="10">
         <h2>Qué recursos son capaces de ofrecer mayor optimización</h2>
         <p>La optimización de una página depende de varios factores. Obviamente uno de ellos es el servidor donde la tengas publicada. Un servidor rápido</p>
         <p>Nota: no entramos en la configuración del servidor, pues en este momento de nuestro aprendizaje y en el marco del Manual de HTML, la configuración del servidor no forma parte de nuestras responsabilidades como desarrolladores. Generalmente usaremos servidores de alojamiento compartido, por lo que no tendremos muchas opciones de configurar el servidor.</p>
@@ -42,7 +42,7 @@
         <p><b>Nota:</b> Las conexiones al servidor, para descargar todos los archivos externos al propio código HTML, como imágenes, CSS, Javascript, llevan un tiempo. El navegador no es capaz de descargar todo a la vez y si tenemos muchos archivos distintos generalmente tardará más. Esto con el próximo HTTP2 cambiará, puesto que ese nuevo protocolo ha optimizado la posibilidad de realizar más descargas concurrentes sin penalizar el tiempo usado en ellas.</p>
         <p><b>Nota:</b> Como segunda nota, también debes de mantener un buen nivel de calidad de tu código. Por ejemplo, debes intentar reutilizar las declaraciones de estilos, no repetir las reglas a no ser que sea necesario, usar selectores adecuados y en general dejar las cosas sencillas al navegador. Pero esta parte tampoco la vamos a tocar, siendo material de estudio en artículos de <a href="https://desarrolloweb.com/articulos/problemas-arquitectura-css.html">Arquitectura de CSS.</a> Te recomendamos la <a href="https://desarrolloweb.com/en-directo/arquitectura-css-clase-vivo-9027.html">clase en vivo de arquitectura de CSS</a>.</p>
         <p>El código CSS compactado luce más o menos como la siguiente imagen:</p>
-        <img src="/Imagenes/Parte1/OptimizacionWeb/CssCode.png" alt="CSS compactado">
+        <img src="../../../Imagenes/Parte1/OptimizacionWeb/CssCode.png" alt="CSS compactado">
         <p>Otra cosa que se puede hacer con el CSS es dividir los estilos en dos archivos separados. En uno se colocaría el código fundamental para el CSS de cabecera y layout, necesario para la renderización de la parte de la página que se ve al abrirla en el navegador. Luego, se puede usar un segundo archivo CSS en el que se colocan todos los estilos que afectan a los elementos que habrá visibles al hacer scroll hacia abajo. El primer archivo CSS se colocará en el HEAD, para que esté disponible lo más rápido posible y el segundo archivo CSS se enlazará antes de cerrar el BODY, ya que no es necesario tan rápidamente y se puede deferir la carga hasta más tarde.</p>
     </section>
     <section>
@@ -57,7 +57,7 @@
             <br>
         </ul>
         <p>Esta próxima imagen es una pequeña parte del código de jQuery, una popular librería Javascript, una vez minimizada.</p>
-        <img src="/Imagenes/Parte1/OptimizacionWeb/JsCode.png" alt="jQuery minimizado">
+        <img src="../../../Imagenes/Parte1/OptimizacionWeb/JsCode.png" alt="jQuery minimizado">
         <h2>Defer vs Async en la etiqueta SCRIPT</h2>
         <p>Los atributos "defer" o "async" sirven para decirle al navegador cuándo procesar el código Javascript. Es solamente posible usarlo en etiquetas SCRIPT que enlazan con archivos js externos.</p>
         <ul>
@@ -93,12 +93,12 @@
         <h3>WPO</h3>
         <p>Ya para acabar queremos mencionar que existe toda una disciplina en torno de la optimización web llamada WPO. Es una disciplina importante y prueba de ello es que hay profesionales que solamente se dedican al WPO.</p>
         <p>WPO son las siglas de "Web Performante Optimization", optimización del rendimiento de la web e incluye tanto la parte del sitio web como la optimización del servidor. Es algo de lo que ya hemos hablado en varios momentos en DesarrolloWeb.com, así que te recomendamos asistir a esta clase, en la que se habla de WPO y que es la primera de las clases del <a href="https://escuela.it/cursos/taller-wpo-optimizar-velocidad-carga-web">Taller de WPO de EscuelaIT</a>.</p>
-        <a href="https://www.youtube.com/watch?v=RkudSeR6Klk"><img src = "/Imagenes/Parte1/OptimizacionWeb/Youtube.png"></a>
+        <a href="https://www.youtube.com/watch?v=RkudSeR6Klk"><img src = "../../../Imagenes/Parte1/OptimizacionWeb/Youtube.png"></a>
     </section>
     <section>
-        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
-        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
-        <p><a href="/HTML/Parte1/OtrasEtiquetasHTML/FuturoWeb.html">&lt;El futuro del desarrollo web: HTML 5</a> </p>
+        <h2><img src="../../../Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="../../Principal.html">Manual de HTML</a></h3>
+        <p><a href="../OtrasEtiquetasHTML/FuturoWeb.html">&lt;El futuro del desarrollo web: HTML 5</a> </p>
     </section>
 </body>
 </html>
